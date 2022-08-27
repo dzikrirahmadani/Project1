@@ -1,0 +1,902 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- G-Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+  <!-- End G-Font -->
+  <title>Tst3</title>
+  <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+<!--  -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+
+      *, html, body{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Inter', sans-serif; */
+    }
+
+body{
+  background-color: #F3E8FF;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-hidden{
+  display: none;
+}
+
+.content-hidden-2{
+  display: none;
+}
+
+/* title table style */
+.title-table{
+  position: absolute;
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 18%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  padding-left: 1.5rem;
+  border-radius: .5rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.title-table > .brand{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title-table > .brand > a{
+  margin-left: -.5rem;
+  margin-right: 2rem;
+}
+.title-table > .brand > a > img{
+  height: 2rem;
+}
+.title-table > .brand > p{
+  font-weight: 600;
+  font-size: 1.3em;
+  color: #7B2A8C;
+}
+.title-table > .input-field input{
+  height: 2.1rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 .1rem  rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.title-table > .input-field input:focus{
+  outline: none;
+}
+.title-table > .input-field > button{
+  height: 2.1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #7B2A8C;
+  color: #fff;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: .8rem;
+}
+/* end of title table style */
+
+
+
+/* table style */
+.container-table{
+  position: absolute;
+  top: 8.5rem;
+  left: 18%;
+  width: 80%;
+  background-color: #fff;
+  border-radius: .5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  padding-bottom: .001rem;
+}
+
+.table{
+  width: 100%;
+  box-shadow: 0 0 .1rem rgba(0, 0, 0, 0.8);
+  border-radius: .5rem .5rem 0 0;
+  overflow: hidden;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+.table > thead > tr > th{
+  padding: 1rem;
+  padding-inline: 3rem 3rem;
+  font-weight: lighter;   
+}
+.table > thead{
+  border-radius: 5rem;
+  background: linear-gradient(#3B296F, #7B2A8C);
+  color: white;
+}
+
+.table tbody tr td{
+  padding: 1rem;
+  border-bottom: .1rem solid #B7BCC4;
+}
+.table > .container-table{
+  padding: 1.5rem;
+}
+
+.table-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 1.8rem;
+}
+.table-footer .prev{
+  border: .08rem solid #7B2A8C;
+  padding: .3rem;
+  background-color: #7B2A8C;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: white;
+  border-radius: .5rem 0 0 .5rem;
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-footer > .prev > span{
+  margin-inline: .5rem;
+}
+
+
+.table-footer .field{
+  padding: .3rem;
+  width: 2%;
+  border-left: none;
+  border-right: none;
+  border-top: .08rem solid #707070;
+  border-bottom: .08rem solid #707070;
+  text-align: center;
+  color: #707070;
+}
+.table-footer .next{
+  border: .08rem solid #7B2A8C;
+  padding: .3rem;
+  background-color: #7B2A8C;
+  box-sizing: border-box;
+  width: 7rem;
+  border-radius: 0 .5rem .5rem 0;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-footer > .next > span{
+  margin-inline: .5rem;
+}
+
+
+/* end of table style */
+
+/* responsive */
+@media (max-width: 1168px){
+  .title-table{
+    width: 70%;
+    margin-left: 25%;
+  }
+  .container-table{
+    width: 70%;
+    left: 25%;
+  }
+}
+
+@media (max-width: 1167px){
+  .title-table{
+    margin-left: 25%;
+    width: 70%;
+  }
+  .container-table{
+    width: 70%;
+    left: 25%
+  }
+}
+
+@media (max-width: 1166px) {
+  .title-table{
+    margin-left: 25%;
+    width: 70%;
+  }
+  .container-table{
+    width: 70%;
+    left: 25%
+  }
+}
+
+@media(max-width: 1071px){
+  .title-table{
+    width: 70%;
+    margin-left: 25%;
+  }
+  .container-table{
+    width: 70%;
+    left: 25%;
+  }
+}
+
+
+@media(max-width: 1065px){
+  .title-table{
+    margin-left: 25%;
+    width: 70%;
+  }
+  .container-table{
+    width: 70%;
+    left: 25%
+  }
+}
+
+@media(max-width: 1064px){
+  .title-table{
+    margin-left: 25%;
+    width: 70%;
+  }
+  .container-table{
+    width: 70%;
+    left: 25%
+  }
+}
+
+@media(max-width: 1063px){
+  .title-table{
+    margin-left: 25%;
+    width: 70%;
+  }
+  .container-table{
+    width: 70%;
+    left: 25%
+  }
+}
+
+@media (max-width: 1046px) {
+  .title-table{
+    margin-left: 25%;
+    width: 70%;
+  }
+  .container-table{
+    width: 70%;
+    left: 25%
+  }
+}
+
+@media (max-width: 1027px){
+  .title-table{
+    width: 70%;
+    margin-left: 25%;
+  }
+  .container-table{
+    width: 70%;
+    left: 25%;
+  }
+}
+
+@media (max-width: 1026px){
+  .title-table{
+    width: 70%;
+    margin-left: 25%;
+  }
+  .container-table{
+    width: 70%;
+    left: 25%;
+  }
+}
+
+@media (max-width: 1025px){
+  .title-table{
+    width: 70%;
+    margin-left: 25%;
+  }
+  .container-table{
+    width: 70%;
+    left: 25%;
+  }
+}
+
+@media (max-width: 1024px){
+  .title-table{
+    width: 70%;
+    margin-left: 25%;
+  }
+  .container-table{
+    width: 70%;
+    left: 25%;
+  }
+}
+
+@media (max-width: 1023px){
+  .title-table{
+    width: 97%;
+    margin: 5rem;
+    margin-left: 1rem;
+  }
+  .container-table{
+    width: 97%;
+    left: 1rem;
+  }
+}
+
+@media (max-width: 800px){
+  .title-table{
+    width: 97%;
+    margin: 5rem;
+    margin-left: .8rem;
+  }
+  .container-table{
+    width: 97%;
+    left: .8rem;
+  }
+  .table-footer .field{
+    width: 2rem;
+  }
+}
+
+@media (max-width: 768px){
+  .table > tbody > tr > .table-btn > a:nth-child(1){
+    margin-top: 1000px;
+  }
+}
+
+@media (max-width: 761px){
+  .container-table > .table > tbody > tr > .table-btn{
+    font-size: .01em;
+  }
+}
+
+@media (max-width: 720px){
+  .title-table{
+    width: 97%;
+    margin: 5rem;
+    margin-left: .5rem;
+  }
+  .container-table{
+    width: 97%;
+    left: .5rem;
+  }
+}
+
+
+@media (max-width: 685px){
+  .content{
+    display: none;
+  }
+  .content-hidden{
+    display: block;
+  }
+  .table thead tr td{
+    background-color: #fff;
+    color: #000;
+    border-bottom: .1rem solid #B7BCC4;
+  }
+  .table thead tr th{
+    width: 10rem;
+  }
+  .table-footer .field{
+    width: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 567px) and (min-width: 533px) {
+  .title-table{
+    display: flex;
+    flex-direction: column;
+  }
+  .title-table > .brand > a{
+    margin-left: -200%;
+    margin-right: 1.5rem;
+  }
+  .container-table{
+    margin-top: .6rem;
+  }
+  .title-table > .input-field > .btn{
+    margin-top: .5rem;
+  }
+}
+
+@media screen and (min-width: 528px) and (max-width: 554px){
+  .container-table{
+    margin-top: .6rem;
+  }
+  .title-table > .input-field > .btn{
+    margin-top: .5rem;
+  }
+}
+
+@media screen and (max-width: 527px) and (min-width: 416px){
+  .container-table{
+    margin-top: .6rem;
+  }
+  .title-table > .input-field > .btn{
+    margin-top: .5rem;
+  }
+  .title-table{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding-top: .8rem;
+    padding-bottom: 1.5rem;
+  }
+  .input-field{
+    margin-top: .8rem;
+  }
+  .table-footer > .next{
+    width: 5.5rem;
+    font-size: .8em;
+  }
+  .table-footer > .next > img{
+    width: .5rem;
+  } 
+  
+  .table-footer > .prev{
+    width: 5.5rem;
+    font-size: .8em;
+  }
+  .table-footer > .prev > img{
+    width: .5rem;
+  } 
+  .table-footer > .prev > span{
+    margin-inline: .5rem;
+  }
+  .table-footer > .field{
+    padding: .2rem;
+  }
+  .title-table > .brand > a{
+    margin-left: -150%;
+    margin-right: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 430px) and (min-width: 300px){
+  .title-table > .brand > a{
+    margin-left: -150%;
+    margin-right: 1.5rem;
+  }
+  .content-hidden{
+    display: none;
+  }
+  .content-hidden-2{
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 299px){
+  .title-table > .brand > a{
+    margin-left: -100%;
+    margin-right: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 446px) and (min-width: 361px){
+  .title-table > .brand > a{
+    margin-left: -110%;
+    margin-right: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 361px) and (min-width: 323px){
+  .title-table > .brand > a{
+    margin-left: -90%;
+    margin-right: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 323px){
+  .title-table > .brand > a{
+    margin-left: -70%;
+    margin-right: 1.5rem;
+  }
+}
+
+@media (max-width: 300px){
+  .input-field > button{
+    width: 100%;
+  }
+  .input-field > input{
+    width: 100%;
+  }
+  .title-table > .input-field > .btn{
+    margin-top: .5rem;
+  }
+  .title-table .brand a{
+    margin-left: -100%;
+  }
+}
+/* end of responsive */
+
+
+      .side{
+        align-items: center;
+      }
+
+      .navbar {
+        width: 100%;
+      }
+
+      nav {
+        height: 100%;
+      }
+
+      .profile {
+        margin-left: 150px;
+      }
+
+      .nav-input {
+        transition: 1s;
+      }
+
+    }
+  </style>
+<!--  -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          display: ['group-focus'],
+          opacity: ['group-focus'],
+          inset: ['group-focus'],
+          colors: {
+            clifford: '#da373d',
+            ungu: '',
+            ungu1: '#7B2A8C',
+            ungu2: '#3B296F',
+            biru: '#5968C3',
+            hijau: '#01C94B',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+
+    <!-- NAV -->
+    <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
+      <div class="text-left font-bold items-center ">
+        <a href="">
+          <h3 class="text-white ml-14 lg:ml-4 text-lg block">InVentory</h3>
+        </a>
+        <div>
+        </div>
+      </div>
+      <div class="profile ml-[260px] sm:ml-[350px] float-right lg:ml-[760px] xl:ml-[1100px] md:ml-[475px]">
+        <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">NoFace21</h3> 
+        <img src="../../img/noface.jpg" alt="profile" class="w-7 h-7 rounded-full border"></a>
+      </div>
+      <div class="absolute px-48 box-border lg:mx-[1px] -my-[7px] hidden md:block">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-[13px] ml-3 bi bi-search inline-block text-white absolute" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          <input type="text" name="text" placeholder="Search" class="sm-input placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 lg:w-[1000px] bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
+          </div>
+    </div>
+
+    <!-- HAMBURGER -->
+    <button id="hamburger" class="fixed m-[16px] text-white inline-flex items-center justify-center focus:border h-10 w-10 rounded-md outline-none focus:outline-none lg:hidden z-10">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+      </svg>
+    </button>
+    <nav id="nav-menu" class="nav-input bg-ungu1 mt-[68px] h-[488px] md:h-[432px] -mr-20 hidden lg:hidden fixed transition duration-1000 rounded-b-md z-50">
+      <ul class="w-[350px]">
+        <li class="ml-[13px] py-2 md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-[13px] ml-3 bi bi-search inline-block text-white absolute" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+        <input type="text" name="text" placeholder="Search" class="placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <img src="../../img/dash.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <img src="../../img/gudang.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Gudang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <img src="../../img/satuan.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Satuan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <img src="../../img/data.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Kategori Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <img src="../../img/checklist.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Pengajuan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <img src="../../img/borrow.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Pinjam Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <img src="../../img/list.png" alt="" class="w-5 h-5
+             ml-7 mr-2">
+            <span class="">Laporan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <img src="../../img/user.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="login.html" class=" side flex text-white py-3 hover:bg-ungu2 hover:rounded-b-md transition duration-200" id="sidebar">
+            <img src="../../img/logout.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Log Out</span>
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <!-- END HAMBURGER -->
+    <!-- END NAV -->
+
+    <!-- SIDE -->
+    <nav class="relative min-h-screen lg:fixed hidden lg:flex">
+      <div class="flex-col bg-ungu1 w-52 mt-[68px]" >
+        <ul class="flex-col">
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+              <img src="../../img/dash.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+              <img src="../../img/gudang.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Gudang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+              <img src="../../img/satuan.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Satuan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+              <img src="../../img/data.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Kategori Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+              <img src="../../img/checklist.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Pengajuan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+              <img src="../../img/borrow.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Pinjam Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+              <img src="../../img/list.png" alt="" class="w-5 h-5
+               ml-7 mr-2">
+              <span class="">Laporan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+              <img src="../../img/user.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="login.html" class="mt-[143px] side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+              <img src="../../img/logout.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Log Out</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <!-- END SIDE -->
+
+    <!-- CONTENT -->
+
+    <!-- title table  -->
+    <div class="content">
+      <div class="flex-col">
+        <div class="title-table W-[500px] p-96">
+          <div class="brand">
+            <a href="#">
+              <img src="../../img/icons/kembali.png" alt="kembali" title="kembali">
+            </a>
+            <p class="font-semibold capitalize">barang keluar</p>
+          </div>
+        </div>
+        <!-- end of title table -->
+
+        <!-- tables -->
+        <div class="container-table">
+          <table class="table" cellspacing="0" cellpadding="0">
+            <thead>
+              <tr class="font-semibold">
+                <th>nama</th>
+                <th>jumlah</th>
+                <th>tanggal keluar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>mouse</td>
+                <td>5</td>
+                <td>01/04/2023</td>
+              </tr>
+              
+              <tr>
+                <td>hedset</td>
+                <td>6</td>
+                <td>02/11/2023</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="table-footer">
+              <button type="button" name="button" class="prev"><span><img src="../../img/icons/back.png" alt="Previos"></span> Previous</button>
+              <input type="text" name="" class="field" value="1" disabled>
+              <button type="button" name="button" class="next"><span>Next </span><img src="../../img/icons/next.png" alt="Next"></button>
+          </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- table hidden -->
+    <div class="content-hidden">
+      <div class="flex-col">
+        <div class="title-table W-[500px] p-96">
+          <div class="brand">
+            <a href="#">
+              <img src="../../img/icons/kembali.png" alt="kembali" title="kembali">
+            </a>
+            <p class="font-semibold capitalize">barang keluar</p>
+          </div>
+        </div>
+        <!-- end of title table -->
+
+        <!-- tables -->
+        <div class="container-table">
+          <table class="table" cellspacing="0" cellpadding="0">
+            <thead>
+              <tr>
+                <th class="font-semibold">nama</th>
+                <td>meja</td>
+                <td>lemari</td>
+              </tr>
+              <tr>
+                <th class="font-semibold">jumlah</th>
+                <td>02/06/2023</td>
+                <td>02/06/2023</td>
+              </tr>
+              <tr>
+                <th class="font-semibold">tanggal masuk</th>
+                <td>02/06/2023</tzd>
+                <td>02/06/2023</tzd>
+              </tr>
+            </thead>
+          </table>
+
+          <div class="table-footer">
+              <button type="button" name="button" class="prev"><img src="../../img/icons/back.png" alt=""><span>Previous</span></button>
+              <input type="text" name="" class="field" value="1" disabled>
+              <button type="button" name="button" class="next"><span>Next</span><img src="../../img/icons/next.png" alt="Next"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-hidden-2">
+      <div class="flex-col">
+        <div class="title-table W-[500px] p-96">
+          <div class="brand">
+            <a href="#">
+              <img src="../../img/icons/kembali.png" alt="kembali" title="kembali">
+            </a>
+            <p class="font-semibold capitalize">barang keluar</p>
+          </div>
+        </div>
+        <!-- end of title table -->
+
+        <!-- tables -->
+            <div class="container-table">
+              <table class="table" cellspacing="0" cellpadding="0">
+                <thead>
+                  <tr>
+                    <th class="font-semibold">nama</th>
+                    <td>meja</td>
+                  </tr>
+                  <tr>
+                    <th class="font-semibold">jumlah</th>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <th class="font-semibold">tanggal masuk</th>
+                    <td>02/06/2023</tzd>
+                  </tr>
+                </thead>
+              </table>
+
+              <div class="table-footer">
+                  <button type="button" name="button" class="prev"><img src="../../img/icons/back.png" alt=""><span>Previous</span></button>
+                  <input type="text" name="" class="field" value="1" disabled>
+                  <button type="button" name="button" class="next"><span>Next</span><img src="../../img/icons/next.png" alt="Next"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of table hidden -->
+
+    <!-- end of tables -->
+
+    <!-- END CONTENT -->
+
+<script src="../dist/script.js"></script>
+</body>
+</html>

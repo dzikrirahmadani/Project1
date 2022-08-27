@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- G-Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+  <!-- End G-Font -->
+  <title>Profile</title>
+  <!-- link my css -->
+  <link rel="stylesheet" href="../../dist/style.css">
+  <!-- end of  link my css -->
+
+  <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+<!--  -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+
+        /* .bg-pp {
+            width: 100%;
+        } */
+
+      .side{
+        align-items: center;
+      }
+
+      .side:active {
+        background-color: #3B296F;
+      }
+      
+      .navbar {
+        width: 100%;
+      }
+
+      nav {
+        height: 100%;
+      }
+
+      .profile {
+        margin-left: 150px;
+      }
+
+      .nav-input {
+        transition: 1s;
+      }
+
+      /* .kotak {
+        display: flex;
+      } */
+
+    }
+  </style>
+<!--  -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          display: ['group-focus'],
+          opacity: ['group-focus'],
+          inset: ['group-focus'],
+          colors: {
+            clifford: '#da373d',
+            ungu: '',
+            ungu1: '#7B2A8C',
+            ungu2: '#3B296F',
+            biru: '#5968C3',
+            hijau: '#01C94B',
+            kuning: '#FCD712',
+            birumuda: '#05BADF',
+
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+  
+    <!-- NAV -->
+    <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
+      <div class="text-left font-bold items-center ">
+        <a href="">
+          <h3 class="text-white ml-14 lg:ml-4 text-lg block">InVentory</h3>
+        </a>
+        <div>
+        </div>
+      </div>
+      <div class="profile ml-[260px] sm:ml-[350px] float-right lg:ml-[760px] xl:ml-[1100px] md:ml-[475px]">
+        <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">NoFace21</h3> 
+        <img src="../../img/noface.jpg" alt="profile" class="w-7 h-7 rounded-full border"></a>
+      </div>
+      <div class="absolute px-48 box-border lg:mx-[1px] -my-[7px] hidden md:block">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-[13px] ml-3 bi bi-search inline-block text-white absolute" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          <input type="text" name="text" placeholder="Search" class="sm-input placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 lg:w-[1000px] bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
+          </div>
+    </div>
+
+    <!-- HAMBURGER -->
+    <button id="hamburger" class="fixed m-[16px] text-white inline-flex items-center justify-center focus:border h-10 w-10 rounded-md outline-none focus:outline-none lg:hidden z-50">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+      </svg>
+    </button>
+    <nav id="nav-menu" class=" nav-input bg-ungu1 mt-[68px] h-[488px] md:h-[432px] -mr-20 hidden lg:hidden fixed transition duration-1000 rounded-b-md z-50">
+      <ul class="w-[350px]">
+        <li class="ml-[13px] py-2 md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-[13px] ml-3 bi bi-search inline-block text-white absolute" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+        <input type="text" name="text" placeholder="Search" class="placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
+        </li>
+        <li>
+          <a href="../dashboard/dash.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/dash.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="../gudang/gudang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/gudang.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Gudang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/satuan.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Satuan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/data.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Kategori Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/checklist.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Pengajuan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/borrow.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Pinjam Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/list.png" alt="" class="w-5 h-5
+             ml-7 mr-2">
+            <span class="">Laporan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="../profile/profile.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/user.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Profile</span>
+          </a>
+        </li>
+        <li>
+          <a class=" side flex text-white py-3 hover:bg-ungu2 hover:rounded-b-md transition duration-200" id="logout">
+            <img src="../../img/logout.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="" id="logout">Log Out</span>
+          </a>
+        </li>
+      </ul>
+      
+    </nav>
+
+    <!-- END HAMBURGER -->
+    <!-- END NAV -->
+
+    <!-- SIDE -->
+    <nav class="relative min-h-screen lg:fixed hidden lg:flex z-50">
+      <div class="sidebar flex-col bg-ungu1 w-52 mt-[68px]" >
+        <ul class="flex-col">
+          <li class="">
+            <a href="../dashboard/dash.html" class="side active flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/dash.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="../gudang/gudang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/gudang.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Gudang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/satuan.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Satuan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/data.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Kategori Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/checklist.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Pengajuan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/borrow.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Pinjam Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/list.png" alt="" class="w-5 h-5
+               ml-7 mr-2">
+              <span class="">Laporan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="../gudang/gudang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/user.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a class="mt-[143px] side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="logout">
+              <img src="../../img/logout.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span id="logout" class="">Log Out</span>
+            </a>
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+
+    <!-- END SIDE -->
+
+    <!-- CONTENT -->
+    
+    <h1 class="lg:mt-[75px] xl:mt-[75px] absolute text-ungu1 text-[25px] lg:ml-[240px] xl:ml-[240px]">Profile</h1>
+    <div class="absolute bg-pp ml-[6px] sm:ml-[11px] md:ml-[12px] lg:ml-[235px] xl:ml-[225px] w-[415px] sm:w-[616px] md:w-[742px] lg:w-[760px] xl:w-[1100px] h-[700px] lg:h-[800px] xl:h-[600px] bg-white p-8 m-96 mt-[120px] xl:mt-[120px] rounded-xl shadow-2xl">
+        
+    </div>
+    <div class="absolute bg-pp ml-[5px] sm:ml-[11px] md:ml-[12px] lg:ml-[235px] xl:ml-[225px] w-[415px] sm:w-[615px] md:w-[742px] lg:w-[760px] xl:w-[1100px] h-[150px] sm:h-[150px] bg-gradient-to-t from-ungu1 to-ungu2 p-8 m-96 mt-[80px] sm:mt-[80px] lg:mt-[120px] xl:mt-[120px] rounded-b-none rounded-xl">
+        <a href=""><img src="../../img/back.svg" alt="" class="w-[30px] h-[30px] -ml-5 sm:-ml-5 -mt-5 sm:-mt-5 xl:-ml-4 xl:-mt-4 absolute"></a>
+        <h1 class="hidden lg:block absolute text-[25px] font-semibold text-white lg:-mt-[20px] xl:-mt-4 lg:ml-[600px] xl:ml-[930px]">NoFace21</h1>
+        <div class="ml-[10px] sm:ml-[70px] mt-[50px] sm:mt-[60px] lg:ml-[290px] xl:ml-[445px] xl:mt-[40px]"> 
+            <img src="../../img/noface.jpg" alt="profile" class="w-32 lg:w-32 rounded-full border-4 shadow-xl">
+        </div>
+          <h1 class="-mt-[105px] sm:-mt-[110px] lg:mt-[20px] text-[18px] font-semibold ml-[180px] sm:ml-[250px] lg:ml-[275px] xl:ml-[435px] text-white lg:text-slate-900">NoFace TwentyOne</h1>
+          <p class="absolute mt-[10px] sm:mt-[5px] md:mt-[10px] pt-2 ml-[213px] sm:ml-[250px] lg:ml-[310px] xl:ml-[460px] text-slate-600">User / Owner</p>
+        <div class="mt-[100px] sm:mt-[100px] w-[415px] sm:w-[616px] md:w-[742px] lg:w-[760px] xl:w-[1100px] h-0.5 bg-slate-300 -ml-[32px] lg:mt-[70px]"></div>
+        <h1 class="pt-2 text-ungu1 text-[20px] font-bold pb-3">Perbarui Profile</h1>
+        
+        <form action="" class="grid">
+            <input type="text" name="text" placeholder="Nama lengkap" class="w-[350px] max-w-md border border-slate-400 bg-slate-100 rounded-full px-4 py-2 text-xs font-semibold focus:border-ungu1 focus:bg-white focus:outline-none mb-2" required>
+            <input type="text" name="text" placeholder="Username" class="w-[350px] max-w-md border border-slate-400 bg-slate-100 rounded-full px-4 py-2 text-xs font-semibold focus:border-ungu1 focus:bg-white focus:outline-none mb-2" required>
+            <input type="email" name="email" placeholder="Email" class="w-[350px] max-w-md border border-slate-400 bg-slate-100 rounded-full px-4 py-2 text-xs font-semibold focus:border-ungu1 focus:bg-white focus:outline-none invalid:text-red-700 mb-2" required>
+            <input type="password" name="password" placeholder="Password" class="w-[350px] max-w-md border border-slate-400 bg-slate-100 rounded-full px-4 py-2 text-xs font-semibold focus:border-ungu1 focus:bg-white focus:outline-none mb-2" required>
+            <input type="password" name="password" placeholder="Konfirmasi Password" class="w-[350px] max-w-md border border-slate-400 bg-slate-100 rounded-full px-4 py-2 text-xs font-semibold focus:border-ungu1 focus:bg-white focus:outline-none mb-5" required>
+        </form>
+        <button class="absolute sm:-mt-[55px] sm:ml-[365px] bg-ungu1 px-6 py-1 rounded-full font-semibold text-white hover:bg-opacity-80">Simpan</button>
+
+        <div class="sm:ml-[10px] xl:ml-[600px] mt-[60px] sm:mt-[20px] xl:-mt-[260px]">
+            <h1 class="pt-2 text-slate-900 text-[20px] font-bold pb-3">Profile :</h1>
+            <p class="pb-5">Username : NoFace21</p>
+            <p class="pb-5">Nama Lengkap : NoFace TwentyOne</p>
+            <p>Email : NoFace21@gmail.com</p>
+        </div>
+    </div>
+    
+    <!-- END CONTENT -->
+    <!-- pop up box -->
+    <div class="modal-popup">
+      <div id="box">
+        <span class="messege font-semibold text-sm md:text-sm xl:text-md">apakah anda yakin ingin logout ?</span>
+        <div class="confirm flex">
+          <a href="#" class="font-semibold text-xs md:text-sm xl:text-md" id="confirmErr">Tidak</a>
+          <a href="../login.html" class="confirmScs font-semibold text-xs md:text-sm xl:text-md">Ya</a>
+        </div>
+      </div>
+    </div>
+    <!-- end of pop up box -->
+    
+<script src="../../dist/script.js"></script>
+<!-- <script>
+  const popup = document.querySelector('.modal-popup');
+
+  // event popup box
+  document.body.addEventListener('click', (e) => {
+    console.log(e.target.id)
+    if( e.target.id == 'logout' ){
+      popup.style.display = 'flex';
+    }else if(e.target.id == 'confirmErr'){
+      popup.style.display = 'none';
+    }
+  })
+</script> -->
+</body>
+</html>

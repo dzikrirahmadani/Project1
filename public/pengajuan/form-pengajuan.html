@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- G-Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+  <!-- End G-Font -->
+  <title>Form Pengajuan</title>
+  <!-- link my css -->
+  <link rel="stylesheet" href="../../dist/style.css">
+  <!-- end of  link my css -->
+
+  <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+<!--  -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+
+        /* .bg-pp {
+            width: 100%;
+        } */
+
+      .side{
+        align-items: center;
+      }
+
+      .side:active {
+        background-color: #3B296F;
+      }
+      
+      .navbar {
+        width: 100%;
+      }
+
+      nav {
+        height: 100%;
+      }
+
+      .profile {
+        margin-left: 150px;
+      }
+
+      .nav-input {
+        transition: 1s;
+      }
+
+      /* .kotak {
+        display: flex;
+      } */
+
+    }
+  </style>
+<!--  -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          display: ['group-focus'],
+          opacity: ['group-focus'],
+          inset: ['group-focus'],
+          colors: {
+            clifford: '#da373d',
+            ungu: '',
+            ungu1: '#7B2A8C',
+            ungu2: '#3B296F',
+            biru: '#5968C3',
+            hijau: '#01C94B',
+            kuning: '#FCD712',
+            birumuda: '#05BADF',
+
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+  
+    <!-- NAV -->
+    <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
+      <div class="text-left font-bold items-center ">
+        <a href="">
+          <h3 class="text-white ml-14 lg:ml-4 text-lg block">InVentory</h3>
+        </a>
+        <div>
+        </div>
+      </div>
+      <div class="profile ml-[260px] sm:ml-[350px] float-right lg:ml-[760px] xl:ml-[1080px] md:ml-[475px]">
+        <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">NoFace21</h3> 
+        <img src="../../img/noface.jpg" alt="profile" class="w-7 h-7 rounded-full border"></a>
+      </div>
+      <div class="absolute px-48 box-border lg:mx-[1px] -my-[7px] hidden md:block">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-[13px] ml-3 bi bi-search inline-block text-white absolute" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          <input type="text" name="text" placeholder="Search" class="sm-input placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 lg:w-[1000px] bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
+          </div>
+    </div>
+
+    <!-- HAMBURGER -->
+    <button id="hamburger" class="fixed m-[16px] text-white inline-flex items-center justify-center focus:border h-10 w-10 rounded-md outline-none focus:outline-none lg:hidden z-50">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+      </svg>
+    </button>
+    <nav id="nav-menu" class=" nav-input bg-ungu1 mt-[68px] h-[488px] md:h-[432px] -mr-20 hidden lg:hidden fixed transition duration-1000 rounded-b-md z-50">
+      <ul class="w-[350px]">
+        <li class="ml-[13px] py-2 md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-[13px] ml-3 bi bi-search inline-block text-white absolute" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+        <input type="text" name="text" placeholder="Search" class="placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
+        </li>
+        <li>
+          <a href="../dashboard/dash.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/dash.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="../gudang/gudang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/gudang.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Gudang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/satuan.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Satuan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/data.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Kategori Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/checklist.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Pengajuan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/borrow.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Pinjam Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/list.png" alt="" class="w-5 h-5
+             ml-7 mr-2">
+            <span class="">Laporan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="../profile/profile.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/user.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Profile</span>
+          </a>
+        </li>
+        <li>
+          <a class=" side flex text-white py-3 hover:bg-ungu2 hover:rounded-b-md transition duration-200" id="logout">
+            <img src="../../img/logout.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="" id="logout">Log Out</span>
+          </a>
+        </li>
+      </ul>
+      
+    </nav>
+
+    <!-- END HAMBURGER -->
+    <!-- END NAV -->
+
+    <!-- SIDE -->
+    <nav class="relative min-h-screen lg:fixed hidden lg:flex z-50">
+      <div class="sidebar flex-col bg-ungu1 w-52 mt-[68px]" >
+        <ul class="flex-col">
+          <li class="">
+            <a href="../dashboard/dash.html" class="side active flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/dash.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="../gudang/gudang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/gudang.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Gudang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/satuan.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Satuan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/data.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Kategori Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/checklist.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Pengajuan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/borrow.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Pinjam Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/list.png" alt="" class="w-5 h-5
+               ml-7 mr-2">
+              <span class="">Laporan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="../gudang/gudang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/user.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a class="mt-[143px] side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="logout">
+              <img src="../../img/logout.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span id="logout" class="">Log Out</span>
+            </a>
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+
+    <!-- END SIDE -->
+
+    <!-- CONTENT -->
+<div class="mt-[90px] ml-[13px] sm:ml-0 md:ml-0 lg:ml-[230px] xl:ml-[5px]">
+    <h1 class="font-semibold xl:-mt-[5px] ml-[5px] sm:ml-[10px] md:ml-[15px] absolute text-ungu1 text-[25px] lg:ml-[25px] xl:ml-[220px]">Pengajuan Barang</h1>
+    <div class="absolute bg-pp ml-[6px] sm:ml-[11px] md:ml-[12px] xl:ml-[220px] w-[415px] sm:w-[616px] md:w-[742px] xl:w-[1100px]  h-[720px] md:h-[690px] xl:h-[680px] bg-white p-8 m-96 mt-[120px] xl:mt-[120px] rounded-lg shadow-2xl">
+        
+    </div>
+    <div class="absolute bg-pp ml-[6px] sm:ml-[11px] md:ml-[12px] xl:ml-[220px] w-[415px] sm:w-[615px] md:w-[742px] xl:w-[1100px] h-[50px] md:h-[90px] sm:h-[50px] bg-gradient-to-t from-ungu1 to-ungu2 p-8 m-96 mt-[60px] sm:mt-[60px] xl:mt-[50px] rounded-b-none rounded-lg">
+
+        <h1 class="ml-[100px] sm:ml-[190px] md:ml-[250px] xl:ml-[440px] -mt-4 md:mt-[0px] text-[23px] font-semibold pb-3 text-white">Form Pengajuan</h1>
+        
+        <div class="sm:ml-[100px] md:ml-0">
+            <form action="" class="grid mt-[40px] md:mt-[60px]">
+                <span class="-ml-[5px] md:ml-[130px] xl:ml-[320px] mt-[5px] absolute ">Nama Lengkap : </span>
+                <input type="text" name="text" placeholder="" class="ml-[120px] md:ml-[270px] xl:ml-[450px] w-[240px] md:w-[300px] max-w-md border border-slate-400 bg-slate-100 rounded-full px-4 py-2 text-xs font-semibold focus:border-ungu1 focus:bg-white focus:outline-none mb-2" required>
+                
+                <label for="nameV" class="-ml-[5px] md:ml-[130px] xl:ml-[320px] mt-[10px]">Instansi :</label>
+                    <select type="text" name="" id="nameV" placeholder="Nama Kategori" class="ml-[120px] md:ml-[270px] xl:ml-[450px] text-sm w-[240px] md:w-[300px] mt-[50px] absolute rounded-full h-8 border border-slate-400">
+                        <option value="">-- pilih instansi --</option>
+                        <option value="">-</option>
+                        <option value="">-</option>
+                        <option value="">-</option>
+                        <option value="">-</option>
+                    </select>
+                <label for="name" class="-ml-[5px] md:ml-[130px] xl:ml-[320px] mt-[25px]">Kategori Barang :</label>
+                    <select type="text" name="" id="name" placeholder="Kategori Barang" class="ml-[120px] md:ml-[270px] xl:ml-[450px] text-sm w-[240px] md:w-[300px] mt-[100px] absolute rounded-full h-8 border border-slate-400">
+                        <option value="">-- pilih kategori --</option>
+                        <option value="">Elektronik</option>
+                        <option value="">Alat Tulis</option>
+                        <option value="">Pakaian</option>
+                        <option value="">Furniture</option>
+                    </select>
+                <span class="-ml-[5px] md:ml-[130px] xl:ml-[320px] mt-[26px]">Nama Barang : </span>
+                <input type="text" name="text" placeholder="" class="-mt-[28px] ml-[120px] md:ml-[270px] xl:ml-[450px] w-[240px] md:w-[300px] max-w-md border border-slate-400 bg-slate-100 rounded-full px-4 py-2 text-xs font-semibold focus:border-ungu1 focus:bg-white focus:outline-none mb-2" required>
+                <span class="-ml-[5px] md:ml-[130px] xl:ml-[320px] mt-[12px]">Type Merk : </span>
+                <input type="text" name="text" placeholder="" class="-mt-[28px] ml-[120px] md:ml-[270px] xl:ml-[450px] w-[240px] md:w-[300px] max-w-md border border-slate-400 bg-slate-100 rounded-full px-4 py-2 text-xs font-semibold focus:border-ungu1 focus:bg-white focus:outline-none mb-2" required>
+                <label for="name" class="-ml-[5px] md:ml-[130px] xl:ml-[320px] mt-[12px]">Satuan :</label>
+                    <select type="text" name="" id="name" placeholder="Kategori Barang" class="ml-[120px] md:ml-[270px] xl:ml-[450px] text-sm w-[240px] md:w-[300px] mt-[248px] absolute rounded-full h-8 border border-slate-400">
+                        <option value="">-- pilih satuan --</option>
+                        <option value="">Kilogram</option>
+                        <option value="">Pcs</option>
+                        <option value="">Pack</option>
+                        <option value="">Dus</option>
+                    </select>
+                <span class="-ml-[5px] md:ml-[130px] xl:ml-[320px] mt-[25px]">Harga Satuan : </span>
+                <input type="text" name="text" placeholder="" class="-mt-[28px] ml-[120px] md:ml-[270px] xl:ml-[450px] w-[240px] md:w-[300px] max-w-md border border-slate-400 bg-slate-100 rounded-full px-4 py-2 text-xs font-semibold focus:border-ungu1 focus:bg-white focus:outline-none mb-2" required>
+                <span class="-ml-[5px] md:ml-[130px] xl:ml-[320px] mt-[13px]">Jumlah Barang : </span>
+                <input type="text" name="text" placeholder="" class="-mt-[28px] ml-[120px] md:ml-[270px] xl:ml-[450px] w-[240px] md:w-[300px] max-w-md border border-slate-400 bg-slate-100 rounded-full px-4 py-2 text-xs font-semibold focus:border-ungu1 focus:bg-white focus:outline-none mb-2" required>
+                <span class="-ml-[5px] md:ml-[130px] xl:ml-[320px] mt-[14px]">Jumlah Barang : </span>
+                <input type="text" name="text" placeholder="" class="-mt-[28px] ml-[120px] md:ml-[270px] xl:ml-[450px] w-[240px] md:w-[300px] max-w-md border border-slate-400 bg-slate-100 rounded-full px-4 py-2 text-xs font-semibold focus:border-ungu1 focus:bg-white focus:outline-none mb-2" required>
+                    <!-- <span class="absolute -ml-[5px] md:ml-[130px] xl:ml-[320px] mt-[105px]">Tanggal : </span>
+                    <input type="date" name="date" placeholder="" class="ml-[120px] md:ml-[270px] mt-[25px] xl:ml-[450px] w-[240px] md:w-[300px] max-w-md border border-slate-400 bg-slate-100 rounded-full px-4 py-2 text-xs font-semibold focus:border-ungu1 focus:bg-white focus:outline-none mb-2"> -->
+            </form>
+
+            <hr class="absolute -ml-[31px] sm:-ml-[132px] md:-ml-[32px] h-0.5 w-[416px] sm:w-[617px] md:w-[743px] xl:w-[1101px] mt-[30px] md:mt-[40px] bg-slate-400">
+
+            <div class="flex ml-[20px] md:ml-[170px] xl:ml-[360px] mt-[70px] md:mt-[80px] xl:mt-[90px]">
+                <button type="submit" class="rounded-lg ml-[80px] px-12 py-2 font-semibold bg-ungu1 hover:bg-opacity-80 text-white transition duration-300 hover:border hover:border-slate-400 hover:bg-white hover:text-slate-400">Simpan</button>
+                
+            </div>
+            <a href="#" type="submit" class="absolute rounded-lg ml-[111px] md:ml-[550px] mt-[35px] md:-mt-[30px] xl:ml-[925px] xl:-mt-[30px] px-8 py-4 font-semibold bg-ungu1 hover:bg-opacity-80 text-white transition duration-300 hover:border hover:border-slate-400 hover:bg-white hover:text-slate-400">Detail <img src="../../img/back.svg" alt="" class="mt-[4px] ml-2 w-4 rotate-180 float-right"></a>
+        </div>
+        
+        <!-- <button class="absolute sm:-mt-[55px] sm:ml-[365px] bg-ungu1 px-6 py-1 rounded-full font-semibold text-white hover:bg-opacity-80">Simpan</button> -->
+        
+    </div>
+</div>   
+    <!-- END CONTENT -->
+    <!-- pop up box -->
+    <div class="modal-popup">
+      <div id="box">
+        <span class="messege font-semibold text-sm md:text-sm lg:text-md">apakah anda yakin ingin logout ?</span>
+        <div class="confirm flex">
+          <a href="#" class="font-semibold text-xs md:text-sm lg:text-md" id="confirmErr">Tidak</a>
+          <a href="../login.html" class="confirmScs font-semibold text-xs md:text-sm lg:text-md">Ya</a>
+        </div>
+      </div>
+    </div>
+    <!-- end of pop up box -->
+    
+<script src="../../dist/script.js"></script>
+<!-- <script>
+  const popup = document.querySelector('.modal-popup');
+
+  // event popup box
+  document.body.addEventListener('click', (e) => {
+    console.log(e.target.id)
+    if( e.target.id == 'logout' ){
+      popup.style.display = 'flex';
+    }else if(e.target.id == 'confirmErr'){
+      popup.style.display = 'none';
+    }
+  })
+</script> -->
+</body>
+</html>

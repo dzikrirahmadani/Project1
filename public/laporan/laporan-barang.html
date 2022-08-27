@@ -1,0 +1,446 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- G-Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+  <!-- End G-Font -->
+  <title>Laporan Barang</title>
+  <!-- link my css -->
+  <link rel="stylesheet" href="../../dist/style.css">
+  <!-- end of  link my css -->
+
+  <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+<!--  -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+
+        /* .bg-pp {
+            width: 100%;
+        } */
+
+      .side{
+        align-items: center;
+      }
+
+      .side:active {
+        background-color: #3B296F;
+      }
+      
+      .navbar {
+        width: 100%;
+      }
+
+      nav {
+        height: 100%;
+      }
+
+      .profile {
+        margin-left: 150px;
+      }
+
+      .nav-input {
+        transition: 1s;
+      }
+
+      /* .kotak {
+        display: flex;
+      } */
+
+    }
+  </style>
+<!--  -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          display: ['group-focus'],
+          opacity: ['group-focus'],
+          inset: ['group-focus'],
+          colors: {
+            clifford: '#da373d',
+            ungu: '',
+            ungu1: '#7B2A8C',
+            ungu2: '#3B296F',
+            biru: '#5968C3',
+            hijau: '#01C94B',
+            kuning: '#FCD712',
+            birumuda: '#05BADF',
+
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+  
+    <!-- NAV -->
+    <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-20">
+      <div class="text-left font-bold items-center ">
+        <a href="">
+          <h3 class="text-white ml-14 lg:ml-4 text-lg block">InVentory</h3>
+        </a>
+        <div>
+        </div>
+      </div>
+      <div class="profile ml-[260px] sm:ml-[350px] float-right lg:ml-[760px] xl:ml-[1080px] md:ml-[475px]">
+        <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">NoFace21</h3> 
+        <img src="../../img/noface.jpg" alt="profile" class="w-7 h-7 rounded-full border"></a>
+      </div>
+      <div class="absolute px-48 box-border lg:mx-[1px] -my-[7px] hidden md:block">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-[13px] ml-3 bi bi-search inline-block text-white absolute" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          <input type="text" name="text" placeholder="Search" class="sm-input placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 lg:w-[1000px] bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
+          </div>
+    </div>
+
+    <!-- HAMBURGER -->
+    <button id="hamburger" class="fixed m-[16px] text-white inline-flex items-center justify-center focus:border h-10 w-10 rounded-md outline-none focus:outline-none lg:hidden z-50">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+      </svg>
+    </button>
+    <nav id="nav-menu" class=" nav-input bg-ungu1 mt-[68px] h-[488px] md:h-[432px] -mr-20 hidden lg:hidden fixed transition duration-1000 rounded-b-md z-50">
+      <ul class="w-[350px]">
+        <li class="ml-[13px] py-2 md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-[13px] ml-3 bi bi-search inline-block text-white absolute" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+        <input type="text" name="text" placeholder="Search" class="placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
+        </li>
+        <li>
+          <a href="../dashboard/dash.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/dash.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="../gudang/gudang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/gudang.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Gudang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/satuan.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Satuan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/data.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Kategori Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/checklist.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Pengajuan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/borrow.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Pinjam Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/list.png" alt="" class="w-5 h-5
+             ml-7 mr-2">
+            <span class="">Laporan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="../profile/profile.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/user.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Profile</span>
+          </a>
+        </li>
+        <li>
+          <a class=" side flex text-white py-3 hover:bg-ungu2 hover:rounded-b-md transition duration-200" id="logout">
+            <img src="../../img/logout.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="" id="logout">Log Out</span>
+          </a>
+        </li>
+      </ul>
+      
+    </nav>
+
+    <!-- END HAMBURGER -->
+    <!-- END NAV -->
+
+    <!-- SIDE -->
+    <nav class="relative min-h-screen lg:fixed hidden lg:flex z-50">
+      <div class="sidebar flex-col bg-ungu1 w-52 mt-[68px]" >
+        <ul class="flex-col">
+          <li class="">
+            <a href="../dashboard/dash.html" class="side active flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/dash.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="../gudang/gudang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/gudang.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Gudang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/satuan.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Satuan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/data.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Kategori Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/checklist.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Pengajuan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/borrow.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Pinjam Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/list.png" alt="" class="w-5 h-5
+               ml-7 mr-2">
+              <span class="">Laporan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="../gudang/gudang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/user.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a class="mt-[143px] side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="logout">
+              <img src="../../img/logout.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span id="logout" class="">Log Out</span>
+            </a>
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+
+    <!-- END SIDE -->
+
+    <!-- CONTENT -->
+    <div class="mt-[90px] ml-[13px] sm:ml-0 md:ml-0 lg:ml-[230px] xl:ml-[5px]">
+    
+        <div class="absolute bg-pp ml-[6px] sm:ml-[11px] md:ml-[12px] xl:ml-[220px] w-[415px] sm:w-[616px] md:w-[742px] xl:w-[1100px] h-[50px] md:h-[90px] sm:h-[50px] bg-gradient-to-t from-ungu1 to-ungu2 p-8 m-96 -mt-[1px] sm:mt-[1px] xl:mt-[50px] rounded-b-none rounded-lg z-10">
+
+            <h1 class="ml-[100px] sm:ml-[190px] md:ml-[250px] xl:ml-[440px] -mt-4 md:mt-[0px] text-[23px] font-semibold pb-3 text-white">Laporan Barang</h1>
+            <a href="" class="absolute -mt-[20px]"><p class="text-[12px] text-white ml-[295px] sm:ml-[490px] md:ml-[610px]">Lihat Lainnya ></p></a>
+            
+            <!-- <button class="absolute sm:-mt-[55px] sm:ml-[365px] bg-ungu1 px-6 py-1 rounded-full font-semibold text-white hover:bg-opacity-80">Simpan</button> -->
+        </div>
+        <div class="absolute bg-pp ml-[6px] sm:ml-[11px] md:ml-[12px] xl:ml-[220px] w-[415px] sm:w-[616px] md:w-[742px] xl:w-[1100px]  h-[950px] md:h-[500px] xl:h-[580px] bg-white p-8 m-96 mt-[60px] xl:mt-[120px] rounded-b-lg shadow-2xl">
+
+        <div class="grid gap-y-[190px] md:gap-y-[155px] md:gap-x-[40px] md:grid-cols-2">
+            <!-- Barang Masuk -->
+            <div class="w-[350px] sm:w-[550px] md:w-[340px] h-[40px] bg-ungu1 sm:mt-[] md:mt-[20px] md:-ml-[12px] lg:mt-[20px]">
+                <h1 class="absolute ml-[120px] sm:ml-[220px] md:ml-[120px] mt-[5px] text-white text-lg">Barang Masuk</h1>
+                <div class="w-[350px] sm:w-[550px] md:w-[340px] h-[200px] border border-slate-400">
+                    <span class="absolute text-slate-900 ml-[20px] mt-[50px]">Perbulan</span>
+                    <div class="flex md:-ml-[6px]">
+                        <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] mt-[85px] h-8 border border-slate-400">
+                            <option value="">-- Pilih Bulan --</option>
+                            <option value="">Januari</option>
+                            <option value="">Februari</option>
+                            <option value="">Maret</option>
+                            <option value="">April</option>
+                            <option value="">Mei</option>
+                            <option value="">Juni</option>
+                            <option value="">Juli</option>
+                            <option value="">Agustus</option>
+                            <option value="">September</option>
+                            <option value="">Oktober</option>
+                            <option value="">November</option>
+                            <option value="">Desember</option>
+                        </select>
+                        <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] mt-[85px] h-8 border border-slate-400">
+                            <option value="">-- Pilih Tahun --</option>
+                            <option value="">2020</option>
+                            <option value="">2021</option>
+                            <option value="">2022</option>
+                            <option value="">2023</option>
+                        </select>
+                    </div>
+                    <button class="bg-ungu1 w-[310px] sm:w-[510px] md:w-[310px] h-[25px] ml-[20px] md:ml-[15px] mt-[25px] text-white">Cetak</button>
+                    <a href="" class="text-sm float-right mt-[5px] mr-[10px]">Lihat Detail ></a>
+                </div>
+            </div>
+            <!-- End Barang Masuk -->
+
+            <!-- Barang Keluar -->
+            <div class="w-[350px] sm:w-[550px] md:w-[340px] h-[40px] bg-ungu1 sm:mt-[] md:mt-[20px] md:-ml-[12px] lg:mt-[20px]">
+                <h1 class="absolute ml-[120px] sm:ml-[220px] md:ml-[120px] mt-[5px] text-white text-lg">Barang Keluar</h1>
+                <div class="w-[350px] sm:w-[550px] md:w-[340px] h-[200px] border border-slate-400">
+                    <span class="absolute text-slate-900 ml-[20px] mt-[50px]">Perbulan</span>
+                    <div class="flex md:-ml-[6px]">
+                        <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] mt-[85px] h-8 border border-slate-400">
+                            <option value="">-- Pilih Bulan --</option>
+                            <option value="">Januari</option>
+                            <option value="">Februari</option>
+                            <option value="">Maret</option>
+                            <option value="">April</option>
+                            <option value="">Mei</option>
+                            <option value="">Juni</option>
+                            <option value="">Juli</option>
+                            <option value="">Agustus</option>
+                            <option value="">September</option>
+                            <option value="">Oktober</option>
+                            <option value="">November</option>
+                            <option value="">Desember</option>
+                        </select>
+                        <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] mt-[85px] h-8 border border-slate-400">
+                            <option value="">-- Pilih Tahun --</option>
+                            <option value="">2020</option>
+                            <option value="">2021</option>
+                            <option value="">2022</option>
+                            <option value="">2023</option>
+                    </select>
+                    </div>
+                    <button class="bg-ungu1 w-[310px] sm:w-[510px] md:w-[310px] h-[25px] ml-[20px] md:ml-[15px] mt-[25px] text-white">Cetak</button>
+                    <a href="" class="text-sm float-right mt-[5px] mr-[10px]">Lihat Detail ></a>
+                </div>
+            </div>
+            <!-- End Barang Keluar -->
+
+            <!-- Data Supplier -->
+            <div class="w-[350px] sm:w-[550px] md:w-[340px] h-[40px] bg-ungu1 sm:mt-[] md:mt-[20px] md:-ml-[12px] lg:mt-[20px]">
+                <h1 class="absolute ml-[120px] sm:ml-[220px] md:ml-[120px] mt-[5px] text-white text-lg">Data Supplier</h1>
+                <div class="w-[350px] sm:w-[550px] md:w-[340px] h-[200px] border border-slate-400">
+                    <span class="absolute text-slate-900 ml-[20px] mt-[50px]">Perbulan</span>
+                    <div class="flex md:-ml-[6px]">
+                        <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] mt-[85px] h-8 border border-slate-400">
+                            <option value="">-- Pilih Bulan --</option>
+                            <option value="">Januari</option>
+                            <option value="">Februari</option>
+                            <option value="">Maret</option>
+                            <option value="">April</option>
+                            <option value="">Mei</option>
+                            <option value="">Juni</option>
+                            <option value="">Juli</option>
+                            <option value="">Agustus</option>
+                            <option value="">September</option>
+                            <option value="">Oktober</option>
+                            <option value="">November</option>
+                            <option value="">Desember</option>
+                        </select>
+                        <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] mt-[85px] h-8 border border-slate-400">
+                            <option value="">-- Pilih Tahun --</option>
+                            <option value="">2020</option>
+                            <option value="">2021</option>
+                            <option value="">2022</option>
+                            <option value="">2023</option>
+                    </select>
+                    </div>
+                    <button class="bg-ungu1 w-[310px] sm:w-[510px] md:w-[310px] h-[25px] ml-[20px] md:ml-[15px] mt-[25px] text-white">Cetak</button>
+                    <a href="" class="text-sm float-right mt-[5px] mr-[10px]">Lihat Detail ></a>
+                </div>
+            </div>
+            <!-- End Data Supplier -->
+
+            <!-- Peminjaman Barang -->
+            <div class="w-[350px] sm:w-[550px] md:w-[340px] h-[40px] bg-ungu1 sm:mt-[] md:mt-[20px] md:-ml-[12px] lg:mt-[20px]">
+                <h1 class="absolute ml-[100px] sm:ml-[200px] md:ml-[100px] mt-[5px] text-white text-lg">Peminjaman Barang</h1>
+                <div class="w-[350px] sm:w-[550px] md:w-[340px] h-[200px] border border-slate-400">
+                    <span class="absolute text-slate-900 ml-[20px] mt-[50px]">Perbulan</span>
+                    <div class="flex md:-ml-[6px]">
+                        <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] mt-[85px] h-8 border border-slate-400">
+                            <option value="">-- Pilih Bulan --</option>
+                            <option value="">Januari</option>
+                            <option value="">Februari</option>
+                            <option value="">Maret</option>
+                            <option value="">April</option>
+                            <option value="">Mei</option>
+                            <option value="">Juni</option>
+                            <option value="">Juli</option>
+                            <option value="">Agustus</option>
+                            <option value="">September</option>
+                            <option value="">Oktober</option>
+                            <option value="">November</option>
+                            <option value="">Desember</option>
+                        </select>
+                        <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] mt-[85px] h-8 border border-slate-400">
+                            <option value="">-- Pilih Tahun --</option>
+                            <option value="">2020</option>
+                            <option value="">2021</option>
+                            <option value="">2022</option>
+                            <option value="">2023</option>
+                    </select>
+                    </div>
+                    <button class="bg-ungu1 w-[310px] sm:w-[510px] md:w-[310px] h-[25px] ml-[20px] md:ml-[15px] mt-[25px] text-white">Cetak</button>
+                    <a href="" class="text-sm float-right mt-[5px] mr-[10px]">Lihat Detail ></a>
+                </div>
+            </div>
+            <!-- End Peminjaman Barang -->
+
+        </div>  
+    </div>   
+        <!-- END CONTENT -->
+
+        <!-- pop up box -->
+        <div class="modal-popup">
+        <div id="box">
+            <span class="messege font-semibold text-sm md:text-sm lg:text-md">apakah anda yakin ingin logout ?</span>
+            <div class="confirm flex">
+            <a href="#" class="font-semibold text-xs md:text-sm lg:text-md" id="confirmErr">Tidak</a>
+            <a href="../login.html" class="confirmScs font-semibold text-xs md:text-sm lg:text-md">Ya</a>
+            </div>
+        </div>
+        </div>
+        <!-- end of pop up box -->
+    </div>
+    
+<script src="../../dist/script.js"></script>
+<!-- <script>
+  const popup = document.querySelector('.modal-popup');
+
+  // event popup box
+  document.body.addEventListener('click', (e) => {
+    console.log(e.target.id)
+    if( e.target.id == 'logout' ){
+      popup.style.display = 'flex';
+    }else if(e.target.id == 'confirmErr'){
+      popup.style.display = 'none';
+    }
+  })
+</script> -->
+</body>
+</html>

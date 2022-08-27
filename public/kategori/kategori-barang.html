@@ -1,0 +1,435 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- G-Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+  <!-- End G-Font -->
+  <title>Kategori Barang</title>
+  <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+<!--  -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+
+      /* title style */
+      .title{
+        margin-left: 15rem;
+        margin-top: 5rem;
+      }
+      .title > h1{
+        font-size: 28px;
+        color: #7B2A8C;
+        text-transform: capitalize;
+      }
+      /* end of title style */
+
+      /* card style */
+      /* .cards{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        margin: 5px 0;
+        position: relative;
+      } */
+      .card{
+        width: 16.5rem;
+        height: 9.9rem;
+        /* margin-left: 15rem; */
+        margin-top: 1.5rem;
+        /* background-color: #fff; */
+        border-radius: 15px;
+        box-shadow: 0 .1rem 5px 1.5px rgba(0,0,0,.2);
+        padding: 1.5rem;
+        padding-bottom: 0;
+        padding-top: 3rem;
+      }
+      .content{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .img-card-one{
+        width: 2.5rem;
+      }
+      /* .title-card{
+        font-size: 1.3em;
+        margin-inline: .5rem;
+        margin-top: .5rem;
+        text-transform: uppercase;
+        color: #5968C3;
+      } */
+      .footer-card{
+        margin-top: 2rem;
+        margin-left: 9rem;
+        margin-right: -1rem;
+        margin-bottom: -1rem;
+      }
+      .footer-card > a > span{
+        color: #808080;
+        text-transform: capitalize;
+        font-size: .7em;
+      }
+      .footer-card > a > .show-detail{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .footer-card > a > .show-detail > span{
+        margin-inline: .5rem;
+      }
+
+      /* .card:nth-child(2), .card:nth-child(3), .card:nth-child(4){
+        margin-left: 1rem;
+      } */
+      .card:nth-child(2) > .content, .card:nth-child(3) > .content, .card:nth-child(4) > .content{
+        margin-top: .7rem;
+      }
+      /* end of card style */
+
+      /* responsive style */
+      /* @media(max-width: 767px){
+        .cards{
+          width: 180%;
+          padding: 3rem;
+        }
+      } */
+
+      @media (max-width: 639px){
+        .title{
+          margin-left: 0;
+          text-align: center;
+        }
+        .card{
+          width: 100%;
+        }
+        .cards{
+          width: 100%;
+          padding: 2rem;
+          margin-inline: 4rem;
+        }
+        .show-detail{
+          margin-right: -4rem;
+        }
+      }
+      @media (max-width: 375px) {
+        .title{
+          margin-left: 0;
+          text-align: center;
+        }
+        .card{
+          width: 100%;
+        }
+        .cards{
+          width: 100%;
+          padding: 2rem;
+        }
+      }
+      /* end of responsive style */
+      
+
+      .side{
+        align-items: center;
+      }
+
+      .navbar {
+        width: 100%;
+      }
+
+      nav {
+        height: 100%;
+      }
+
+      .profile {
+        margin-left: 150px;
+      }
+
+      .nav-input {
+        transition: 1s;
+      }
+
+    }
+  </style>
+<!--  -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          display: ['group-focus'],
+          opacity: ['group-focus'],
+          inset: ['group-focus'],
+          colors: {
+            clifford: '#da373d',
+            ungu: '',
+            ungu1: '#7B2A8C',
+            ungu2: '#3B296F',
+            biru: '#5968C3',
+            birumuda: '#05BADF',
+            kuning: '#FCD712',
+            hijau: '#01C94B',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+
+    <!-- NAV -->
+    <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
+      <div class="text-left font-bold items-center ">
+        <a href="">
+          <h3 class="text-white ml-14 lg:ml-4 text-lg block">InVentory</h3>
+        </a>
+        <div>
+        </div>
+      </div>
+      <div class="profile ml-[260px] sm:ml-[350px] float-right lg:ml-[760px] xl:ml-[1100px] md:ml-[475px]">
+        <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">NoFace21</h3> 
+        <img src="../../img/noface.jpg" alt="profile" class="w-7 h-7 rounded-full border"></a>
+      </div>
+      <div class="absolute px-48 box-border lg:mx-[1px] -my-[7px] hidden md:block">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-[13px] ml-3 bi bi-search inline-block text-white absolute" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          <input type="text" name="text" placeholder="Search" class="sm-input placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 lg:w-[1000px] bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
+          </div>
+    </div>
+
+    <!-- HAMBURGER -->
+    <button id="hamburger" class="fixed m-[16px] text-white inline-flex items-center justify-center focus:border h-10 w-10 rounded-md outline-none focus:outline-none lg:hidden z-10">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+      </svg>
+    </button>
+    <nav id="nav-menu" class="nav-input bg-ungu1 mt-[68px] h-[488px] md:h-[432px] -mr-20 hidden lg:hidden fixed transition duration-1000 rounded-b-md z-50">
+      <ul class="w-[350px]">
+        <li class="ml-[13px] py-2 md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-[13px] ml-3 bi bi-search inline-block text-white absolute" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+        <input type="text" name="text" placeholder="Search" class="placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
+        </li>
+        <li>
+          <a href="../dashboard/dash.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/dash.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="../gudang/gudang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/gudang.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Gudang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/satuan.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Satuan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/data.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Kategori Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/checklist.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Pengajuan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/borrow.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Pinjam Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/list.png" alt="" class="w-5 h-5
+             ml-7 mr-2">
+            <span class="">Laporan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/user.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="login.html" class=" side flex text-white py-3 hover:bg-ungu2 hover:rounded-b-md transition duration-200">
+            <img src="../../img/logout.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Log Out</span>
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <!-- END HAMBURGER -->
+    <!-- END NAV -->
+
+    <!-- SIDE -->
+    <nav class="relative min-h-screen lg:fixed hidden lg:flex">
+      <div class="flex-col bg-ungu1 w-52 mt-[68px]" >
+        <ul class="flex-col">
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/dash.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/gudang.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Gudang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/satuan.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Satuan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/data.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Kategori Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/checklist.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Pengajuan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/borrow.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Pinjam Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/list.png" alt="" class="w-5 h-5
+               ml-7 mr-2">
+              <span class="">Laporan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/user.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="login.html" class="mt-[143px] side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/logout.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Log Out</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <!-- END SIDE -->
+
+    <!-- CONTENT -->
+    <section class="satuan-barang -ml-[70px] lg:-ml-9 xl:-ml-5 sm:-ml-2 md:-ml-3">
+      <div class="title">
+        <h1 class="font-semibold ml-[15px]">satuan barang</h1>
+      </div>
+      <div class="cards grid sm:grid-cols-2 sm:gap-x-10 sm:mx-100 sm:ml-1 sm:mx-5 sm:p-3 md:grid-cols-2 md:ml-5 md:mr-5 lg:grid-cols-3 lg:ml-60 xl:grid-cols-4 xl:ml-60 gap-x-7">
+        <div class="card sm:w-[305px] md:w-[350px] lg:w-[16rem] xl:w-[16rem] bg-biru">
+          <div class="content flex-col -mt-[14px] -ml-[25px]">
+            <img src="../../img/icons/cpu.png" alt="" class="absolute w-[85px] -mt-[20px] -ml-[100px]">
+            <p class="text-white text-md absolute -mt-[80px] ml-[110px]">Produk Elektronik</p>
+            <span class="ml-[50px] mt-[7px] font-semibold text-white text-[50px]">15</span>
+          </div>
+          <div class="footer-card">
+            <a href="#">
+              <span class="absolute show-detail md:ml-[5rem] lg:ml-[0]">
+                <span class=" text-white ml-[50px] -mt-[20px] lg:ml-0">lihat detail ></span>
+                <div class="absolute -mt-[15px] -ml-[44px] sm:-ml-[117px] md:-ml-[231px] lg:-ml-[166px] w-[380px] sm:w-[305px] md:w-[350px] lg:w-[256px] h-[35px] bg-black opacity-25 rounded-b-[15px]"></div>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="card sm:w-[305px] md:w-[350px] lg:w-[16rem] xl:w-[16rem] bg-hijau">
+          <div class="flex-col -mt-[1px] -m-[5px] lg:-ml-[40px]">
+            <img src="../../img/icons/pen.png" alt="" class="absolute w-[80px] -mt-[20px] ml-[50px]">
+            <p class="text-white text-md absolute -mt-[20px] ml-[110px]">Produk Alat Tulis</p>
+            <span class="ml-[120px] mt-[6px] font-semibold text-white text-[50px]">85</span>
+          </div>
+          <div class="footer-card">
+            <a href="#">
+              <span class="absolute show-detail md:ml-[5rem] lg:ml-[0]">
+                <span class=" text-white -mt-[20px]">lihat detail ></span>
+                <div class="absolute -mt-[15px] -ml-[44px] sm:-ml-[117px] md:-ml-[231px] lg:-ml-[166px] w-[380px] sm:w-[305px] md:w-[350px] lg:w-[256px] h-[35px] bg-black opacity-25 rounded-b-[15px]"></div>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="card sm:w-[305px] md:w-[350px] lg:w-[16rem] xl:w-[16rem] bg-kuning">
+          <div class="flex-col -mt-[1px] -m-[5px] lg:-ml-[40px]">
+            <img src="../../img/icons/shirt.png" alt="" class="absolute w-[80px] -mt-[13px] ml-[50px]">
+            <p class="text-white text-md absolute -mt-[20px] ml-[130px]">Produk Pakaian</p>
+            <span class="ml-[130px] mt-[6px] font-semibold text-white text-[50px]">343</span>
+          </div>
+          <div class="footer-card">
+            <a href="#">
+              <span class="absolute show-detail md:ml-[5rem] lg:ml-[0]">
+                <span class=" text-white -mt-[20px]">lihat detail ></span>
+                <div class="absolute -mt-[15px] -ml-[44px] sm:-ml-[117px] md:-ml-[231px] lg:-ml-[166px] w-[380px] sm:w-[305px] md:w-[350px] lg:w-[256px] h-[35px] bg-black opacity-25 rounded-b-[15px]"></div>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="card sm:w-[305px] md:w-[350px] lg:w-[16rem] xl:w-[16rem] bg-birumuda">
+          <div class="flex-col -mt-[1px] -m-[5px] lg:-ml-[40px]">
+            <img src="../../img/icons/lamp.png" alt="" class="absolute w-[55px] -mt-[13px] ml-[55px]">
+            <p class="text-white text-md absolute -mt-[20px] ml-[125px]">Produk Furniture</p>
+            <span class="ml-[125px] mt-[6px] font-semibold text-white text-[50px]">118</span>
+          </div>
+          <div class="footer-card">
+            <a href="#">
+              <span class="absolute show-detail md:ml-[5rem] lg:ml-[0]">
+                <span class=" text-white -mt-[20px]">lihat detail ></span>
+                <div class="absolute -mt-[15px] -ml-[44px] sm:-ml-[117px] md:-ml-[231px] lg:-ml-[166px] w-[380px] sm:w-[305px] md:w-[350px] lg:w-[256px] h-[35px] bg-black opacity-25 rounded-b-[15px]"></div>
+              </span>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- END CONTENT -->
+
+<script src="../dist/script.js"></script>
+</body>
+</html>

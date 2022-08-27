@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- G-Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+  <!-- End G-Font -->
+  <title>Dashboard</title>
+  <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+<!--  -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+
+      .side{
+        align-items: center;
+      }
+
+      .side:active {
+        background-color: #3B296F;
+      }
+      
+      .navbar {
+        width: 100%;
+      }
+
+      nav {
+        height: 100%;
+      }
+
+      .profile {
+        margin-left: 150px;
+      }
+
+      .nav-input {
+        transition: 1s;
+      }
+
+      /* .kotak {
+        display: flex;
+      } */
+
+    }
+  </style>
+<!--  -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          display: ['group-focus'],
+          opacity: ['group-focus'],
+          inset: ['group-focus'],
+          colors: {
+            clifford: '#da373d',
+            ungu: '',
+            ungu1: '#7B2A8C',
+            ungu2: '#3B296F',
+            biru: '#5968C3',
+            hijau: '#01C94B',
+            kuning: '#FCD712',
+            birumuda: '#05BADF',
+
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+  
+    <!-- NAV -->
+    <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
+        <div class="text-left font-bold items-center ">
+          <a href="">
+            <h3 class="text-white ml-14 lg:ml-4 text-lg block">InVentory</h3>
+          </a>
+          <div>
+          </div>
+        </div>
+        <div class="profile ml-[260px] sm:ml-[350px] float-right lg:ml-[760px] xl:ml-[1100px] md:ml-[475px]">
+          <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">NoFace21</h3> 
+          <img src="../../img/noface.jpg" alt="profile" class="w-7 h-7 rounded-full border"></a>
+        </div>
+        <div class="absolute px-48 box-border lg:mx-[1px] -my-[7px] hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-[13px] ml-3 bi bi-search inline-block text-white absolute" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+            <input type="text" name="text" placeholder="Search" class="sm-input placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 lg:w-[1000px] bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
+            </div>
+    </div>
+
+    <!-- HAMBURGER -->
+    <button id="hamburger" class="fixed m-[16px] text-white inline-flex items-center justify-center focus:border h-10 w-10 rounded-md outline-none focus:outline-none lg:hidden z-50">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+      </svg>
+    </button>
+    <nav id="nav-menu" class=" nav-input bg-ungu1 mt-[68px] h-[488px] md:h-[432px] -mr-20 hidden lg:hidden fixed transition duration-1000 rounded-b-md z-50">
+      <ul class="w-[350px]">
+        <li class="ml-[13px] py-2 md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-[13px] ml-3 bi bi-search inline-block text-white absolute" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+        <input type="text" name="text" placeholder="Search" class="placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
+        </li>
+        <li>
+          <a href="../dashboard/dash.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/dash.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="../gudang/gudang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/gudang.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Gudang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/satuan.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Satuan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/data.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Kategori Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/checklist.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Pengajuan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/borrow.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Pinjam Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/list.png" alt="" class="w-5 h-5
+             ml-7 mr-2">
+            <span class="">Laporan Barang</span>
+          </a>
+        </li>
+        <li>
+          <a href="../profile/profile.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/user.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="../login.html" class=" side flex text-white py-3 hover:bg-ungu2 hover:rounded-b-md transition duration-200">
+            <img src="../../img/logout.png" alt="" class="w-4 h-4
+             ml-7 mr-2">
+            <span class="">Log Out</span>
+          </a>
+        </li>
+      </ul>
+      
+    </nav>
+
+    <!-- END HAMBURGER -->
+    <!-- END NAV -->
+
+    <!-- SIDE -->
+    <nav class="relative min-h-screen lg:fixed hidden lg:flex z-50">
+      <div class="flex-col bg-ungu1 w-52 mt-[68px]" >
+        <ul class="flex-col">
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/dash.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="../gudang/gudang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/gudang.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Gudang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/satuan.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Satuan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/data.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Kategori Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/checklist.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Pengajuan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/borrow.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Pinjam Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/list.png" alt="" class="w-5 h-5
+               ml-7 mr-2">
+              <span class="">Laporan Barang</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../public/profile/profile.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/user.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="login.html" class="mt-[143px] side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+              <img src="../../img/logout.png" alt="" class="w-4 h-4
+               ml-7 mr-2">
+              <span class="">Log Out</span>
+            </a>
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+
+    <!-- END SIDE -->
+
+    <!-- CONTENT -->
+    
+    <div class="p-8 text-ungu1-font-semibold m-96 mt-12 ml-[10px] xl:ml-[195px] w-[100%] md:-ml-[18px]">
+      <div class="flex lg:ml-[220px] xl:ml-0">
+        <h1 class="text-2xl font-semibold text-ungu1 mr-[20px]">Dashboard</h1>
+        <input type="date" id="tanggal" name="tanggal" class="rounded-lg text-sm text-gray-700 px-10">
+      </div>
+      <div class="grid lg:ml-[220px] xl:ml-0 md:grid-cols-2 md:gap-x-[380px] lg:grid-cols-3 xl:grid-cols-4 gap-x-[285px] lg:gap-x-[260px] xl:gap-x-[285px]"> 
+          <a href="../gudang/gudang.html" class="w-[350px] sm:w-[550px] md:w-[360px] lg:w-[240px] xl:w-[264px] h-[150px] xl:h-[70px] bg-white rounded-lg shadow-xl mt-5">
+              <img src="../../img/barstatic.png" alt="" class="w-12 h-12 absolute ml-[45px] lg:ml-[33px] mt-[50px] xl:w-6 xl:h-6 xl:ml-[21px] xl:mt-[23px]">
+            <div class="ml-[25px] mt-7 w-[90px] lg:ml-[13px] h-[90px] bg-biru rounded-[25px] xl:rounded-2xl xl:w-[50px] xl:h-[50px] xl:mt-[10px] xl:ml-2">
+              <h1 class="absolute -z-5 ml-[200px] -mt-2 lg:ml-[140px] font-semibold text-[50px] xl:text-[35px] xl:ml-[180px] xl:-mt-[13px]">561</h1>
+              <p class="absolute -z-5 ml-[170px] lg:ml-[100px] mt-16 font-semibold text-slate-600 xl:text-[13px] xl:ml-[140px] xl:mt-[30px]">Total Inventaris</p>
+            </div>
+          </a> 
+
+          <a href="" class="w-[350px] sm:w-[550px] md:w-[360px] lg:w-[240px] xl:w-[264px] h-[150px] xl:h-[70px] bg-white rounded-lg shadow-xl mt-5">
+              <img src="../../img/recieve.png" alt="" class="w-16 h-16 absolute ml-[39px] lg:ml-[24px] mt-[43px] xl:w-10 xl:h-10 xl:ml-[13px] xl:mt-[16px]">
+            <div class="ml-[25px] mt-7 w-[90px] lg:ml-[12px] h-[90px] bg-hijau rounded-[25px] xl:rounded-2xl xl:w-[50px] xl:h-[50px] xl:mt-[10px] xl:ml-2">
+              <h1 class="absolute -z-5 ml-[240px] -mt-2 lg:ml-[140px] font-semibold text-[50px] xl:text-[35px] xl:ml-[215px] xl:-mt-[13px]">5</h1>
+              <p class="absolute -z-5 ml-[170px] lg:ml-[100px] mt-16 font-semibold text-slate-600 xl:text-[13px] xl:ml-[140px] xl:mt-[30px]">Barang Diterima</p>
+            </div>
+          </a> 
+
+          <a href="" class="w-[350px] sm:w-[550px] md:w-[360px] lg:w-[240px] xl:w-[264px] h-[150px] xl:h-[70px] bg-white rounded-lg shadow-xl mt-5">
+              <img src="../../img/download.png" alt="" class="w-12 h-12 absolute ml-[46px] lg:ml-[37px] mt-[50px] xl:w-6 xl:h-6 xl:ml-[21px] xl:mt-[23px]">
+            <div class="ml-[25px] mt-7 w-[90px] lg:ml-[17px] h-[90px] bg-kuning rounded-[25px] xl:rounded-2xl xl:w-[50px] xl:h-[50px] xl:mt-[10px] xl:ml-2">
+              <h1 class="absolute -z-5 ml-[240px] -mt-2 lg:ml-[140px] font-semibold text-[50px] xl:text-[35px] xl:ml-[200px] xl:-mt-[13px]">2</h1>
+              <p class="absolute -z-5 ml-[170px] lg:ml-[100px] mt-16 font-semibold text-slate-600 xl:text-[13px] xl:ml-[140px] xl:mt-[30px]">Barang Masuk</p>
+            </div>
+          </a> 
+
+          <a href="" class="w-[350px] sm:w-[550px] md:w-[360px] lg:w-[240px] xl:w-[264px] h-[150px] xl:h-[70px] bg-white rounded-lg shadow-xl mt-5">
+              <img src="../../img/upload.png" alt="" class="w-12 h-12 absolute ml-[46px] lg:ml-[34px] mt-[50px] xl:w-6 xl:h-6 xl:ml-[21px] xl:mt-[23px]">
+            <div class="ml-[25px] mt-7 w-[90px] lg:ml-[13px] h-[90px] bg-birumuda rounded-[25px] xl:rounded-2xl xl:w-[50px] xl:h-[50px] xl:mt-[10px] xl:ml-2">
+              <h1 class="absolute -z-5 ml-[240px] -mt-2 lg:ml-[145px] font-semibold text-[50px] xl:text-[35px] xl:ml-[200px] xl:-mt-[13px]">5</h1>
+              <p class="absolute -z-5 ml-[170px] lg:ml-[110px] mt-16 font-semibold text-slate-600 xl:text-[13px] xl:ml-[140px] xl:mt-[30px]">Barang Keluar</p>
+            </div>
+          </a> 
+
+          <a href="" class="w-[350px] sm:w-[550px] md:w-[360px] lg:w-[240px] xl:w-[264px] h-[150px] xl:h-[70px] bg-white rounded-lg shadow-xl mt-5 mb-5">
+              <img src="../../img/check.png" alt="" class="w-12 h-12 absolute ml-[46px] lg:ml-[35px] mt-[50px] xl:w-6 xl:h-6 xl:ml-[21px] xl:mt-[23px]">
+            <div class="ml-[25px] mt-7 w-[90px] lg:ml-[15px] h-[90px] bg-ungu1 rounded-[25px] xl:rounded-2xl xl:w-[50px] xl:h-[50px] xl:mt-[10px] xl:ml-2">
+              <h1 class="absolute -z-5 ml-[240px] -mt-2 lg:ml-[140px] font-semibold text-[50px] xl:text-[35px] xl:ml-[200px] xl:-mt-[13px]">3</h1>
+              <p class="absolute -z-5 ml-[170px] lg:ml-[110px] mt-16 font-semibold text-slate-600 xl:text-[13px] xl:ml-[140px] xl:mt-[30px]">Data Supplier</p>
+            </div>
+          </a> 
+      </div>
+    </div>
+    
+    <!-- <div class="flex-col p-8 text-ungu1-font-semibold m-96 mt-12 -ml-[10px] lg:pl-[240px]">
+      <div class="flex">
+        
+        <?xml version="1.0" ?><svg class="z-10 absolute mt-[105px] lg:mt-[86px] ml-[42px] lg:ml-[37px] lg:w-[35px] lg:h-[35px]" height="55px" version="1.1" viewBox="0 0 48 48" width="55px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g id="Artboard-Copy" transform="translate(-167.000000, -129.000000)"><path d="M178.001,149.9995 C176.896,149.9995 176,150.8955 176,152.0005 L176,165.9995 C176,167.1045 176.896,168.0005 178.001,168.0005 L182.001,168.0005 C183.104,168.0005 184,167.1045 184,165.9995 L184,152.0005 C184,150.8955 183.104,149.9995 182.001,149.9995 L178.001,149.9995 Z M200,133.9995 C198.895,133.9995 198.001,134.8955 198.001,136.0005 L198.001,165.9995 C198.001,167.1045 198.895,168.0005 200,168.0005 L204,168.0005 C205.105,168.0005 205.999,167.1045 205.999,165.9995 L205.999,136.0005 C205.999,134.8955 205.105,133.9995 204,133.9995 L200,133.9995 Z M189.001,141.9995 C187.895,141.9995 186.999,142.8955 186.999,144.0005 L186.999,165.9995 C186.999,167.1045 187.895,168.0005 189.001,168.0005 L193.001,168.0005 C194.105,168.0005 195,167.1045 195,165.9995 L195,144.0005 C195,142.8955 194.105,141.9995 193.001,141.9995 L189.001,141.9995 Z" fill="#fff" id="chart3"/><g id="slices" transform="translate(47.000000, 9.000000)"/></g></g></svg>
+        
+        <h1 class="text-2xl font-semibold text-ungu1 mr-[20px]">Dashboard</h1>
+        <input type="date" id="tanggal" name="tanggal" class="rounded-md text-sm text-gray-700 px-12">
+      </div>
+      <div class="">
+        <div class="mt-5 w-[400px] h-[150px] lg:w-[300px] lg:h-[95px] rounded-2xl bg-white shadow-md">
+          <div class="absolute w-[80px] h-[80px] lg:w-[50px] lg:h-[50px] bg-biru rounded-[13px] mt-[37px] lg:mt-[25px] ml-[30px]"></div>
+          <h1 class="pl-[250px] lg:pl-[195px] text-[70px] lg:text-[45px] font-semibold text-slate-900">561</h1>
+          <p class="block pl-[220px] lg:pl-[180px] pb-5 lg:pb-[20px] text-slate-500 font-semibold text-xl lg:text-sm">Total Inventaris</p>
+        </div>
+      </div>
+      <div class="">
+        <div class="mt-5 w-[400px] h-[150px] lg:w-[300px] lg:h-[95px] rounded-2xl bg-white shadow-md">
+          <div class="absolute w-[80px] h-[80px] lg:w-[50px] lg:h-[50px] bg-biru rounded-[13px] mt-[37px] lg:mt-[25px] ml-[30px]"></div>
+          <h1 class="pl-[250px] lg:pl-[195px] text-[70px] lg:text-[45px] font-semibold text-slate-900">561</h1>
+          <p class="block pl-[220px] lg:pl-[180px] pb-5 lg:pb-[20px] text-slate-500 font-semibold text-xl lg:text-sm">Total Inventaris</p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- END CONTENT -->
+    
+<script src="../../dist/script.js"></script>
+</body>
+</html>
