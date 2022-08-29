@@ -19,7 +19,7 @@
   <style type="text/tailwindcss">
     @layer utilities {
 
-        /* .bg-pp {
+        /* .{
             width: 100%;
         } */
 
@@ -259,162 +259,195 @@
     <!-- END SIDE -->
 
     <!-- CONTENT -->
-    <div class="mt-[90px] ml-[13px] sm:ml-0 md:ml-0 lg:ml-[230px] xl:ml-[5px]">
+    <div class="mt-[80px] xl:mt-[40px] ml-[13px] sm:ml-0 md:ml-0 lg:ml-[230px] xl:ml-[5px] h-[850px]">
     
-        <div class="absolute bg-pp ml-[6px] sm:ml-[11px] md:ml-[12px] xl:ml-[220px] w-[415px] sm:w-[616px] md:w-[742px] xl:w-[1100px] h-[50px] md:h-[90px] sm:h-[50px] bg-gradient-to-t from-ungu1 to-ungu2 p-8 m-96 -mt-[1px] sm:mt-[1px] xl:mt-[50px] rounded-b-none rounded-lg z-10">
+      <div class="absolute -ml-[4px] sm:ml-[11px] md:ml-[12px] xl:ml-[224px] w-[415px] sm:w-[616px] md:w-[742px] xl:w-[1100px] h-[50px] md:h-[90px] sm:h-[50px] bg-gradient-to-t from-ungu1 to-ungu2 p-8 m-96 -mt-[1px] sm:mt-[1px] xl:mt-[50px] rounded-b-none rounded-lg z-10">
 
-            <h1 class="ml-[100px] sm:ml-[190px] md:ml-[250px] xl:ml-[440px] -mt-4 md:mt-[0px] text-[23px] font-semibold pb-3 text-white">Laporan Barang</h1>
-            <a href="" class="absolute -mt-[20px]"><p class="text-[12px] text-white ml-[295px] sm:ml-[490px] md:ml-[610px]">Lihat Lainnya ></p></a>
-            
-            <!-- <button class="absolute sm:-mt-[55px] sm:ml-[365px] bg-ungu1 px-6 py-1 rounded-full font-semibold text-white hover:bg-opacity-80">Simpan</button> -->
+          <h1 class="ml-[100px] sm:ml-[190px] md:ml-[250px] xl:ml-[440px] -mt-4 md:mt-[0px] text-[23px] font-semibold pb-3 text-white">Laporan Barang</h1>
+          
+          <!-- <button class="absolute sm:-mt-[55px] sm:ml-[365px] bg-ungu1 px-6 py-1 rounded-full font-semibold text-white hover:bg-opacity-80">Simpan</button> -->
+      </div>
+      <div class="-ml-[4px] sm:ml-[11px] md:ml-[12px] xl:ml-[224px] w-[415px] sm:w-[616px] md:w-[742px] xl:w-[1100px]  h-[1180px] md:h-[700px] xl:h-[710px] bg-white p-8 mb-3 mt-[60px] xl:mt-[120px] rounded-b-lg shadow-2xl">
+
+      <div class="grid gap-y-[190px] md:gap-y-[155px] md:gap-x-[40px] md:grid-cols-2">
+          <!-- Barang Masuk -->
+          <div class="w-[350px] sm:w-[550px] md:w-[340px] xl:w-[520px] h-[40px] bg-ungu1 sm:mt-[] md:mt-[20px] md:-ml-[12px] lg:mt-[20px]">
+              <h1 class="absolute ml-[120px] sm:ml-[220px] md:ml-[120px] xl:ml-[210px] mt-[5px] text-white text-lg">Barang Masuk</h1>
+              <div class="w-[350px] sm:w-[550px] md:w-[340px] xl:w-[520px] h-[200px] border border-slate-400">
+                  <span class="absolute text-slate-900 ml-[20px] mt-[50px]">Perbulan</span>
+                  <div class="flex md:-ml-[6px]">
+                      <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] xl:ml-[23px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] xl:w-[230px] mt-[85px] h-8 border border-slate-400">
+                          <option value="">-- Pilih Bulan --</option>
+                          <option value="">Januari</option>
+                          <option value="">Februari</option>
+                          <option value="">Maret</option>
+                          <option value="">April</option>
+                          <option value="">Mei</option>
+                          <option value="">Juni</option>
+                          <option value="">Juli</option>
+                          <option value="">Agustus</option>
+                          <option value="">September</option>
+                          <option value="">Oktober</option>
+                          <option value="">November</option>
+                          <option value="">Desember</option>
+                      </select>
+                      <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] xl:ml-[23px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] xl:w-[230px] mt-[85px] h-8 border border-slate-400">
+                          <option value="">-- Pilih Tahun --</option>
+                          <option value="">2020</option>
+                          <option value="">2021</option>
+                          <option value="">2022</option>
+                          <option value="">2023</option>
+                      </select>
+                  </div>
+                  <button class="bg-ungu1 w-[310px] sm:w-[510px] md:w-[310px] xl:w-[483px] h-[25px] ml-[20px] md:ml-[15px] xl:ml-[17px] mt-[25px] text-white">Cetak</button>
+                  <a href="" class="text-sm float-right mt-[5px] mr-[10px]">Lihat Detail ></a>
+              </div>
+          </div>
+          <!-- End Barang Masuk -->
+
+          <!-- Barang Keluar -->
+          <div class="w-[350px] sm:w-[550px] md:w-[340px] xl:w-[520px] h-[40px] bg-ungu1 sm:mt-[] md:mt-[20px] md:-ml-[12px] lg:mt-[20px]">
+              <h1 class="absolute ml-[120px] sm:ml-[220px] md:ml-[120px] xl:ml-[210px] mt-[5px] text-white text-lg">Barang Keluar</h1>
+              <div class="w-[350px] sm:w-[550px] md:w-[340px] xl:w-[520px] h-[200px] border border-slate-400">
+                  <span class="absolute text-slate-900 ml-[20px] mt-[50px]">Perbulan</span>
+                  <div class="flex md:-ml-[6px]">
+                      <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] xl:ml-[23px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] xl:w-[230px] mt-[85px] h-8 border border-slate-400">
+                          <option value="">-- Pilih Bulan --</option>
+                          <option value="">Januari</option>
+                          <option value="">Februari</option>
+                          <option value="">Maret</option>
+                          <option value="">April</option>
+                          <option value="">Mei</option>
+                          <option value="">Juni</option>
+                          <option value="">Juli</option>
+                          <option value="">Agustus</option>
+                          <option value="">September</option>
+                          <option value="">Oktober</option>
+                          <option value="">November</option>
+                          <option value="">Desember</option>
+                      </select>
+                      <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] xl:ml-[23px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] xl:w-[230px] mt-[85px] h-8 border border-slate-400">
+                          <option value="">-- Pilih Tahun --</option>
+                          <option value="">2020</option>
+                          <option value="">2021</option>
+                          <option value="">2022</option>
+                          <option value="">2023</option>
+                  </select>
+                  </div>
+                  <button class="bg-ungu1 w-[310px] sm:w-[510px] md:w-[310px] xl:w-[483px] h-[25px] ml-[20px] md:ml-[15px] xl:ml-[17px] mt-[25px] text-white">Cetak</button>
+                  <a href="" class="text-sm float-right mt-[5px] mr-[10px]">Lihat Detail ></a>
+              </div>
+          </div>
+          <!-- End Barang Keluar -->
+
+          <!-- Data Supplier -->
+          <div class="w-[350px] sm:w-[550px] md:w-[340px] xl:w-[520px] h-[40px] bg-ungu1 sm:mt-[] md:mt-[20px] md:-ml-[12px] lg:mt-[20px]">
+              <h1 class="absolute ml-[120px] sm:ml-[220px] md:ml-[120px] xl:ml-[210px] mt-[5px] text-white text-lg">Data Supplier</h1>
+              <div class="w-[350px] sm:w-[550px] md:w-[340px] xl:w-[520px] h-[200px] border border-slate-400">
+                  <span class="absolute text-slate-900 ml-[20px] mt-[50px]">Perbulan</span>
+                  <div class="flex md:-ml-[6px]">
+                      <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] xl:ml-[23px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] xl:w-[230px] mt-[85px] h-8 border border-slate-400">
+                          <option value="">-- Pilih Bulan --</option>
+                          <option value="">Januari</option>
+                          <option value="">Februari</option>
+                          <option value="">Maret</option>
+                          <option value="">April</option>
+                          <option value="">Mei</option>
+                          <option value="">Juni</option>
+                          <option value="">Juli</option>
+                          <option value="">Agustus</option>
+                          <option value="">September</option>
+                          <option value="">Oktober</option>
+                          <option value="">November</option>
+                          <option value="">Desember</option>
+                      </select>
+                      <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] xl:ml-[23px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] xl:w-[230px] mt-[85px] h-8 border border-slate-400">
+                          <option value="">-- Pilih Tahun --</option>
+                          <option value="">2020</option>
+                          <option value="">2021</option>
+                          <option value="">2022</option>
+                          <option value="">2023</option>
+                  </select>
+                  </div>
+                  <button class="bg-ungu1 w-[310px] sm:w-[510px] md:w-[310px] xl:w-[483px] h-[25px] ml-[20px] md:ml-[15px] xl:ml-[17px] mt-[25px] text-white">Cetak</button>
+                  <a href="" class="text-sm float-right mt-[5px] mr-[10px]">Lihat Detail ></a>
+              </div>
+          </div>
+          <!-- End Data Supplier -->
+
+          <!-- Peminjaman Barang -->
+          <div class="w-[350px] sm:w-[550px] md:w-[340px] xl:w-[520px] h-[40px] bg-ungu1 sm:mt-[] md:mt-[20px] md:-ml-[12px] lg:mt-[20px]">
+              <h1 class="absolute ml-[100px] sm:ml-[200px] md:ml-[100px] xl:ml-[185px] mt-[5px] text-white text-lg">Peminjaman Barang</h1>
+              <div class="w-[350px] sm:w-[550px] md:w-[340px] xl:w-[520px] h-[200px] border border-slate-400">
+                  <span class="absolute text-slate-900 ml-[20px] mt-[50px]">Perbulan</span>
+                  <div class="flex md:-ml-[6px]">
+                      <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] xl:ml-[23px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] xl:w-[230px] mt-[85px] h-8 border border-slate-400">
+                          <option value="">-- Pilih Bulan --</option>
+                          <option value="">Januari</option>
+                          <option value="">Februari</option>
+                          <option value="">Maret</option>
+                          <option value="">April</option>
+                          <option value="">Mei</option>
+                          <option value="">Juni</option>
+                          <option value="">Juli</option>
+                          <option value="">Agustus</option>
+                          <option value="">September</option>
+                          <option value="">Oktober</option>
+                          <option value="">November</option>
+                          <option value="">Desember</option>
+                      </select>
+                      <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] xl:ml-[23px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] xl:w-[230px] mt-[85px] h-8 border border-slate-400">
+                          <option value="">-- Pilih Tahun --</option>
+                          <option value="">2020</option>
+                          <option value="">2021</option>
+                          <option value="">2022</option>
+                          <option value="">2023</option>
+                  </select>
+                  </div>
+                  <button class="bg-ungu1 w-[310px] sm:w-[510px] md:w-[310px] xl:w-[483px] h-[25px] ml-[20px] md:ml-[15px] xl:ml-[17px] mt-[25px] text-white">Cetak</button>
+                  <a href="" class="text-sm float-right mt-[5px] mr-[10px]">Lihat Detail ></a>
+              </div>
+          </div>
+          <!-- End Peminjaman Barang -->
+
+          <!-- Barang Diterima -->
+          <div class="w-[350px] sm:w-[550px] md:w-[340px] xl:w-[520px] h-[40px] bg-ungu1 sm:mt-[] md:mt-[20px] md:ml-[160px] xl:ml-[250px] lg:mt-[20px] ">
+            <h1 class="absolute ml-[100px] sm:ml-[200px] md:ml-[100px] xl:ml-[195px] mt-[5px] text-white text-lg">Barang Diterima</h1>
+            <div class="w-[350px] sm:w-[550px] md:w-[340px] xl:w-[520px] h-[200px] border border-slate-400">
+                <span class="absolute text-slate-900 ml-[20px] mt-[50px]">Perbulan</span>
+                <div class="flex md:-ml-[6px]">
+                    <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] xl:ml-[23px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] xl:w-[230px] mt-[85px] h-8 border border-slate-400">
+                        <option value="">-- Pilih Bulan --</option>
+                        <option value="">Januari</option>
+                        <option value="">Februari</option>
+                        <option value="">Maret</option>
+                        <option value="">April</option>
+                        <option value="">Mei</option>
+                        <option value="">Juni</option>
+                        <option value="">Juli</option>
+                        <option value="">Agustus</option>
+                        <option value="">September</option>
+                        <option value="">Oktober</option>
+                        <option value="">November</option>
+                        <option value="">Desember</option>
+                    </select>
+                    <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] xl:ml-[23px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] xl:w-[230px] mt-[85px] h-8 border border-slate-400">
+                        <option value="">-- Pilih Tahun --</option>
+                        <option value="">2020</option>
+                        <option value="">2021</option>
+                        <option value="">2022</option>
+                        <option value="">2023</option>
+                </select>
+                </div>
+                <button class="bg-ungu1 w-[310px] sm:w-[510px] md:w-[310px] xl:w-[483px] h-[25px] ml-[20px] md:ml-[15px] xl:ml-[17px] mt-[25px] text-white">Cetak</button>
+                <a href="" class="text-sm float-right mt-[5px] mr-[10px]">Lihat Detail ></a>
+            </div>
         </div>
-        <div class="absolute bg-pp ml-[6px] sm:ml-[11px] md:ml-[12px] xl:ml-[220px] w-[415px] sm:w-[616px] md:w-[742px] xl:w-[1100px]  h-[950px] md:h-[500px] xl:h-[580px] bg-white p-8 m-96 mt-[60px] xl:mt-[120px] rounded-b-lg shadow-2xl">
+          <!-- End Barang Diterima -->
 
-        <div class="grid gap-y-[190px] md:gap-y-[155px] md:gap-x-[40px] md:grid-cols-2">
-            <!-- Barang Masuk -->
-            <div class="w-[350px] sm:w-[550px] md:w-[340px] h-[40px] bg-ungu1 sm:mt-[] md:mt-[20px] md:-ml-[12px] lg:mt-[20px]">
-                <h1 class="absolute ml-[120px] sm:ml-[220px] md:ml-[120px] mt-[5px] text-white text-lg">Barang Masuk</h1>
-                <div class="w-[350px] sm:w-[550px] md:w-[340px] h-[200px] border border-slate-400">
-                    <span class="absolute text-slate-900 ml-[20px] mt-[50px]">Perbulan</span>
-                    <div class="flex md:-ml-[6px]">
-                        <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] mt-[85px] h-8 border border-slate-400">
-                            <option value="">-- Pilih Bulan --</option>
-                            <option value="">Januari</option>
-                            <option value="">Februari</option>
-                            <option value="">Maret</option>
-                            <option value="">April</option>
-                            <option value="">Mei</option>
-                            <option value="">Juni</option>
-                            <option value="">Juli</option>
-                            <option value="">Agustus</option>
-                            <option value="">September</option>
-                            <option value="">Oktober</option>
-                            <option value="">November</option>
-                            <option value="">Desember</option>
-                        </select>
-                        <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] mt-[85px] h-8 border border-slate-400">
-                            <option value="">-- Pilih Tahun --</option>
-                            <option value="">2020</option>
-                            <option value="">2021</option>
-                            <option value="">2022</option>
-                            <option value="">2023</option>
-                        </select>
-                    </div>
-                    <button class="bg-ungu1 w-[310px] sm:w-[510px] md:w-[310px] h-[25px] ml-[20px] md:ml-[15px] mt-[25px] text-white">Cetak</button>
-                    <a href="" class="text-sm float-right mt-[5px] mr-[10px]">Lihat Detail ></a>
-                </div>
-            </div>
-            <!-- End Barang Masuk -->
-
-            <!-- Barang Keluar -->
-            <div class="w-[350px] sm:w-[550px] md:w-[340px] h-[40px] bg-ungu1 sm:mt-[] md:mt-[20px] md:-ml-[12px] lg:mt-[20px]">
-                <h1 class="absolute ml-[120px] sm:ml-[220px] md:ml-[120px] mt-[5px] text-white text-lg">Barang Keluar</h1>
-                <div class="w-[350px] sm:w-[550px] md:w-[340px] h-[200px] border border-slate-400">
-                    <span class="absolute text-slate-900 ml-[20px] mt-[50px]">Perbulan</span>
-                    <div class="flex md:-ml-[6px]">
-                        <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] mt-[85px] h-8 border border-slate-400">
-                            <option value="">-- Pilih Bulan --</option>
-                            <option value="">Januari</option>
-                            <option value="">Februari</option>
-                            <option value="">Maret</option>
-                            <option value="">April</option>
-                            <option value="">Mei</option>
-                            <option value="">Juni</option>
-                            <option value="">Juli</option>
-                            <option value="">Agustus</option>
-                            <option value="">September</option>
-                            <option value="">Oktober</option>
-                            <option value="">November</option>
-                            <option value="">Desember</option>
-                        </select>
-                        <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] mt-[85px] h-8 border border-slate-400">
-                            <option value="">-- Pilih Tahun --</option>
-                            <option value="">2020</option>
-                            <option value="">2021</option>
-                            <option value="">2022</option>
-                            <option value="">2023</option>
-                    </select>
-                    </div>
-                    <button class="bg-ungu1 w-[310px] sm:w-[510px] md:w-[310px] h-[25px] ml-[20px] md:ml-[15px] mt-[25px] text-white">Cetak</button>
-                    <a href="" class="text-sm float-right mt-[5px] mr-[10px]">Lihat Detail ></a>
-                </div>
-            </div>
-            <!-- End Barang Keluar -->
-
-            <!-- Data Supplier -->
-            <div class="w-[350px] sm:w-[550px] md:w-[340px] h-[40px] bg-ungu1 sm:mt-[] md:mt-[20px] md:-ml-[12px] lg:mt-[20px]">
-                <h1 class="absolute ml-[120px] sm:ml-[220px] md:ml-[120px] mt-[5px] text-white text-lg">Data Supplier</h1>
-                <div class="w-[350px] sm:w-[550px] md:w-[340px] h-[200px] border border-slate-400">
-                    <span class="absolute text-slate-900 ml-[20px] mt-[50px]">Perbulan</span>
-                    <div class="flex md:-ml-[6px]">
-                        <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] mt-[85px] h-8 border border-slate-400">
-                            <option value="">-- Pilih Bulan --</option>
-                            <option value="">Januari</option>
-                            <option value="">Februari</option>
-                            <option value="">Maret</option>
-                            <option value="">April</option>
-                            <option value="">Mei</option>
-                            <option value="">Juni</option>
-                            <option value="">Juli</option>
-                            <option value="">Agustus</option>
-                            <option value="">September</option>
-                            <option value="">Oktober</option>
-                            <option value="">November</option>
-                            <option value="">Desember</option>
-                        </select>
-                        <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] mt-[85px] h-8 border border-slate-400">
-                            <option value="">-- Pilih Tahun --</option>
-                            <option value="">2020</option>
-                            <option value="">2021</option>
-                            <option value="">2022</option>
-                            <option value="">2023</option>
-                    </select>
-                    </div>
-                    <button class="bg-ungu1 w-[310px] sm:w-[510px] md:w-[310px] h-[25px] ml-[20px] md:ml-[15px] mt-[25px] text-white">Cetak</button>
-                    <a href="" class="text-sm float-right mt-[5px] mr-[10px]">Lihat Detail ></a>
-                </div>
-            </div>
-            <!-- End Data Supplier -->
-
-            <!-- Peminjaman Barang -->
-            <div class="w-[350px] sm:w-[550px] md:w-[340px] h-[40px] bg-ungu1 sm:mt-[] md:mt-[20px] md:-ml-[12px] lg:mt-[20px]">
-                <h1 class="absolute ml-[100px] sm:ml-[200px] md:ml-[100px] mt-[5px] text-white text-lg">Peminjaman Barang</h1>
-                <div class="w-[350px] sm:w-[550px] md:w-[340px] h-[200px] border border-slate-400">
-                    <span class="absolute text-slate-900 ml-[20px] mt-[50px]">Perbulan</span>
-                    <div class="flex md:-ml-[6px]">
-                        <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] mt-[85px] h-8 border border-slate-400">
-                            <option value="">-- Pilih Bulan --</option>
-                            <option value="">Januari</option>
-                            <option value="">Februari</option>
-                            <option value="">Maret</option>
-                            <option value="">April</option>
-                            <option value="">Mei</option>
-                            <option value="">Juni</option>
-                            <option value="">Juli</option>
-                            <option value="">Agustus</option>
-                            <option value="">September</option>
-                            <option value="">Oktober</option>
-                            <option value="">November</option>
-                            <option value="">Desember</option>
-                        </select>
-                        <select type="text" name="" id="nameV" placeholder="Nama Kategori" class=" bg-white ml-[20px] text-sm text-slate-400 w-[145px] sm:w-[245px] md:w-[145px] mt-[85px] h-8 border border-slate-400">
-                            <option value="">-- Pilih Tahun --</option>
-                            <option value="">2020</option>
-                            <option value="">2021</option>
-                            <option value="">2022</option>
-                            <option value="">2023</option>
-                    </select>
-                    </div>
-                    <button class="bg-ungu1 w-[310px] sm:w-[510px] md:w-[310px] h-[25px] ml-[20px] md:ml-[15px] mt-[25px] text-white">Cetak</button>
-                    <a href="" class="text-sm float-right mt-[5px] mr-[10px]">Lihat Detail ></a>
-                </div>
-            </div>
-            <!-- End Peminjaman Barang -->
-
-        </div>  
-    </div>   
-        <!-- END CONTENT -->
-
+      </div>  
+  </div>   
+      <!-- END CONTENT -->
         <!-- pop up box -->
         <div class="modal-popup">
         <div id="box">
