@@ -15,6 +15,20 @@
   <style type="text/tailwindcss">
     @layer utilities {
 
+      body{
+        opacity: 0;
+        scroll-behavior: smooth;
+      }
+      .thumb{
+        opacity: 0;
+        transition: all .5s ease;
+        transform: translate(0, -40px);
+      }
+      .thumb.muncul{
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+
       .side{
         align-items: center;
       }
@@ -69,7 +83,7 @@
     }
   </script>
 </head>
-<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter" onload="onload()">
   
     <!-- NAV -->
     <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
@@ -80,7 +94,7 @@
           <div>
           </div>
         </div>
-        <div class="profile ml-[260px] sm:ml-[350px] float-right lg:ml-[760px] xl:ml-[1100px] md:ml-[475px]">
+        <div class="profile ml-[260px] sm:ml-[350px] float-right lg:ml-[1100px] md:ml-[475px]">
           <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">NoFace21</h3> 
           <img src="../../img/noface.jpg" alt="profile" class="w-7 h-7 rounded-full border"></a>
         </div>
@@ -88,7 +102,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-[13px] ml-3 bi bi-search inline-block text-white absolute" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
               </svg>
-            <input type="text" name="text" placeholder="Search" class="sm-input placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 lg:w-[1000px] bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
+            <input type="text" name="text" placeholder="Search" class="sm-input placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 lg:w-[1000px] bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " requi0>
             </div>
     </div>
 
@@ -252,49 +266,49 @@
 
     <!-- CONTENT -->
     
-    <div class="p-8 text-ungu1-font-semibold m-96 mt-12 ml-[10px] xl:ml-[195px] w-[100%] md:-ml-[18px]">
-      <div class="flex lg:ml-[220px] xl:ml-0">
+    <div class="p-8 text-ungu1-font-semibold m-96 mt-12 ml-[10px] lg:ml-[195px] w-[100%] md:-ml-[18px]">
+      <div class="flex">
         <h1 class="text-2xl font-semibold text-ungu1 mr-[20px]">Dashboard</h1>
         <input type="date" id="tanggal" name="tanggal" class="rounded-lg text-sm text-gray-700 px-10">
       </div>
-      <div class="grid lg:ml-[220px] xl:ml-0 md:grid-cols-2 md:gap-x-[380px] lg:grid-cols-3 xl:grid-cols-4 gap-x-[285px] lg:gap-x-[260px] xl:gap-x-[285px]"> 
-          <a href="../gudang/gudang.html" class="w-[350px] sm:w-[550px] md:w-[360px] lg:w-[240px] xl:w-[264px] h-[150px] xl:h-[70px] bg-white rounded-lg shadow-xl mt-5">
-              <img src="../../img/barstatic.png" alt="" class="w-12 h-12 absolute ml-[45px] lg:ml-[33px] mt-[50px] xl:w-6 xl:h-6 xl:ml-[21px] xl:mt-[23px]">
-            <div class="ml-[25px] mt-7 w-[90px] lg:ml-[13px] h-[90px] bg-biru rounded-[25px] xl:rounded-2xl xl:w-[50px] xl:h-[50px] xl:mt-[10px] xl:ml-2">
-              <h1 class="absolute -z-5 ml-[200px] -mt-2 lg:ml-[140px] font-semibold text-[50px] xl:text-[35px] xl:ml-[180px] xl:-mt-[13px]">561</h1>
-              <p class="absolute -z-5 ml-[170px] lg:ml-[100px] mt-16 font-semibold text-slate-600 xl:text-[13px] xl:ml-[140px] xl:mt-[30px]">Total Inventaris</p>
+      <div class="grid md:grid-cols-2 md:gap-x-[380px] lg:grid-cols-4 gap-x-[285px] lg:gap-x-[285px]"> 
+          <a href="../gudang/gudang.html" class="thumb w-[350px] sm:w-[550px] md:w-[360px] lg:w-[264px] h-[150px] lg:h-[70px] bg-white rounded-lg shadow-lg mt-5">
+              <img src="../../img/barstatic.png" alt="" class="w-12 h-12 absolute ml-[45px] mt-[50px] lg:w-6 lg:h-6 lg:ml-[21px] lg:mt-[23px]">
+            <div class="ml-[25px] mt-7 w-[90px] h-[90px] bg-biru rounded-[25px] lg:rounded-2xl lg:w-[50px] lg:h-[50px] lg:mt-[10px] lg:ml-2">
+              <h1 class="absolute -z-5 ml-[200px] -mt-2 font-semibold text-[50px] lg:text-[35px] lg:ml-[180px] lg:-mt-[13px]">561</h1>
+              <p class="absolute -z-5 ml-[170px] mt-16 font-semibold text-slate-600 lg:text-[13px] lg:ml-[140px] lg:mt-[30px]">Total Inventaris</p>
             </div>
           </a> 
 
-          <a href="" class="w-[350px] sm:w-[550px] md:w-[360px] lg:w-[240px] xl:w-[264px] h-[150px] xl:h-[70px] bg-white rounded-lg shadow-xl mt-5">
-              <img src="../../img/recieve.png" alt="" class="w-16 h-16 absolute ml-[39px] lg:ml-[24px] mt-[43px] xl:w-10 xl:h-10 xl:ml-[13px] xl:mt-[16px]">
-            <div class="ml-[25px] mt-7 w-[90px] lg:ml-[12px] h-[90px] bg-hijau rounded-[25px] xl:rounded-2xl xl:w-[50px] xl:h-[50px] xl:mt-[10px] xl:ml-2">
-              <h1 class="absolute -z-5 ml-[240px] -mt-2 lg:ml-[140px] font-semibold text-[50px] xl:text-[35px] xl:ml-[215px] xl:-mt-[13px]">5</h1>
-              <p class="absolute -z-5 ml-[170px] lg:ml-[100px] mt-16 font-semibold text-slate-600 xl:text-[13px] xl:ml-[140px] xl:mt-[30px]">Barang Diterima</p>
+          <a href="" class="thumb w-[350px] sm:w-[550px] md:w-[360px] lg:w-[264px] h-[150px] lg:h-[70px] bg-white rounded-lg shadow-lg mt-5">
+              <img src="../../img/recieve.png" alt="" class="w-16 h-16 absolute ml-[39px] mt-[43px] lg:w-10 lg:h-10 lg:ml-[13px] lg:mt-[16px]">
+            <div class="ml-[25px] mt-7 w-[90px] h-[90px] bg-hijau rounded-[25px] lg:rounded-2xl lg:w-[50px] lg:h-[50px] lg:mt-[10px] lg:ml-2">
+              <h1 class="absolute -z-5 ml-[240px] -mt-2 font-semibold text-[50px] lg:text-[35px] lg:ml-[215px] lg:-mt-[13px]">5</h1>
+              <p class="absolute -z-5 ml-[170px] mt-16 font-semibold text-slate-600 lg:text-[13px] lg:ml-[140px] lg:mt-[30px]">Barang Diterima</p>
             </div>
           </a> 
 
-          <a href="" class="w-[350px] sm:w-[550px] md:w-[360px] lg:w-[240px] xl:w-[264px] h-[150px] xl:h-[70px] bg-white rounded-lg shadow-xl mt-5">
-              <img src="../../img/download.png" alt="" class="w-12 h-12 absolute ml-[46px] lg:ml-[37px] mt-[50px] xl:w-6 xl:h-6 xl:ml-[21px] xl:mt-[23px]">
-            <div class="ml-[25px] mt-7 w-[90px] lg:ml-[17px] h-[90px] bg-kuning rounded-[25px] xl:rounded-2xl xl:w-[50px] xl:h-[50px] xl:mt-[10px] xl:ml-2">
-              <h1 class="absolute -z-5 ml-[240px] -mt-2 lg:ml-[140px] font-semibold text-[50px] xl:text-[35px] xl:ml-[200px] xl:-mt-[13px]">2</h1>
-              <p class="absolute -z-5 ml-[170px] lg:ml-[100px] mt-16 font-semibold text-slate-600 xl:text-[13px] xl:ml-[140px] xl:mt-[30px]">Barang Masuk</p>
+          <a href="" class="thumb w-[350px] sm:w-[550px] md:w-[360px] lg:w-[264px] h-[150px] lg:h-[70px] bg-white rounded-lg shadow-lg mt-5">
+              <img src="../../img/download.png" alt="" class="w-12 h-12 absolute ml-[46px] mt-[50px] lg:w-6 lg:h-6 lg:ml-[21px] lg:mt-[23px]">
+            <div class="ml-[25px] mt-7 w-[90px] h-[90px] bg-kuning rounded-[25px] lg:rounded-2xl lg:w-[50px] lg:h-[50px] lg:mt-[10px] lg:ml-2">
+              <h1 class="absolute -z-5 ml-[240px] -mt-2 font-semibold text-[50px] lg:text-[35px] lg:ml-[200px] lg:-mt-[13px]">2</h1>
+              <p class="absolute -z-5 ml-[170px] mt-16 font-semibold text-slate-600 lg:text-[13px] lg:ml-[140px] lg:mt-[30px]">Barang Masuk</p>
             </div>
           </a> 
 
-          <a href="" class="w-[350px] sm:w-[550px] md:w-[360px] lg:w-[240px] xl:w-[264px] h-[150px] xl:h-[70px] bg-white rounded-lg shadow-xl mt-5">
-              <img src="../../img/upload.png" alt="" class="w-12 h-12 absolute ml-[46px] lg:ml-[34px] mt-[50px] xl:w-6 xl:h-6 xl:ml-[21px] xl:mt-[23px]">
-            <div class="ml-[25px] mt-7 w-[90px] lg:ml-[13px] h-[90px] bg-birumuda rounded-[25px] xl:rounded-2xl xl:w-[50px] xl:h-[50px] xl:mt-[10px] xl:ml-2">
-              <h1 class="absolute -z-5 ml-[240px] -mt-2 lg:ml-[145px] font-semibold text-[50px] xl:text-[35px] xl:ml-[200px] xl:-mt-[13px]">5</h1>
-              <p class="absolute -z-5 ml-[170px] lg:ml-[110px] mt-16 font-semibold text-slate-600 xl:text-[13px] xl:ml-[140px] xl:mt-[30px]">Barang Keluar</p>
+          <a href="" class="thumb w-[350px] sm:w-[550px] md:w-[360px] lg:w-[264px] h-[150px] lg:h-[70px] bg-white rounded-lg shadow-lg mt-5">
+              <img src="../../img/upload.png" alt="" class="w-12 h-12 absolute ml-[46px] mt-[50px] lg:w-6 lg:h-6 lg:ml-[21px] lg:mt-[23px]">
+            <div class="ml-[25px] mt-7 w-[90px] h-[90px] bg-birumuda rounded-[25px] lg:rounded-2xl lg:w-[50px] lg:h-[50px] lg:mt-[10px] lg:ml-2">
+              <h1 class="absolute -z-5 ml-[240px] -mt-2 font-semibold text-[50px] lg:text-[35px] lg:ml-[200px] lg:-mt-[13px]">5</h1>
+              <p class="absolute -z-5 ml-[170px] mt-16 font-semibold text-slate-600 lg:text-[13px] lg:ml-[140px] lg:mt-[30px]">Barang Keluar</p>
             </div>
           </a> 
 
-          <a href="" class="w-[350px] sm:w-[550px] md:w-[360px] lg:w-[240px] xl:w-[264px] h-[150px] xl:h-[70px] bg-white rounded-lg shadow-xl mt-5 mb-5">
-              <img src="../../img/check.png" alt="" class="w-12 h-12 absolute ml-[46px] lg:ml-[35px] mt-[50px] xl:w-6 xl:h-6 xl:ml-[21px] xl:mt-[23px]">
-            <div class="ml-[25px] mt-7 w-[90px] lg:ml-[15px] h-[90px] bg-ungu1 rounded-[25px] xl:rounded-2xl xl:w-[50px] xl:h-[50px] xl:mt-[10px] xl:ml-2">
-              <h1 class="absolute -z-5 ml-[240px] -mt-2 lg:ml-[140px] font-semibold text-[50px] xl:text-[35px] xl:ml-[200px] xl:-mt-[13px]">3</h1>
-              <p class="absolute -z-5 ml-[170px] lg:ml-[110px] mt-16 font-semibold text-slate-600 xl:text-[13px] xl:ml-[140px] xl:mt-[30px]">Data Supplier</p>
+          <a href="" class="thumb w-[350px] sm:w-[550px] md:w-[360px] lg:w-[264px] h-[150px] lg:h-[70px] bg-white rounded-lg shadow-lg mt-5 mb-5">
+              <img src="../../img/check.png" alt="" class="w-12 h-12 absolute ml-[46px] mt-[50px] lg:w-6 lg:h-6 lg:ml-[21px] lg:mt-[23px]">
+            <div class="ml-[25px] mt-7 w-[90px] h-[90px] bg-ungu1 rounded-[25px] lg:rounded-2xl lg:w-[50px] lg:h-[50px] lg:mt-[10px] lg:ml-2">
+              <h1 class="absolute -z-5 ml-[240px] -mt-2 font-semibold text-[50px] lg:text-[35px] lg:ml-[200px] lg:-mt-[13px]">3</h1>
+              <p class="absolute -z-5 ml-[170px] mt-16 font-semibold text-slate-600 lg:text-[13px] lg:ml-[140px] lg:mt-[30px]">Data Supplier</p>
             </div>
           </a> 
       </div>
@@ -325,7 +339,6 @@
     </div> -->
 
     <!-- END CONTENT -->
-    
 <script src="../../dist/script.js"></script>
 </body>
 </html>

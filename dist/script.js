@@ -32,3 +32,31 @@ const popup = document.querySelector('.modal-popup');
 // $('.side').click(function() {
 //     $(this).addClass("active").siblings().removeClass("active");
 // });
+
+
+// script ketika halaman di load untuk dashboard
+const thumb = document.querySelectorAll('.thumb');
+const onload = () => {
+  document.body.style.opacity = '1';
+  document.body.style.transition = 'all .6s .2s ease';
+
+  for(let i = 0; i < thumb.length; i++){
+    setTimeout(() => {
+      thumb[i].classList.add('muncul');
+      thumb[i].style.transition = 'all .5s .5s ease';
+    }, 100 * (i + 1));
+  }
+}
+
+thumb.forEach(el => {
+  el.addEventListener('mouseover', function() {
+    this.style.transition = "all .5s ease-in-out";
+    this.style.transform = "scale(1.06, 1.06)";
+    this.style.boxShadow = "0 2px 5px .1px #B7BCC4";
+  })
+  el.addEventListener('mouseleave', function(){
+    this.style.transition = "all .4s ease-in-out";
+    this.style.transform = "scale(1,1)";
+    this.style.boxShadow = 'none';
+  })
+})
