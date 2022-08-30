@@ -13,7 +13,120 @@
   <script src="https://cdn.tailwindcss.com"></script>
 <!--  -->
   <style type="text/tailwindcss">
+    .wrapper {
+        display: flex;
+        margin-left: 90px;
+    }
+
+    .wrapper .dynamic-text {
+        margin-left: 15px;
+        height: 90px;
+        line-height: 90px;
+        overflow: hidden;
+    }
+
+    .dynamic-text li {
+        list-style: none;
+        color: #7B2A8C;
+        font-size: 25px;
+        font-weight: 650;
+        position: relative;
+        top: 0;
+        animation: slide 12s steps(4) infinite;
+    }
+
+    @media (max-width: 520px) {
+      .wrapper {
+        display: flex;
+        margin-left: 25px;
+    }
+    .dynamic-text li {
+        list-style: none;
+        color: #7B2A8C;
+        font-size: 20px;
+        font-weight: 650;
+        position: relative;
+        top: 0;
+        animation: slide 12s steps(4) infinite;
+    }
+    }
+
+    /* @media (max-width: 420px) {
+      .dynamic-text li {
+        margin-left: 10px;
+        list-style: none;
+        color: #7B2A8C;
+        font-size: 0px;
+        font-weight: 650;
+        position: relative;
+        top: 0;
+        animation: slide 12s steps(4) infinite;
+      }
+    } */
+    /* @media (max-width: 660px) {
+      .dynamic-text li {
+        margin-left: 5px;
+        list-style: none;
+        color: #7B2A8C;
+        font-size: 20px;
+        font-weight: 650;
+        position: relative;
+        top: 0;
+        animation: slide 12s steps(4) infinite;
+      }
+    }
+
+    @media (max-width: 786px) {
+      .dynamic-text li {
+        margin-left: 10px;
+        list-style: none;
+        color: #7B2A8C;
+        font-size: 25px;
+        font-weight: 650;
+        position: relative;
+        top: 0;
+        animation: slide 12s steps(4) infinite;
+    }
+    .wrapper {
+        display: flex;
+        margin-left: 5px;
+    }
+
+    } */
+
+    @keyframes slide {
+        100% {
+            top: -360px;
+          }
+        }
+        
+        .dynamic-text li span {
+            position: relative;
+            margin: 5px 0;
+            line-height: 90px;
+        }
     
+        .dynamic-text li span::after {
+            content: '';
+            position: absolute;
+            margin-top: 25px;
+            left: 0;
+            height: 40px;
+            width: 100%;
+            background: white;
+            border-left: 2px solid #94A3B8;
+            animation: typing 3s steps(14) infinite;
+        }
+
+    @keyframes typing {
+        40%,
+        60% {
+            left: calc(100% + 30px);
+        }
+        100% {
+            left: 0;
+        }
+    }
   </style>
 <!--  -->
   <script>
@@ -40,7 +153,15 @@
                     <span class="text-ungu1">In</span>Ventory
                 </div>
                 <div class="py-5 md:py-10">
-                    <h2 class="text-xl lg:text-2xl font-bold text-ungu1 mb-2">Masuk Ke Akun Anda</h2>
+                    <div class="sm:ml-[80px] md:ml-[10px] lg:ml-[73px] xl:ml-[100px] wrapper">
+                      <ul class="dynamic-text">
+                          <li><span>Sudah punya akun?</span></li>
+                          <li><span>Log In Sekarang!</span></li>
+                          <li><span>Masukkan Akun Anda</span></li>
+                      </ul>
+              
+                    </div>
+                    <!-- <h2 class="text-xl lg:text-2xl font-bold text-ungu1 mb-2">Masuk Ke Akun Anda</h2> -->
                     <div class="border-2 w-10 border-ungu1 inline-block mb-2"></div>
                     <p class="text-sm text-slate-500 mb-5">Masukkan akun yang sudah terdaftar</p>
                     <form action="">
@@ -53,7 +174,7 @@
                 </div>
             </div>
             <div class="w-full md:w-2/5 bg-gradient-to-t from-ungu1 to-ungu2 py-10 md:py-12">
-                <div class="font-bold text-2xl text-white py-5">Registrasi</div>
+                <div class="font-bold text-2xl text-white py-5  md:mt-[50px]">Registrasi</div>
                 <div class="border-2 w-10 bg-white inline-block mb-12"></div>
                 <p class="text-white font-medium pb-5">Belum punya akun?</p>
                 <p class="text-white font-medium pb-10">Daftar disini!</p>
