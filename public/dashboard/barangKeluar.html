@@ -23,6 +23,7 @@
 
 body{
   background-color: #F3E8FF;
+  opacity: 0;
 }
 
 .content{
@@ -196,7 +197,25 @@ body{
   margin-inline: .5rem;
 }
 
-
+/* animate */
+.container-table{
+  max-height: 3.5rem;
+  overflow: hidden;
+}
+.title-table{
+  margin-left: 25%;
+  width: 70%;
+  opacity: 0;
+}
+@keyframes myanimate {
+  0%{
+    max-height: 3.5rem;
+    overflow: hidden;
+  }
+  100%{
+    max-height: 100%;
+  }
+}
 /* end of table style */
 
 /* responsive */
@@ -576,7 +595,7 @@ body{
     }
   </script>
 </head>
-<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter" onload="onload()">
 
     <!-- NAV -->
     <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
@@ -762,7 +781,7 @@ body{
     <!-- title table  -->
     <div class="content">
       <div class="flex-col">
-        <div class="title-table W-[500px] p-96">
+        <div class="title-table W-[500px] p-96" id="title-1">
           <div class="brand">
             <a href="#">
               <img src="../../img/icons/kembali.png" alt="kembali" title="kembali">
@@ -773,7 +792,7 @@ body{
         <!-- end of title table -->
 
         <!-- tables -->
-        <div class="container-table">
+        <div class="container-table" id="content-1">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
               <tr class="font-semibold">
@@ -803,8 +822,13 @@ body{
               <button type="button" name="button" class="next"><span>Next </span><img src="../../img/icons/next.png" alt="Next"></button>
           </div>
         </div>
+      </div>
     </div>
-    </div>
+
+    
+    <style>
+      
+    </style>
 
     <!-- table hidden -->
     <div class="content-hidden">
@@ -897,6 +921,6 @@ body{
 
     <!-- END CONTENT -->
 
-<script src="../dist/script.js"></script>
+<script src="../../dist/script.js"></script>
 </body>
 </html>

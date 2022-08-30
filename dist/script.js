@@ -43,9 +43,23 @@ const onload = () => {
   for(let i = 0; i < thumb.length; i++){
     setTimeout(() => {
       thumb[i].classList.add('muncul');
-      thumb[i].style.transition = 'all .5s .5s ease';
+      thumb[i].style.transition = 'all .5s ease';
     }, 100 * (i + 1));
   }
+
+
+  // event dashboard barang keluar onload
+  const conTable = document.querySelector('#content-1');
+  const titleTable = document.querySelector('#title-1');
+  conTable.style.animation = 'myanimate 5s .6s forwards';
+  titleTable.style.opacity = '1';
+  titleTable.style.marginLeft = '18%';
+  titleTable.style.width = '80%';
+  titleTable.style.transition = 'all .6s .6s ease-in'
+
+  document.body.style.opacity = '1';
+  document.body.style.transition = 'all .6s .2s ease';
+  // end of event dashboard barang keluar onload
 }
 
 thumb.forEach(el => {
