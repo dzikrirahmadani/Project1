@@ -47,7 +47,6 @@ const onload = () => {
     }, 100 * (i + 1));
   }
 
-
   // event dashboard barang keluar onload
   const conTable = document.querySelector('#content-1');
   const titleTable = document.querySelector('#title-1');
@@ -55,35 +54,24 @@ const onload = () => {
   const titleTable2 = document.querySelector('#title-2');
 
   // responsive javascript
-  if( window.innerWidth > 1023){
-    conTable.style.animation = 'myanimate 5s .6s forwards';
-    titleTable.style.opacity = '1';
-    titleTable.style.marginLeft = '20%';
-    titleTable.style.width = '80%';
-    titleTable.style.transition = 'all .6s .6s ease-in';
-  
-    conTable2.style.animation = 'myanimate 5s .6s forwards';
-    titleTable2.style.opacity = '1';
-    titleTable2.style.marginLeft = '18%';
-    titleTable2.style.width = '80%';
-    titleTable2.style.transition = 'all .6s .6s forwards';
-    
+  if( window.innerWidth > 1023 && window.innerWidth <= 1218){
+    styles(conTable, titleTable, '20%');
+  }else if( window.innerWidth > 1218 ){
+    styles(conTable, titleTable, '16%');
   }else if( window.innerWidth < 1024){
-    conTable.style.animation = 'myanimate 5s .6s forwards';
-    conTable2.style.animation = 'myanimate 5s .6s forwards';
-
-    titleTable.style.opacity = '1';
-    titleTable.style.marginLeft = '5%';
-    titleTable.style.width = '80%';
-    titleTable.style.transition = 'all .6s .6s ease-in';
-
-    titleTable2.style.opacity = '1';
-    titleTable2.style.marginLeft = '5%';
-    titleTable2.style.width = '80%';
-    titleTable2.style.transition = 'all .6s .6s forwards';
+    styles(conTable, titleTable, '5%');
+    styles(conTable2, titleTable2, '5%');
   }
 
   // end of event dashboard barang keluar onload
+}
+
+const styles = (conTable, titleTable, marginLeftTitle) => {
+  conTable.style.animation = 'myanimate 5s .6s forwards';
+  titleTable.style.opacity = '1';
+  titleTable.style.marginLeft = marginLeftTitle;
+  titleTable.style.width = '80%';
+  titleTable.style.transition = 'all .6s .6s ease-in';
 }
 
 thumb.forEach(el => {
