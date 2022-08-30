@@ -43,7 +43,7 @@ const onload = () => {
   for(let i = 0; i < thumb.length; i++){
     setTimeout(() => {
       thumb[i].classList.add('muncul');
-      thumb[i].style.transition = 'all .5s .5s ease';
+      thumb[i].style.transition = 'all .5s ease';
     }, 100 * (i + 1));
   }
 
