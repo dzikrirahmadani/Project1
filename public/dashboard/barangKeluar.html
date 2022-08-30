@@ -173,7 +173,10 @@ body{
 .table > thead > tr > td{
   background-color: #fff;
   color: #808080;
-  border-bottom: .1px solid #808080;
+  border-bottom: .1rem solid #B7BCC4;
+}
+.content-hidden > .flex-col > .container-table >  .table{
+  box-shadow: none;
 }
 .table > thead > tr > th{
   max-width: 2rem;
@@ -181,12 +184,15 @@ body{
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.content-hidden > .flex-col > .container-table > .table-footer > .field{
+  padding-top: 5px;
+}
 /* end of content hidden */
 
 
 .table-footer .field{
   padding: .3rem;
-  width: 4%;
+  width: 3%;
   border-left: none;
   border-right: none;
   border-top: .08rem solid #707070;
@@ -233,7 +239,52 @@ body{
 /* end of table style */
 
 /* responsive */
-
+@media screen and (max-width: 1218px){
+  .title-table, .container-table{
+    width: 75%;
+  }
+  .title-table{
+    position: absolute;
+  }
+  .container-table{
+    left: 21%;
+  }
+}
+@media screen and (max-width: 1023px){
+  .title-table, .container-table{
+    width: 90%;
+  }
+  .title-table{
+    margin-left: 15%;
+  }
+  .container-table{
+    left: 5%;
+  }
+}
+@media screen and (max-width: 640px){
+  .content{
+    display: none;
+  }
+  .content-hidden{
+    display: flex;
+    opacity: 1;
+  }
+  .table-footer > .prev, .table-footer > .next{
+    padding: .5rem;
+    font-size: .8em;
+  }
+  .table-footer > .prev > img, .table-footer > .next > img{
+    width: .5rem;
+  }
+  .table-footer .field{
+    width: 1.5rem;
+  }
+}
+@media screen and (max-width: 254px){
+  .title-table > .brand > a > img{
+    width: 1rem;
+  }
+}
 /* end of responsive */
 
 
@@ -464,42 +515,7 @@ body{
     <!-- CONTENT -->
 
     <style>
-      @media screen and (max-width: 1218px){
-        .title-table, .container-table{
-          width: 75%;
-        }
-        .title-table{
-          position: absolute;
-        }
-        .container-table{
-          left: 21%;
-        }
-      }
-      @media screen and (max-width: 1023px){
-        .title-table, .container-table{
-          width: 90%;
-        }
-        .title-table{
-          margin-left: 15%;
-        }
-        .container-table{
-          left: 5%;
-        }
-      }
-      @media screen and (max-width: 640px){
-        .content{
-          display: none;
-        }
-        .content-hidden{
-          display: flex;
-          opacity: 1;
-        }
-      }
-      @media screen and (max-width: 254px){
-        .title-table > .brand > a > img{
-          width: 1rem;
-        }
-      }
+      
     </style>
     <!-- title table  -->
     <div class="content">
@@ -513,7 +529,6 @@ body{
           </div>
         </div>
         <!-- end of title table -->
-
         <!-- tables -->
         <div class="container-table" id="content-1">
           <table class="table" cellspacing="0" cellpadding="0">
@@ -580,11 +595,11 @@ body{
             </thead>
           </table>
 
-          <div class="table-footer">
-              <button type="button" name="button" class="prev"><img src="../../img/icons/back.png" alt=""><span>Previous</span></button>
-              <input type="text" name="" class="field" value="1" disabled>
-              <button type="button" name="button" class="next"><span>Next</span><img src="../../img/icons/next.png" alt="Next"></button>
-          </div>
+          <div class="table-footer ml-[100px]">
+            <button type="button" name="button" class="prev"><span><img src="../../img/icons/back.png" alt="Previos"></span> Previous</button>
+            <input type="text" name="" class="field" value="1" disabled>
+            <button type="button" name="button" class="next"><span>Next </span><img src="../../img/icons/next.png" alt="Next"></button>
+        </div>
         </div>
       </div>
     </div>

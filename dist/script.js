@@ -67,6 +67,7 @@ const onload = () => {
     titleTable2.style.marginLeft = '18%';
     titleTable2.style.width = '80%';
     titleTable2.style.transition = 'all .6s .6s forwards';
+    
   }else if( window.innerWidth < 1024){
     conTable.style.animation = 'myanimate 5s .6s forwards';
     conTable2.style.animation = 'myanimate 5s .6s forwards';
