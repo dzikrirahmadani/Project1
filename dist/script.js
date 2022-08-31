@@ -1,4 +1,3 @@
-//
 const hamburger = document.querySelector('#hamburger');
 const navMenu = document.querySelector('#nav-menu');
 const navInput = document.querySelector('.nav-input');
@@ -25,6 +24,7 @@ const onload = () => {
   document.body.style.opacity = '1';
   document.body.style.transition = 'all .6s .2s ease';
 
+  // thumbnails dashboard
   for(let i = 0; i < thumb.length; i++){
     setTimeout(() => {
       thumb[i].classList.add('muncul');
@@ -47,7 +47,6 @@ const onload = () => {
     styles(conTable, titleTable, '5%');
     styles(conTable2, titleTable2, '5%');
   }
-
   // end of event dashboard barang keluar onload
 }
 
