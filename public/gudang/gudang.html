@@ -169,224 +169,119 @@ body{
   cursor: pointer;
   color: white;
 }
+
+/* content hidden style */
+.content-hidden > .flex-col > .container-table > .table > thead > tr > th{
+  max-width: 2rem;
+}
+.content-hidden > .flex-col > .container-table > .table > thead > tr > td{
+  background-color: #fff;
+  color: #0F172A;
+}
+/* end of content hidden style */
+
 /* end of table style */
 
 /* responsive */
-@media (max-width: 1168px){
-  .title-table{
-    width: 70%;
-    margin-left: 25%;
-  }
+@media screen and (max-width: 1182px){
   .container-table{
-    width: 70%;
-    left: 25%;
+    width: 80%;
+    margin-left: 1%;
+  }
+  .table{
+    width: 100%;
+  }
+  .title-table, .navbar-table{
+    width: 80%;
+    margin-left: 19%;
   }
 }
-
-@media (max-width: 1167px){
-  .title-table{
-    margin-left: 25%;
-    width: 70%;
+@media screen and (max-width: 1128px){
+  .container-table{
+    width: 79%;
+    margin-left: 2%;
+  }
+  .table{
+    width: 100%;
+  }
+  .title-table, .navbar-table{
+    width: 79%;
+    margin-left: 20%;
   }
   .container-table{
-    width: 70%;
-    left: 25%
+    font-size: .9rem;
   }
 }
-
-@media (max-width: 1166px) {
-  .title-table{
-    margin-left: 25%;
-    width: 70%;
+@media screen and (max-width: 1070px){
+  .container-table{
+    width: 78%;
+    margin-left: 2.8%;
+  }
+  .table{
+    width: 100%;
+  }
+  .title-table, .navbar-table{
+    width: 78%;
+    margin-left: 20.8%;
   }
   .container-table{
-    width: 70%;
-    left: 25%
+    font-size: .9rem;
   }
 }
-
-@media(max-width: 1071px){
-  .title-table{
-    width: 70%;
-    margin-left: 25%;
-  }
+@media screen and (max-width: 1023px){
   .container-table{
-    width: 70%;
-    left: 25%;
+    left: 2%;
+    width: 90%;
   }
-}
-
-
-@media(max-width: 1065px){
   .title-table{
-    margin-left: 25%;
-    width: 70%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%
+    margin-left: 5%;
+    width: 90%;
   }
 }
-
-@media(max-width: 1064px){
-  .title-table{
-    margin-left: 25%;
-    width: 70%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%
-  }
-}
-
-@media(max-width: 1063px){
-  .title-table{
-    margin-left: 25%;
-    width: 70%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%
-  }
-}
-
-@media (max-width: 1046px) {
-  .title-table{
-    margin-left: 25%;
-    width: 70%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%
-  }
-}
-
-@media (max-width: 1027px){
-  .title-table{
-    width: 70%;
-    margin-left: 25%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%;
-  }
-}
-
-@media (max-width: 1026px){
-  .title-table{
-    width: 70%;
-    margin-left: 25%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%;
-  }
-}
-
-@media (max-width: 1025px){
-  .title-table{
-    width: 70%;
-    margin-left: 25%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%;
-  }
-}
-
-@media (max-width: 1024px){
-  .title-table{
-    width: 70%;
-    margin-left: 25%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%;
-  }
-}
-
-@media (max-width: 1023px){
-  .title-table{
-    width: 97%;
-    margin: 5rem;
-    margin-left: 1rem;
-  }
-  .container-table{
-    width: 97%;
-    left: 1rem;
-  }
-}
-
-@media (max-width: 800px){
-  .title-table{
-    width: 97%;
-    margin: 5rem;
-    margin-left: .8rem;
-  }
-  .container-table{
-    width: 97%;
-    left: .8rem;
-  }
-}
-
-@media (max-width: 720px){
-  .title-table{
-    width: 97%;
-    margin: 5rem;
-    margin-left: .5rem;
-  }
-  .container-table{
-    width: 97%;
-    left: .5rem;
-  }
-}
-
-@media (max-width: 685px){
+@media screen and (max-width: 664px){
   .content{
     display: none;
   }
   .content-hidden{
-    display: block;
-  }
-  .table thead tr td{
-    background-color: #fff;
-    color: #000;
-    border-bottom: .1rem solid #B7BCC4;
-  }
-
-  .table thead tr th{
-    width: 10rem;
+    display: flex;
   }
 }
-
-@media (max-width: 496px){
+@media screen and (max-width: 520px){
   .title-table{
+    display: flex;  
+    flex-direction: column;
+  }
+  .title-table > .brand{
+    margin-top: .5rem;
+  }
+  .title-table > .brand > p{
+    font-size: 1.5em; 
+  }
+  .title-table > .input-field {
+    margin-top: 1rem; 
+    margin-bottom: 1rem;
+  }
+  
+  .container-table{
+    margin-top: 4.7rem;
+  }
+}
+@media screen and (max-width: 455px){
+  .title-table > .input-field{
     display: flex;
     flex-direction: column;
-    position: absolute;
-    padding-top: .8rem;
-    padding-bottom: 1.5rem;
+  }
+  .title-table > .input-field > button{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
   }
   .container-table{
-    margin-top: 3.8rem;
-  }
-  .input-field{
-    margin-top: .8rem;
+    margin-top: 7.6rem;
   }
 }
-
-@media (max-width: 429px){
-  .input-field > input{
-    width: 50%;
-  }
-}
-
-@media (max-width: 300px){
-  .input-field > button{
-    width: 50%;
-  }
-  .container-table{
-    margin-top: 5.8rem;
+@media screen and (max-width: 311px){
+  .title-table > .input-field > button, .title-table > .input-field > input{
+    width: 90%;
   }
 }
 /* end of responsive */
@@ -709,7 +604,6 @@ body{
         </div>
     </div>
     </div>
-
     <!-- table hidden -->
     <div class="content-hidden">
       <div class="flex-col">
@@ -723,41 +617,43 @@ body{
           </div>
         </div>
         <!-- end of title table -->
-
+<style>
+  
+</style>
         <!-- tables -->
         <div class="container-table">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
-              <tr class="font-semibold">
-                <th>no</th>
+              <tr>
+                <th class="font-semibold">no</th>
                 <td>1</td>
               </tr>
               <tr>
-                <th>id</th>
+                <th class="font-semibold">id</th>
                 <td>BRG-001</td>
               </tr>
               <tr>
-                <th>nama</th>
+                <th class="font-semibold">nama</th>
                 <td>keybord</td>
               </tr>
               <tr>
-                <th>typeMerk</th>
+                <th class="font-semibold">typeMerk</th>
                 <td>logitech</td>
               </tr>
               <tr>
-                <th>satuan</th>
+                <th class="font-semibold">satuan</th>
                 <td>dus</td>
               </tr>
               <tr>
-                <th>harga Satuan</th>
-                <td></td>
+                <th class="font-semibold">harga Satuan</th>
+                <td>rp. 50.000,00</td>
               </tr>
               <tr>
-                <th>stok-Awal</th>
+                <th class="font-semibold">stok-Awal</th>
                 <td>10</td>
               </tr>
               <tr>
-                <th>stok-Akhir</th>
+                <th class="font-semibold">stok-Akhir</th>
                 <td>6</td>
               </tr>
             </thead>
@@ -778,15 +674,5 @@ body{
     <!-- END CONTENT -->
 
 <script src="../../dist/script.js"></script>
-<script>
-  const side = document.querySelectorAll('#sidebar');
- 
-  side.forEach(e => {
-    e.addEventListener('click', function(e){
-      e.preventDefault();
-      e.stopPropagation();
-    })
-  })
-</script>
 </body>
 </html>
