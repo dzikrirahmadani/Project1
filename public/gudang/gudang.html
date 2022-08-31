@@ -23,6 +23,7 @@
 
 body{
   background-color: #F3E8FF;
+  opacity: 0;
 }
 
 .content{
@@ -180,6 +181,22 @@ body{
 }
 /* end of content hidden style */
 
+/* animate style */
+.container-table{
+  max-height: 3.5rem;
+  overflow: hidden;
+}
+@keyframes myanimate {
+  0%{
+    max-height: 3.5rem;
+    overflow: hidden;
+  }
+  100%{
+    max-height: 100%;
+  }
+}
+/* end of animate style */
+
 /* end of table style */
 
 /* responsive */
@@ -330,7 +347,7 @@ body{
     }
   </script>
 </head>
-<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter" onload="onload()">
 
     <!-- NAV -->
     <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
@@ -528,7 +545,7 @@ body{
         <!-- end of title table -->
 
         <!-- tables -->
-        <div class="container-table">
+        <div class="container-table"  id="container">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
               <tr class="font-semibold">
@@ -549,7 +566,7 @@ body{
                 <td>keybord</td>
                 <td>logitech</td>
                 <td>dus</td>
-                <td></td>
+                <td>rp. 100.000,00</td>
                 <td>10</td>
                 <td>6</td>
               </tr>
@@ -559,7 +576,7 @@ body{
                 <td>keybord</td>
                 <td>logitech</td>
                 <td>dus</td>
-                <td></td>
+                <td>rp. 100.000,00</td>
                 <td>10</td>
                 <td>6</td>
               </tr>
@@ -569,7 +586,7 @@ body{
                 <td>keybord</td>
                 <td>logitech</td>
                 <td>dus</td>
-                <td></td>
+                <td>rp. 100.000,00</td>
                 <td>10</td>
                 <td>6</td>
               </tr>
@@ -579,7 +596,7 @@ body{
                 <td>keybord</td>
                 <td>logitech</td>
                 <td>dus</td>
-                <td></td>
+                <td>rp. 100.000,00</td>
                 <td>10</td>
                 <td>6</td>
               </tr>
@@ -589,7 +606,7 @@ body{
                 <td>keybord</td>
                 <td>logitech</td>
                 <td>dus</td>
-                <td></td>
+                <td>rp. 100.000,00</td>
                 <td>10</td>
                 <td>6</td>
               </tr>
@@ -618,7 +635,7 @@ body{
         </div>
         <!-- end of title table -->
         <!-- tables -->
-        <div class="container-table">
+        <div class="container-table" id="container">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
               <tr>
@@ -665,11 +682,10 @@ body{
     </div>
     </div>
     <!-- end of table hidden -->
-
     <!-- end of tables -->
 
     <!-- END CONTENT -->
 
-<script src="../../dist/script.js"></script>
+<script src="../../dist/gudangScript/gudang.js"></script>
 </body>
 </html>
