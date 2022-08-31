@@ -8,21 +8,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
   <!-- End G-Font -->
-  <title>Pengajuan Barang</title>
+  <title>Data Supplier</title>
   <!-- <link href="/dist/output.css" rel="stylesheet"> -->
   <script src="https://cdn.tailwindcss.com"></script>
-<!--  -->
+  <!--  -->
   <style type="text/tailwindcss">
     @layer utilities {
 
       *, html, body{
     margin: 0;
     padding: 0;
-    /* font-family: 'Inter', sans-serif; */
     }
 
 body{
   background-color: #F3E8FF;
+  opacity: 0;
 }
 
 .content{
@@ -219,18 +219,25 @@ body{
   margin-inline: .5rem;
 }
 
+/* animate */
+.container-table{
+  max-height: 3.5rem;
+  overflow: hidden;
+}
+@keyframes myanimate {
+  0%{
+    max-height: 3.5rem;
+    overflow: hidden;
+  }
+  100%{
+    max-height: 100%;
+  }
+}
+/* end of animate style*/
 /* end of table style */
 
 /* responsive */
-@media screen and (max-width: 1182px){
-  .container-table{
-    width: 70%;
-    margin-left: 5%;
-  }
-  .title-table, .navbar-table{
-    width: 70%;
-    margin-left: 23%;
-  }
+@media screen and (max-width: 1325px){
   .table > tbody > tr > .table-btn{
     display: flex;
     justify-content: center;
@@ -242,18 +249,59 @@ body{
     margin-bottom: .1rem;
   }
 }
+@media screen and (max-width: 1182px){
+  .container-table{
+    width: 80%;
+    margin-left: 1%;
+  }
+  .table{
+    width: 100%;
+  }
+  .title-table, .navbar-table{
+    width: 80%;
+    margin-left: 19%;
+  }
+}
+@media screen and (max-width: 1128px){
+  .container-table{
+    width: 79%;
+    margin-left: 2%;
+  }
+  .table{
+    width: 100%;
+  }
+  .title-table, .navbar-table{
+    width: 79%;
+    margin-left: 20%;
+  }
+  .container-table{
+    font-size: .9rem;
+  }
+}
 @media screen and (max-width: 1070px){
+  .container-table{
+    width: 78%;
+    margin-left: 2.8%;
+  }
+  .table{
+    width: 100%;
+  }
+  .title-table, .navbar-table{
+    width: 78%;
+    margin-left: 20.8%;
+  }
   .container-table{
     font-size: .9rem;
   }
 }
 @media screen and (max-width: 1023px){
-  .container-table, .title-table, .navbar-table{
-    left: 0;
+  .container-table{
+    left: 2%;
     width: 90%;
   }
-  .title-table, .navbar-table{
+  .navbar-table{
     margin-left: 5%;
+    width: 90%;
   }
 }
 @media screen and (max-width: 991px){
@@ -389,30 +437,9 @@ body{
   }
 }
 @media screen and (max-width: 284px){
-  .container-table{
-    top: 14.5rem;
-  }
   .title-table, .navbar-table{
     margin-left: 19%;
     margin-right: 0;
-  }
-}
-@media screen and (max-width: 267px){
-  .input-field{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .input-field > a{
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-  }
-  .title-table{
-    margin-top: 16rem;
-  }
-  .container-table{
-    top: 18.5rem;
   }
 }
 @media screen and (max-width: 260px){
@@ -452,9 +479,12 @@ body{
     margin-right: 0;
   }
 }
-@media screen and (max-width: 195px){
-  .container-table{
-    top: 20.5rem;
+@media screen and (max-width: 169px){
+  .content-hidden > .flex-col > .navbar-table > .input-field > a{
+    font-size: .6em;
+  }
+  .brand{
+    overflow: hidden;
   }
 }
 /* end of responsive */
@@ -503,7 +533,7 @@ body{
     }
   </script>
 </head>
-<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter" onload="onload()">
 
     <!-- NAV -->
     <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
@@ -703,18 +733,10 @@ body{
           </div>
         </div>
         <!-- end of navbar table -->
-
-        <!-- title table -->
-        <!-- <div class="title-table W-[500px] p-96">
-          <div class="title input-field w-[100%]">
-            <p class="font-semibold capitalize text-[1.7em] text-center">data supplier</p>
-          </div>
-        </div> -->
-        <!-- end of title table -->
         <!-- end of header table -->
 
         <!-- tables -->
-        <div class="container-table">
+        <div class="container-table" id="cont-1">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
               <tr class="font-semibold">
@@ -764,11 +786,8 @@ body{
                   <a href="#" class="p-2 px-5 mx-1 rounded-lg text-white text-sm md:text-xs" style="background-color: #FF5050;">hapus</a>
                 </td>
               </tr>
-              
-              
             </tbody>
           </table>
-
           <div class="table-footer">
               <button type="button" name="button" class="prev"><span><img src="../../img/icons/back.png" alt="Previos"></span> Previous</button>
               <input type="text" name="" class="field" value="1" disabled>
@@ -777,7 +796,6 @@ body{
         </div>
       </div>
     </div>
-
     <!-- table hidden -->
     <div class="content-hidden">
       <div class="flex-col">
@@ -794,44 +812,37 @@ body{
       </div>
       <!-- end of navbar table  -->
 
-      <!-- title table -->
-        <!-- <div class="title-table W-[500px] p-96">
-          <div class="title input-field">
-            <p class="font-semibold capitalize sm:text-[1.6em] text-center">data supplier</p>
-          </div>
-        </div> -->
-      <!-- end of title table -->
       <!-- end of header table -->
         <!-- tables -->
-        <div class="container-table">
+        <div class="container-table" id="cont-2">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
-              <tr class="font-semibold">
-                <th>No</th>
+              <tr>
+                <th class="font-semibold">No</th>
                 <td>1</td>
               </tr>
               <tr>
-                <th>supplier</th>
+                <th class="font-semibold">supplier</th>
                 <td>PT.SukaMaju</td>
               </tr>
               <tr>
-                <th>alamat</th>
+                <th class="font-semibold">alamat</th>
                 <td>JL Suka Maju No.21</td>
               </tr>
               <tr>
-                <th>kota</th>
+                <th class="font-semibold">kota</th>
                 <td>Tasikmalaya</td>
               </tr>
               <tr>
-                <th>email</th>
+                <th class="font-semibold">email</th>
                 <td>pt.sukamaju@gmail.com</td>
               </tr>
               <tr>
-                <th>No.Telp</th>
+                <th class="font-semibold">No.Telp</th>
                 <td>0812345678910</td>
               </tr>
               <tr>
-                <th>Aksi</th>
+                <th class="font-semibold">Aksi</th>
                 <td class="table-btn">
                   <a href="#" class="sm:mr-[60px] md:mr-0 p-2 px-5 mx-1 rounded-lg text-white text-sm md:text-xs" style="background-color: #00C2FF;">ubah</a>
                   <a href="#" class="p-2 px-5 mx-1 rounded-lg text-white text-sm md:text-xs" style="background-color: #FF5050;">hapus</a>
@@ -852,7 +863,6 @@ body{
     <!-- end of tables -->
 
     <!-- END CONTENT -->
-
-<script src="../dist/script.js"></script>
+<script src="../../dist/dashboardScript/dataSupplier.js"></script>
 </body>
 </html>
