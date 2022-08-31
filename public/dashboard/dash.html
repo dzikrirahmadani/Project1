@@ -52,6 +52,10 @@
         transition: 1s;
       }
 
+      ul li .active {
+        background: #fff;
+      }
+
       /* .kotak {
         display: flex;
       } */
@@ -86,7 +90,7 @@
   
     <!-- NAV -->
     <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
-        <div class="text-left font-bold items-center ">
+        <div class="content text-left font-bold items-center ">
           <a href="">
             <h3 class="text-white ml-14 lg:ml-4 text-lg block">InVentory</h3>
           </a>
@@ -193,8 +197,8 @@
     <nav class="relative min-h-screen lg:fixed hidden lg:flex z-50">
       <div class="flex-col bg-ungu1 w-52 mt-[68px]" >
         <ul class="flex-col">
-          <li>
-            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+          <li class="">
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 active:bg-ungu2 transition duration-200">
               <img src="../../img/dash.png" alt="" class="w-4 h-4
                ml-7 mr-2">
               <span class="">Dashboard</span>
