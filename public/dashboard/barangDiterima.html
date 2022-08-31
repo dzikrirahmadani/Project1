@@ -23,6 +23,7 @@
 
 body{
   background-color: #F3E8FF;
+  opacity: 0;
 }
 
 .content{
@@ -176,6 +177,25 @@ body{
   margin-inline: .5rem;
 }
 
+/* content hidden */
+.table > thead > tr > td{
+  background-color: #fff;
+  color: #808080;
+  border-bottom: .1rem solid #B7BCC4;
+}
+.content-hidden > .flex-col > .container-table >  .table{
+  box-shadow: none;
+}
+.table > thead > tr > th{
+  max-width: 2rem;
+  padding: .5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.content-hidden > .flex-col > .container-table > .table-footer > .field{
+  padding-top: 5px;
+}
+/* end of content hidden */
 
 .table-footer .field{
   padding: .3rem;
@@ -204,342 +224,80 @@ body{
   margin-inline: .5rem;
 }
 
-
+/* animate */
+.container-table{
+  max-height: 3.5rem;
+  overflow: hidden;
+}
+.title-table{
+  margin-left: 25%;
+  width: 70%;
+  opacity: 0;
+}
+@keyframes myanimate {
+  0%{
+    max-height: 3.5rem;
+    overflow: hidden;
+  }
+  100%{
+    max-height: 100%;
+  }
+}
 /* end of table style */
 
 /* responsive */
-@media (max-width: 1168px){
-  .title-table{
-    width: 70%;
-    margin-left: 25%;
+@media screen and (max-width: 1218px){
+  .title-table, .container-table{
+    width: 75%;
   }
   .container-table{
-    width: 70%;
-    left: 25%;
+    left: 21%;
   }
 }
-
-@media (max-width: 1167px){
+@media screen and (max-width: 1023px){
+  .title-table, .container-table{
+    width: 90%;
+  }
   .title-table{
-    margin-left: 25%;
-    width: 70%;
+    margin-left: 15%;
   }
   .container-table{
-    width: 70%;
-    left: 25%
+    left: 5%;
   }
 }
-
-@media (max-width: 1166px) {
-  .title-table{
-    margin-left: 25%;
-    width: 70%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%
-  }
-}
-
-@media(max-width: 1071px){
-  .title-table{
-    width: 70%;
-    margin-left: 25%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%;
-  }
-}
-
-
-@media(max-width: 1065px){
-  .title-table{
-    margin-left: 25%;
-    width: 70%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%
-  }
-}
-
-@media(max-width: 1064px){
-  .title-table{
-    margin-left: 25%;
-    width: 70%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%
-  }
-}
-
-@media(max-width: 1063px){
-  .title-table{
-    margin-left: 25%;
-    width: 70%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%
-  }
-}
-
-@media (max-width: 1046px) {
-  .title-table{
-    margin-left: 25%;
-    width: 70%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%
-  }
-}
-
-@media (max-width: 1027px){
-  .title-table{
-    width: 70%;
-    margin-left: 25%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%;
-  }
-}
-
-@media (max-width: 1026px){
-  .title-table{
-    width: 70%;
-    margin-left: 25%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%;
-  }
-}
-
-@media (max-width: 1025px){
-  .title-table{
-    width: 70%;
-    margin-left: 25%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%;
-  }
-}
-
-@media (max-width: 1024px){
-  .title-table{
-    width: 70%;
-    margin-left: 25%;
-  }
-  .container-table{
-    width: 70%;
-    left: 25%;
-  }
-}
-
-@media (max-width: 1023px){
-  .title-table{
-    width: 97%;
-    margin: 5rem;
-    margin-left: 1rem;
-  }
-  .container-table{
-    width: 97%;
-    left: 1rem;
-  }
-}
-
-@media (max-width: 800px){
-  .title-table{
-    width: 97%;
-    margin: 5rem;
-    margin-left: .8rem;
-  }
-  .container-table{
-    width: 97%;
-    left: .8rem;
-  }
-  .table-footer .field{
-    width: 2rem;
-  }
-}
-
-@media (max-width: 768px){
-  .table > tbody > tr > .table-btn > a:nth-child(1){
-    margin-top: 1000px;
-  }
-}
-
-@media (max-width: 761px){
-  .container-table > .table > tbody > tr > .table-btn{
-    font-size: .01em;
-  }
-}
-
-@media (max-width: 720px){
-  .title-table{
-    width: 97%;
-    margin: 5rem;
-    margin-left: .5rem;
-  }
-  .container-table{
-    width: 97%;
-    left: .5rem;
-  }
-}
-
-
-@media (max-width: 685px){
+@media screen and (max-width: 640px){
   .content{
     display: none;
   }
   .content-hidden{
-    display: block;
+    display: flex;
+    opacity: 1;
   }
-  .table thead tr td{
-    background-color: #fff;
-    color: #000;
-    border-bottom: .1rem solid #B7BCC4;
+  .table-footer > .prev, .table-footer > .next{
+    padding: .5rem;
+    font-size: .8em;
   }
-  .table thead tr th{
-    width: 10rem;
+  .table-footer > .prev > img, .table-footer > .next > img{
+    width: .5rem;
   }
   .table-footer .field{
     width: 1.5rem;
   }
 }
-
-@media screen and (max-width: 567px) and (min-width: 533px) {
-  .title-table{
-    display: flex;
-    flex-direction: column;
-  }
-  .title-table > .brand > a{
-    margin-left: -200%;
-    margin-right: 1.5rem;
-  }
-  .container-table{
-    margin-top: .6rem;
-  }
-  .title-table > .input-field > .btn{
-    margin-top: .5rem;
+@media screen and (max-width: 344px){
+  .title-table > .brand > a > img{
+    width: 1rem;
   }
 }
-
-@media screen and (min-width: 528px) and (max-width: 554px){
-  .container-table{
-    margin-top: .6rem;
+@media screen and (max-width: 340px){
+  .content-hidden > .flex-col > .title-table > .brand > a > img{
+    height: 1.4rem;
   }
-  .title-table > .input-field > .btn{
-    margin-top: .5rem;
-  }
-}
-
-@media screen and (max-width: 527px) and (min-width: 416px){
-  .container-table{
-    margin-top: .6rem;
-  }
-  .title-table > .input-field > .btn{
-    margin-top: .5rem;
-  }
-  .title-table{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    padding-top: .8rem;
-    padding-bottom: 1.5rem;
-  }
-  .input-field{
-    margin-top: .8rem;
-  }
-  .table-footer > .next{
-    width: 5.5rem;
-    font-size: .8em;
-  }
-  .table-footer > .next > img{
-    width: .5rem;
-  } 
-  
-  .table-footer > .prev{
-    width: 5.5rem;
-    font-size: .8em;
-  }
-  .table-footer > .prev > img{
-    width: .5rem;
-  } 
-  .table-footer > .prev > span{
-    margin-inline: .5rem;
-  }
-  .table-footer > .field{
-    padding: .2rem;
-  }
-  .title-table > .brand > a{
-    margin-left: -150%;
-    margin-right: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 430px) and (min-width: 300px){
-  .title-table > .brand > a{
-    margin-left: -150%;
-    margin-right: 1.5rem;
-  }
-  .content-hidden{
-    display: none;
-  }
-  .content-hidden-2{
-    display: flex;
-  }
-}
-
-@media screen and (max-width: 299px){
-  .title-table > .brand > a{
-    margin-left: -100%;
-    margin-right: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 446px) and (min-width: 361px){
-  .title-table > .brand > a{
-    margin-left: -110%;
-    margin-right: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 361px) and (min-width: 323px){
-  .title-table > .brand > a{
-    margin-left: -90%;
-    margin-right: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 323px){
-  .title-table > .brand > a{
-    margin-left: -70%;
-    margin-right: 1.5rem;
-  }
-}
-
-@media (max-width: 300px){
-  .input-field > button{
-    width: 100%;
-  }
-  .input-field > input{
-    width: 100%;
-  }
-  .title-table > .input-field > .btn{
-    margin-top: .5rem;
-  }
-  .title-table .brand a{
-    margin-left: -100%;
+  .content-hidden > .flex-col > .title-table > .brand > p{
+    font-size: 1em;
   }
 }
 /* end of responsive */
-
 
       .side{
         align-items: center;
@@ -584,7 +342,7 @@ body{
     }
   </script>
 </head>
-<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter" onload="onload()">
 
     <!-- NAV -->
     <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
@@ -770,7 +528,7 @@ body{
     <!-- title table  -->
     <div class="content">
       <div class="flex-col">
-        <div class="title-table W-[500px] p-96">
+        <div class="title-table W-[500px] p-96" id="title-1">
             <div class="brand">
               <a href="#">
                 <img src="../../img/icons/kembali.png" alt="kembali" title="kembali">
@@ -781,7 +539,7 @@ body{
         <!-- end of title table -->
 
         <!-- tables -->
-        <div class="container-table">
+        <div class="container-table" id="content-1">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
               <tr class="font-semibold">
@@ -823,7 +581,7 @@ body{
     <!-- table hidden -->
     <div class="content-hidden">
       <div class="flex-col">
-        <div class="title-table W-[500px] p-96">
+        <div class="title-table W-[500px] p-96" id="title-1">
             <div class="brand">
               <a href="#">
                 <img src="../../img/icons/kembali.png" alt="kembali" title="kembali">
@@ -834,26 +592,20 @@ body{
         <!-- end of title table -->
 
         <!-- tables -->
-        <div class="container-table">
+        <div class="container-table" id="content-1">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
               <tr>
                 <th class="font-semibold">nama</th>
                 <td>Mouse</td>
-                <td>Headset</td>
-                <td>Kursi</td>
               </tr>
               <tr>
                 <th class="font-semibold">jumlah</th>
                 <td>5</td>
-                <td>7</td>
-                <td>1</td>
               </tr>
               <tr>
                 <th class="font-semibold">tanggal masuk</th>
                 <td>03/03/2023</td>
-                <td>09/10/2023</td>
-                <td>11/12/2023</td>
               </tr>
             </thead>
           </table>
@@ -867,53 +619,11 @@ body{
       </div>
     </div>
 
-    <div class="content-hidden-2">
-      <div class="flex-col">
-        <div class="title-table W-[500px] p-96">
-          <div class="brand">
-            <a href="#">
-              <img src="../../img/icons/kembali.png" alt="kembali" title="kembali">
-            </a>
-            <p class="font-semibold capitalize">barang diterima</p>
-          </div>
-        </div>
-        <!-- end of title table -->
-
-        <!-- tables -->
-            <div class="container-table">
-              <table class="table" cellspacing="0" cellpadding="0">
-                <thead>
-                  <tr>
-                    <th class="font-semibold">nama</th>
-                    <td>meja</td>
-                  </tr>
-                  <tr>
-                    <th class="font-semibold">jumlah</th>
-                    <td>5</td>
-                  </tr>
-                  <tr>
-                    <th class="font-semibold">tanggal masuk</th>
-                    <td>02/06/2023</tzd>
-                  </tr>
-                </thead>
-              </table>
-
-              <div class="table-footer">
-                  <button type="button" name="button" class="prev"><img src="../../img/icons/back.png" alt=""><span>Previous</span></button>
-                  <input type="text" name="" class="field" value="1" disabled>
-                  <button type="button" name="button" class="next"><span>Next</span><img src="../../img/icons/next.png" alt="Next"></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- end of table hidden -->
-
     <!-- end of tables -->
 
     <!-- END CONTENT -->
 
-<script src="../dist/script.js"></script>
+<script src="../../dist/dashboardScript/barangDiterima.js"></script>
 </body>
 </html>
