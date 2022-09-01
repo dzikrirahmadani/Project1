@@ -25,6 +25,22 @@
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
       } */
 
+      body{
+        scroll-behavior: smooth;
+        opacity: 0;
+      }
+      .content{
+        width: 100%;
+      }
+      .title-table{
+        width: 81.5%;
+      }
+      .container{
+        width: 81.5%;
+        margin-left: 16.9%;
+        opacity: 0;
+      }
+
       /* title style */
       .col-title{
         border-bottom: .1rem solid #B7BCC4;
@@ -412,6 +428,231 @@
           margin-top : 0;
         }
       }
+      
+      @media screen and (min-width: 1280px){
+        .container{
+          width: 80%;
+          overflow: hidden;
+        }
+      }
+      @media screen and (max-width: 1268px){
+        .container, .title-table{
+          width: 78%;
+          left: 3%;
+        }
+      }
+      @media screen and (max-width: 1110px){
+        .container, .title-table{
+          width: 75%;
+          left: 5%;
+        }
+        .tambah-barang{
+          margin-left: -10%;
+        }
+      }
+      @media screen and (max-width: 1023px){
+        .container, .title-table{
+          left: -4%;
+        }
+        .tambah-barang{
+          margin-left: -15%
+        }
+      }
+      @media screen and (max-width: 900px){
+        .tambah-barang{
+          margin-left: -25%
+        }
+      }
+      @media screen and (max-width: 800px){
+        .tambah-barang{
+          margin-left: -35%
+        }
+      }
+      @media screen and (max-width: 750px){
+        .tambah-barang{
+          margin-left: -40%
+        }
+      }
+      @media screen and (max-width: 745px){
+        .title-table{
+          display: flex;
+          flex-direction: column;
+        }
+        .container{
+          margin-top: 11.5rem;
+        }
+        .title-table > .brand > p{
+          margin-inline: 14rem;
+        }
+        .title-table > .brand > img{
+          margin-top: .4rem;
+        }
+      }
+      @media screen and (max-width: 711px){
+        .content-variasi{
+          margin-left: 45%;
+        }
+      }
+      @media screen and (max-width: 682px){
+        .title-table > .brand > p{
+          margin-inline: 13rem;
+        }
+      }
+      @media screen and (max-width: 639px){
+        .title-table > .input-field{
+          display: flex;
+          flex-direction: column;
+        }
+        .title-table > .brand{
+          margin-top: .4rem;
+        }
+        .title-table > .brand > img{
+          margin-top: .2rem;
+        }
+        .title-table > .input-field > input, .title-table > .input-field > button{
+          width: 100%;
+          margin-left: 0;
+        }
+        .container{
+          margin-top: 14.5rem;
+        }
+        .title-table > .brand > p{
+          margin-inline: 12rem;
+        }
+        .content-variasi{
+          margin-left: 50%;
+        }
+      }
+      @media screen and (max-width: 600px){
+        .title-table > .brand > p{
+          margin-inline: 11rem;
+        }
+        .tambah-barang{
+          margin-left: -50%;
+        }
+        .tambah-barang > .content-variasi > .btn-addVariasi{
+          width: 10rem;
+          margin-left: 1rem;
+        }
+      }
+      @media screen and (max-width: 566px){
+        .tambah-barang > .content-variasi > ul {
+          display: flex;
+          flex-direction: column;
+        }
+        .tambah-barang > .content-variasi > ul > li{
+          margin-top: .5rem;
+        }
+        .title-table > .brand > p{
+          margin-inline: 5rem;
+        }
+        .form-input > form > input{
+          width: 25%;
+        }
+      }
+      @media screen and (max-width: 557px){
+        .title-table > .brand > p{
+          margin-inline: 10rem;
+        }
+      }
+      @media screen and (max-width: 526px){
+        .title-table > .brand > p{
+          margin-inline: 8rem;
+        }
+        .content-variasi{
+          margin-left: 60%;
+        }
+        .form-input > form > input{
+          width: 35%;
+        }
+        .tambah-barang{
+          margin-left: -100%;
+        }
+      }
+      @media screen and (max-width: 452px){
+        .tambah-barang{
+          margin-left: -110%;
+        }
+      }
+      @media screen and (max-width: 440px){
+        .form-input > form > input{
+          width: 30%;
+        }
+        .title-table > .brand > p{
+          margin-inline: 7rem;
+        }
+        .input-field{
+          margin-top: 1rem;
+        }
+        .container{
+          margin-top: 15rem;
+        }
+      }
+      @media screen and (max-width: 435px){
+        .title-table{
+          width: 90%;
+          left: -13%;
+        }
+        .container{
+          width: 90%;
+          left: -13%;
+        }
+      }
+      @media screen and (max-width: 420px){
+        .tambah-barang{
+          margin-left: -120%;
+        }
+      }
+      @media screen and (max-width: 403px){
+        .tambah-barang{
+          margin-left: -130%;
+        }
+      }
+      @media screen and (max-width: 387px){
+        .title-table{
+          width: 100%;
+          left: -18%;
+        }
+        .container{
+          width: 100%;
+          left: -18%;
+          overflow: hidden;
+        }
+      }
+      @media screen and (max-width: 360px){
+        .tambah-barang{
+          margin-left: -100%;
+        }
+      }
+      @media screen and (max-width: 317px){
+        .tambah-barang > .content-variasi > ul {
+          display: flex;
+          flex-direction: column;
+        }
+        .tambah-barang > .content-variasi > ul > li{
+          margin-top: .5rem;
+        }
+        .title-table > .brand > p{
+          margin-inline: 5rem;
+        }
+        .form-input > form > input{
+          width: 25%;
+        }
+      }
+      @media screen and (max-width: 326px){
+        .confirm > button{
+          width: 8rem;
+          font-size: .9em;
+          padding: .5rem;
+        }
+      }
+      @media screen and (max-width: 297px){
+        .confirm > button{
+          width: 5rem;
+          font-size: .9em;
+          padding: .5rem;
+        }
+      }
       /* end of responsive */
 
       .side{
@@ -457,7 +698,7 @@
     }
   </script>
 </head>
-<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter" onload="onload()">
 
     <!-- NAV -->
     <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
@@ -639,9 +880,13 @@
     <!-- END SIDE -->
 
     <!-- CONTENT -->
-
+<style>
+  .title-table{
+    
+  }
+</style>
     <!-- title  -->
-    <div class="lg:ml-[45px] xl:-ml-[5px] md:-ml-[115px] -ml-[70px] sm:-ml-[120px] absolute w-[505px] sm:w-[770px] lg:w-[1000px] xl:w-[1375px] md:w-[875px]">
+    <div class="content absolute">
       <div class="grid shadow-xl">
         <div class="title-table W-[500px] p-96">
           <div class="brand flex  -mt-[50px] sm:mt-0">
@@ -656,15 +901,14 @@
       </div>
     </div>
     <!-- end of title -->
-
     <!-- form -->
-    <section class="container lg:ml-[215px] xl:ml-[228px] lg:w-[800px] xl:w-[1100px] absolute bg-white mt-[195px] w-[405px] sm:w-[617px] lg: xl:mt-[155px] sm:mt-[155px] ml-[15px] sm:ml-[10px] md:w-[700px] lg: xl:h-[670px] h-[690px] md:h-[675px] rounded-xl md:mt-[155px] md:ml-[35px] shadow-lg: xl">
+    <section class="container lg:ml-[215px]. xl:ml-[228px]. lg:w-[800px]. xl:w-[1100px]. absolute bg-white mt-[9.5rem] w-[405px]. sm:w-[617px]. lg: xl:mt-[155px]. sm:mt-[155px]. ml-[15px]. sm:ml-[10px]. md:w-[700px]. lg: xl:h-[670px]. h-[690px]. md:h-[675px]. rounded-xl md:mt-[155px]. md:ml-[35px]. shadow-lg: xl ">
 
       <div class="col-title">
         <h1 class="font-semibold text-xl text-ungu2">Tambah Barang</h1>
       </div>
       
-      <div class="flex-col mt-4">
+      <div class="form-input flex-col mt-4">
         <form action="" class="-ml-[200px] mt-[10px]">
           <span class="absolute ml-[220px] sm:ml-[270px] mt-[5px]">Nama Barang : </span>
           <span class="absolute ml-[220px] sm:ml-[275px] mt-[45px]">Jenis Barang : </span>
@@ -673,8 +917,7 @@
         </form>
       </div>
       <hr class="h-[1.9px] lg: xl:w-[1100px] bg-slate-300 mt-4 mb-4"></hr>
-
-      <div class="-ml-[300px] sm:-ml-[200px] lg:-ml-[100px] xl:-ml-0">
+      <div class="tambah-barang -ml-[300px. sm:-ml-[200px]. lg:-ml-[100px]. xl:-ml-0.">
         <div class="content-variasi">
           <span class="font-semibold text-[20px] text-ungu2 ">variasi</span>
           <ul>
@@ -683,7 +926,7 @@
             <li class="sm:px-16">BRG.001</li>
             <span class="text-red-600"><a href="#">X</a></span>
           </ul>
-          <div id="btn-click" class="btn hover:opacity-80">
+          <div id="btn-click" class="btn btn-addVariasi hover:opacity-80">
             <a id="btn-click" href="#" class="font-semibold">tambah variasi</a>
           </div>
         </div>
@@ -691,7 +934,7 @@
       
       <hr class="h-[1.9px] lg: xl:w-[1100px] bg-slate-300 mt-4 mb-4"></hr>
 
-      <div class="-ml-[300px] sm:-ml-[200px] lg:-ml-[100px] xl:-ml-0">
+      <div class="tambah-barang -ml-[300px]. sm:-ml-[200px]. lg:-ml-[100px]. xl:-ml-0.">
         <div class="content-variasi">
           <span class="font-semibold text-[20px] text-ungu2">Stok</span>
           <ul>
@@ -706,12 +949,12 @@
       </div>
       <hr class="h-[1.9px] lg: xl:w-[1100px] bg-slate-300 mt-4 mb-4"></hr>
 
-      <div class="-ml-[300px] sm:-ml-[200px] lg:-ml-[100px] xl:-ml-0">
+      <div class="tambah-barang -ml-[300px]. sm:-ml-[200px]. lg:-ml-[100px]. xl:-ml-0.">
         <div class="content-variasi">
           <span class="font-semibold text-[20px] text-ungu2">Biaya</span>
           <ul>
             <li class="px-16">Logitech</li>
-            <li class="absolute">Rp. 140.000,00</li>
+            <li class="">Rp. 140.000,00</li>
             <span class="text-red-600 px-28"><a href="#">X</a></span>
           </ul>
           <div id="btn-click" class="btn hover:opacity-80">
@@ -721,7 +964,7 @@
       </div>
       <hr class="h-[1.9px] lg: xl:w-[1100px] bg-slate-300 mt-4 mb-4"></hr>
 
-      <div class="flex float-right mr-[20px]">
+      <div class="confirm flex float-right mr-[20px]">
         <button href="" type="submit" class="rounded-full mr-3 px-12 py-2 font-semibold bg-slate-200 hover:text-opacity-50 hover:bg-opacity-80 text-slate-600 transition duration-300">Batal</button>
         <button type="submit" class="rounded-full px-12 py-2 font-semibold bg-ungu1 hover:bg-opacity-80 text-white transition duration-300">Simpan</button>
       </div>
@@ -799,22 +1042,7 @@
 
     <!-- END CONTENT -->
 
-<script src="../../dist/script.js"></script>
-
-<script>
-  const modal = document.querySelector('.modal');
-  const batal = document.querySelector('.modal > .modal-popup > #box > .content .btn .batal');
-  
-  batal.addEventListener('click', () => {
-    modal.style.display = 'none';
-  })
-
-  document.body.addEventListener('click', (e) => {
-    if( e.target.id == 'btn-click' ){
-      modal.style.display = "flex";
-    }
-  })
-</script>
+<script src="../../dist/gudangScript/tambahBarang.js"></script>
 
 </body>
 </html>
