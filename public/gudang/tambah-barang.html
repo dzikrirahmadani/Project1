@@ -1041,31 +1041,6 @@
     <!-- end of  popup modal -->
 
     <!-- END CONTENT -->
-<script>
-  const modal = document.querySelector('.modal');
-  const batal = document.querySelector('.modal > .modal-popup > #box > .content .btn .batal');
-  
-  batal.addEventListener('click', () => {
-    modal.style.display = 'none';
-  })
-
-  document.body.addEventListener('click', (e) => {
-    if( e.target.id == 'btn-click' ){
-      modal.style.display = "flex";
-    }
-  })
-
-// Hamburger
-const hamburger = document.querySelector('#hamburger');
-const navMenu = document.querySelector('#nav-menu');
-const navInput = document.querySelector('.nav-input');
-
-hamburger.addEventListener('click', function(){
-    hamburger.classList.toggle('hamburger-active');
-    navMenu.classList.toggle('hidden');
-});
-
-</script>
-
+<script src="../../dist/gudangScript/tambahBarang.js"></script>
 </body>
 </html>
