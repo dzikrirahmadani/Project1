@@ -23,6 +23,7 @@
 
 body{
   background-color: #F3E8FF;
+  opacity: 0;
 }
 
 .content{
@@ -119,7 +120,6 @@ body{
 
 .table{
   width: 100%;
-  box-shadow: 0 0 .1rem rgba(0, 0, 0, 0.8);
   border-radius: .5rem .5rem 0 0;
   overflow: hidden;
   text-align: center;
@@ -198,10 +198,27 @@ body{
 }
 
 
+/* animate */
+.container-table{
+  max-height: 3.5rem;
+  overflow: hidden;
+}
+.title-table{
+  opacity: 0;
+}
+@keyframes myanimate {
+  0%{
+    max-height: 3.5rem;
+    overflow: hidden;
+  }
+  100%{
+    max-height: 100%;
+  }
+}
 /* end of table style */
 
 /* responsive */
-@media screen and (max-width: 1182px) and (min-width: 990px){
+@media screen and (max-width: 1182px){
   .container-table{
     width: 70%;
     margin-left: 5%;
@@ -211,18 +228,33 @@ body{
     margin-left: 23%;
   }
 }
-@media screen and (max-width: 991px) and (min-width: 866px){
+@media screen and (max-width: 1023px){
+  .container-table, .title-table{
+    width: 90%;
+    left: 0;
+  }
+  .title-table{
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 991px){
   .containers{
     display: flex;
   }
 }
-@media screen and (max-width: 865px){
-  .containers{
-    margin-left: -2.5rem;
+@media screen and (max-width: 818px){
+  .table > tbody > tr > .table-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .container-table{
-    margin-left: -2.6rem;
+  .table > tbody > tr > .table-btn > a{
+    margin-top: .2rem;
+    margin-bottom: .2rem;
   }
+}
+@media screen and (max-width: 767px){
   .content{
     display: none;
   }
@@ -240,12 +272,11 @@ body{
   .table-footer .field{
     width: 1.5rem;
   }
+  .title-table{
+    position: absolute;
+  }
 }
-@media screen and (max-width: 767px){
-  .table > thead > tr > td.table-btn{
-  } 
-}
-@media screen and (max-width: 628px){
+@media screen and (max-width: 636px){
   .title-table{
     display: flex;
     flex-direction: column;
@@ -283,6 +314,16 @@ body{
 @media screen and (max-width: 260px){
   .container-table, .title-table{
     overflow: hidden;
+  }
+}
+@media screen and (max-width: 151px){
+  .title-table > .brand > p{
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 125px){
+  .container-table{
+    margin-top: 6.5rem;
   }
 }
 /* end of responsive */
@@ -332,7 +373,7 @@ body{
     }
   </script>
 </head>
-<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter" onload="onload()">
 
     <!-- NAV -->
     <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
@@ -529,7 +570,7 @@ body{
         <!-- end of title table -->
 
         <!-- tables -->
-        <div class="container-table">
+        <div class="container-table" id="content">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
               <tr class="font-semibold">
@@ -592,7 +633,7 @@ body{
         <!-- end of title table -->
 
         <!-- tables -->
-        <div class="container-table">
+        <div class="container-table" id="content">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
               <tr>
@@ -639,6 +680,6 @@ body{
 
     <!-- END CONTENT -->
 
-<script src="../../src/script.js"></script>
+<script src="../../dist/satuanJS/pcs.js"></script>
 </body>
 </html>
