@@ -214,7 +214,7 @@ body{
 /* end of table style */
 
 /* responsive */
-@media screen and (max-width: 1182px) and (min-width: 990px){
+@media screen and (max-width: 1182px){
   .container-table{
     width: 70%;
     margin-left: 5%;
@@ -224,27 +224,33 @@ body{
     margin-left: 23%;
   }
 }
-@media screen and (max-width: 991px) and (min-width: 866px){
+@media screen and (max-width: 1023px){
+  .container-table, .title-table{
+    width: 90%;
+    left: 0;
+  }
+  .title-table{
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 991px){
   .containers{
     display: flex;
   }
 }
-@media screen and (max-width: 941px){
-  .table > tbody > tr > .table-btn > a{
-    margin-inline: 0;
+@media screen and (max-width: 795px){
+  .table > tbody > tr > .table-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .table > tbody > tr > .table-btn > a{
-    padding: .5rem;
-    font-size: .6em;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
   }
 }
-@media screen and (max-width: 865px){
-  .containers{
-    margin-left: -2.5rem;
-  }
-  .container-table{
-    margin-left: -2.6rem;
-  }
+@media screen and (max-width: 767px){
   .content{
     display: none;
   }
@@ -264,7 +270,6 @@ body{
   }
   .title-table{
     position: absolute;
-    left: -2.5rem;
   }
 }
 @media screen and (max-width: 636px){
@@ -624,7 +629,7 @@ body{
         <!-- end of title table -->
 
         <!-- tables -->
-        <div class="container-table">
+        <div class="container-table" id="content">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
               <tr>
