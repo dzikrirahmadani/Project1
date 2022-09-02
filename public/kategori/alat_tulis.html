@@ -193,7 +193,25 @@ body{
   margin-inline: .5rem;
 }
 
-
+/* animate */
+.container-table{
+  max-height: 3.5rem;
+  overflow: hidden;
+}
+.title-table{
+  margin-left: 25%;
+  width: 70%;
+  opacity: 0;
+}
+@keyframes myanimate {
+  0%{
+    max-height: 3.5rem;
+    overflow: hidden;
+  }
+  100%{
+    max-height: 100%;
+  }
+}
 /* end of table style */
 
 /* responsive */
@@ -610,28 +628,28 @@ body{
         <div class="container-table">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
-              <tr class="font-semibold">
-                <th>id</th>
+              <tr>
+                <th class="font-semibold">id</th>
                 <td>BRG-001</td>
               </tr>
               <tr>
-                <th>nama</th>
+                <th class="font-semibold">nama</th>
                 <td>Keybord Logitech</td>
               </tr>
               <tr>
-                <th>tanggal update</th>
+                <th class="font-semibold">tanggal update</th>
                 <td>06/05/2022</td>
               </tr>
               <tr>
-                <th>masuk</th>
+                <th class="font-semibold">masuk</th>
                 <td>4</tzd>
               </tr>
               <tr>
-                <th>keluar</th>
+                <th class="font-semibold">keluar</th>
                 <td>6</td>
               </tr>
               <tr>
-                <th>aksi</th>
+                <th class="font-semibold">aksi</th>
                 <td class="table-btn">
                   <a href="#" class="sm:mr-[60px] md:mr-0 p-2 px-5 mx-1 rounded-lg text-white text-sm md:text-xs" style="background-color: #00C2FF;">ubah</a>
                   <a href="#" class="p-2 px-5 mx-1 rounded-lg text-white text-sm md:text-xs" style="background-color: #FF5050;">hapus</a>
