@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
   <!-- End G-Font -->
-  <title>Tst3</title>
+  <title>Elektronik</title>
   <!-- <link href="/dist/output.css" rel="stylesheet"> -->
   <script src="https://cdn.tailwindcss.com"></script>
 <!--  -->
@@ -23,6 +23,7 @@
 
 body{
   background-color: #F3E8FF;
+  opacity: 0;
 }
 
 .content{
@@ -115,7 +116,6 @@ body{
 
 .table{
   width: 100%;
-  box-shadow: 0 0 .1rem rgba(0, 0, 0, 0.8);
   border-radius: .5rem .5rem 0 0;
   overflow: hidden;
   text-align: center;
@@ -182,10 +182,27 @@ body{
   color: white;
 }
 
+/* animate */
+.container-table{
+  max-height: 3.5rem;
+  overflow: hidden;
+}
+.title-table{
+  opacity: 0;
+}
+@keyframes myanimate {
+  0%{
+    max-height: 3.5rem;
+    overflow: hidden;
+  }
+  100%{
+    max-height: 100%;
+  }
+}
 /* end of table style */
 
 /* responsive */
-@media screen and (max-width: 1182px) and (min-width: 990px){
+@media screen and (max-width: 1182px){
   .container-table{
     width: 70%;
     margin-left: 5%;
@@ -195,13 +212,21 @@ body{
     margin-left: 23%;
   }
 }
-@media screen and (max-width: 1102px){
-  .table > tbody > tr > .table-btn > a{
-    padding: .5rem;
-    font-size: .6em;
+@media screen and (max-width: 1023px){
+  .container-table, .title-table{
+    width: 90%;
+    left: 0;
+  }
+  .title-table{
+    margin-left: 5%;
   }
 }
-@media screen and (max-width: 1015px){
+@media screen and (max-width: 991px){
+  .containers{
+    display: flex;
+  }
+}
+@media screen and (max-width: 818px){
   .table > tbody > tr > .table-btn{
     display: flex;
     flex-direction: column;
@@ -209,23 +234,11 @@ body{
     align-items: center;
   }
   .table > tbody > tr > .table-btn > a{
-    margin-inline: 0;
-    width: 100%;
     margin-top: .2rem;
+    margin-bottom: .2rem;
   }
 }
-@media screen and (max-width: 991px) and (min-width: 866px){
-  .containers{
-    display: flex;
-  }
-}
-@media screen and (max-width: 865px){
-  .containers{
-    margin-left: -2.5rem;
-  }
-  .container-table{
-    margin-left: -2.6rem;
-  }
+@media screen and (max-width: 767px){
   .content{
     display: none;
   }
@@ -245,11 +258,9 @@ body{
   }
   .title-table{
     position: absolute;
-    left: -2.5rem;
   }
 }
-
-@media screen and (max-width: 685px){
+@media screen and (max-width: 636px){
   .title-table{
     display: flex;
     flex-direction: column;
@@ -261,7 +272,7 @@ body{
     margin-top: 3rem;
   }
 }
-@media screen and (max-width: 550px){
+@media screen and (max-width: 520px){
   .title-table > .input-field > input, .title-table > .input-field > button{
     width: 100%;
     margin-left: -.5rem;
@@ -289,8 +300,17 @@ body{
     overflow: hidden;
   }
 }
+@media screen and (max-width: 151px){
+  .title-table > .brand > p{
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 125px){
+  .container-table{
+    margin-top: 6.5rem;
+  }
+}
 /* end of responsive */
-
 
       .side{
         align-items: center;
@@ -335,7 +355,7 @@ body{
     }
   </script>
 </head>
-<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter" onload="onload()">
 
     <!-- NAV -->
     <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
@@ -533,7 +553,7 @@ body{
         <!-- end of title table -->
 
         <!-- tables -->
-        <div class="container-table">
+        <div class="container-table" id="content">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
               <tr class="font-semibold">
@@ -596,36 +616,28 @@ body{
         <!-- end of title table -->
 
         <!-- tables -->
-        <div class="container-table">
+        <div class="container-table" id="content">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
               <tr>
-                <th>Id</th>
+                <th class="font-semibold">Id</th>
                 <td>BRG-001</td>
               </tr>
               <tr>
-                <th>Nama</th>
+                <th class="font-semibold">Nama</th>
                 <td>keybord</td>
               </tr>
               <tr>
-                <th>Tanggal Update</th>
+                <th class="font-semibold">Tanggal Update</th>
                 <td>logitech</td>
               </tr>
               <tr>
-                <th>satuan</th>
-                <td>dus</td>
+                <th class="font-semibold">masuk</th>
+                <td>20</td>
               </tr>
               <tr>
-                <th>harga Satuan</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>stok-Awal</th>
+                <th class="font-semibold">keluar</th>
                 <td>10</td>
-              </tr>
-              <tr>
-                <th>stok-Akhir</th>
-                <td>6</td>
               </tr>
               <tr>
                 <th class="font-semibold">aksi</th>
@@ -651,6 +663,6 @@ body{
 
     <!-- END CONTENT -->
 
-<script src="../../src/script.js"></script>
+<script src="../../dist/kategoriJS/Elektronik.js"></script>
 </body>
 </html>

@@ -23,6 +23,7 @@
 
 body{
   background-color: #F3E8FF;
+  opacity: 0;
 }
 
 .content{
@@ -115,7 +116,6 @@ body{
 
 .table{
   width: 100%;
-  box-shadow: 0 0 .1rem rgba(0, 0, 0, 0.8);
   border-radius: .5rem .5rem 0 0;
   overflow: hidden;
   text-align: center;
@@ -193,11 +193,27 @@ body{
   margin-inline: .5rem;
 }
 
-
+/* animate */
+.container-table{
+  max-height: 3.5rem;
+  overflow: hidden;
+}
+.title-table{
+  opacity: 0;
+}
+@keyframes myanimate {
+  0%{
+    max-height: 3.5rem;
+    overflow: hidden;
+  }
+  100%{
+    max-height: 100%;
+  }
+}
 /* end of table style */
 
 /* responsive */
-@media screen and (max-width: 1182px) and (min-width: 990px){
+@media screen and (max-width: 1182px){
   .container-table{
     width: 70%;
     margin-left: 5%;
@@ -207,27 +223,33 @@ body{
     margin-left: 23%;
   }
 }
-@media screen and (max-width: 991px) and (min-width: 866px){
+@media screen and (max-width: 1023px){
+  .container-table, .title-table{
+    width: 90%;
+    left: 0;
+  }
+  .title-table{
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 991px){
   .containers{
     display: flex;
   }
 }
-@media screen and (max-width: 941px){
-  .table > tbody > tr > .table-btn > a{
-    margin-inline: 0;
+@media screen and (max-width: 795px){
+  .table > tbody > tr > .table-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .table > tbody > tr > .table-btn > a{
-    padding: .5rem;
-    font-size: .6em;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
   }
 }
-@media screen and (max-width: 865px){
-  .containers{
-    margin-left: -2.5rem;
-  }
-  .container-table{
-    margin-left: -2.6rem;
-  }
+@media screen and (max-width: 767px){
   .content{
     display: none;
   }
@@ -247,7 +269,6 @@ body{
   }
   .title-table{
     position: absolute;
-    left: -2.5rem;
   }
 }
 @media screen and (max-width: 636px){
@@ -346,7 +367,7 @@ body{
     }
   </script>
 </head>
-<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter" onload="onload()">
 
     <!-- NAV -->
     <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
@@ -544,7 +565,7 @@ body{
         <!-- end of title table -->
 
         <!-- tables -->
-        <div class="container-table">
+        <div class="container-table" id="content">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
               <tr class="font-semibold">
@@ -589,7 +610,7 @@ body{
               <button type="button" name="button" class="next"><span>Next </span><img src="../../img/icons/next.png" alt="Next"></button>
           </div>
         </div>
-    </div>
+      </div>
     </div>
 
     <!-- table hidden -->
@@ -607,31 +628,31 @@ body{
         <!-- end of title table -->
 
         <!-- tables -->
-        <div class="container-table">
+        <div class="container-table" id="content">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
-              <tr class="font-semibold">
-                <th>id</th>
+              <tr>
+                <th class="font-semibold">id</th>
                 <td>BRG-001</td>
               </tr>
               <tr>
-                <th>nama</th>
+                <th class="font-semibold">nama</th>
                 <td>Keybord Logitech</td>
               </tr>
               <tr>
-                <th>tanggal update</th>
+                <th class="font-semibold">tanggal update</th>
                 <td>06/05/2022</td>
               </tr>
               <tr>
-                <th>masuk</th>
+                <th class="font-semibold">masuk</th>
                 <td>4</tzd>
               </tr>
               <tr>
-                <th>keluar</th>
+                <th class="font-semibold">keluar</th>
                 <td>6</td>
               </tr>
               <tr>
-                <th>aksi</th>
+                <th class="font-semibold">aksi</th>
                 <td class="table-btn">
                   <a href="#" class="sm:mr-[60px] md:mr-0 p-2 px-5 mx-1 rounded-lg text-white text-sm md:text-xs" style="background-color: #00C2FF;">ubah</a>
                   <a href="#" class="p-2 px-5 mx-1 rounded-lg text-white text-sm md:text-xs" style="background-color: #FF5050;">hapus</a>
@@ -654,6 +675,6 @@ body{
 
     <!-- END CONTENT -->
 
-<script src="../../src/script.js"></script>
+<script src="../../dist/kategoriJS/alatTulis.js"></script>
 </body>
 </html>
