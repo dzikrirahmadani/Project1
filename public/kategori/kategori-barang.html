@@ -177,7 +177,7 @@
     }
   </script>
 </head>
-<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter" onload="onload()">
 
     <!-- NAV -->
     <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
@@ -427,9 +427,18 @@
         
       </div>
     </section>
-
+    <style>
+      .card{
+        opacity: 0;
+        transform: translate(0, -40px);
+      }
+      .card.muncul{
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    </style>
     <!-- END CONTENT -->
 
-<script src="../../src/script.js"></script>
+<script src="../../dist/kategoriJS/kategoriBarang.js"></script>
 </body>
 </html>
