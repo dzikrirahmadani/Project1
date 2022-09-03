@@ -23,6 +23,7 @@
 
 body{
   background-color: #F3E8FF;
+  opacity: 0;
 }
 
 .content{
@@ -219,6 +220,35 @@ body{
   margin-inline: .5rem;
 }
 
+/* animate */
+.container-table{
+  max-height: 3.5rem;
+  overflow: hidden;
+  opacity: 0;
+}
+.title-table{
+  opacity: 0;
+}
+.navbar-table{
+  opacity: 0;
+}
+@keyframes myanimate {
+  0%{
+    max-height: 3.5rem;
+    overflow: hidden;
+  }
+  100%{
+    max-height: 100%;
+  }
+}
+@keyframes slideTop {
+  0%{
+    transform: translate(0, -5rem);
+  }
+  100%{
+    tranform: none;
+  }
+}
 /* end of table style */
 
 /* responsive */
@@ -526,7 +556,7 @@ body{
     }
   </script>
 </head>
-<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter" onload="onload()">
 
     <!-- NAV -->
     <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
@@ -733,7 +763,7 @@ body{
         <!-- end of header table -->
 
         <!-- tables -->
-        <div class="container-table">
+        <div class="container-table" id="content">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
               <tr class="font-semibold">
@@ -806,7 +836,7 @@ body{
       <!-- end of title table -->
       <!-- end of header table -->
         <!-- tables -->
-        <div class="container-table">
+        <div class="container-table" id="content">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead>
               <tr class="font-semibold">
@@ -852,6 +882,6 @@ body{
 
     <!-- END CONTENT -->
 
-<script src="../../src/script.js"></script>
+<script src="../../dist/peminjamanJS/peminjamanHariIni.js"></script>
 </body>
 </html>
