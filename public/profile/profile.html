@@ -55,8 +55,26 @@
         display: flex;
       } */
 
-      /* Responsive */
+      
+      body{
+        opacity: 0;
+      }
 
+      /* animate style */
+      @keyframes myanimate2 {
+        0%{
+          transform: translate(0, 20rem);
+          width: 100%;
+        }
+        100%{
+          transform: none;
+          opacity: 1;
+          width: 100%;
+        }
+      }
+      /* end of animate style */
+
+      /* Responsive */
       @media screen and (max-width: 1365px){
         div.profile {
           margin-left: 82%;
@@ -234,7 +252,7 @@
     }
   </script>
 </head>
-<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter" onload="onload()">
   
     <!-- NAV -->
     <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
@@ -416,7 +434,7 @@
     <!-- END SIDE -->
 
     <!-- CONTENT -->
-  <div class="container h-[985px] sm:h-[955px] lg:h-[790px]"> 
+  <div class="container h-[985px] sm:h-[955px] lg:h-[790px]" id="content"> 
     <h1 class="lg:mt-[75px] xl:mt-[75px] absolute text-ungu1 text-[25px] lg:ml-[240px] xl:ml-[240px]">Profile</h1>
     <div class="kotak1 absolute bg-pp ml-[6px] sm:ml-[11px] md:ml-[12px] lg:ml-[235px] xl:ml-[225px] w-[415px] sm:w-[616px] md:w-[742px] lg:w-[760px] xl:w-[1100px] h-[850px] sm:h-[820px] lg:h-[680px] xl:h-[640px] bg-white p-8 m-96 mt-[120px] xl:mt-[120px] rounded-xl shadow-2xl">
         
@@ -466,19 +484,6 @@
   </div>
     <!-- end of pop up box -->
     
-<script src="../../src/script.js"></script>
-<!-- <script>
-  const popup = document.querySelector('.modal-popup');
-
-  // event popup box
-  document.body.addEventListener('click', (e) => {
-    console.log(e.target.id)
-    if( e.target.id == 'logout' ){
-      popup.style.display = 'flex';
-    }else if(e.target.id == 'confirmErr'){
-      popup.style.display = 'none';
-    }
-  })
-</script> -->
+<script src="../../dist/profileJS/profile.js"></script>
 </body>
 </html>
