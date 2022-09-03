@@ -51,6 +51,22 @@
         display: flex;
       } */
 
+      body{
+        opacity: 0;
+      }
+      /* animate style */
+      @keyframes myanimate2 {
+        0%{
+          transform: translate(0, 20rem);
+          width: 100%;
+        }
+        100%{
+          transform: none;
+          opacity: 1;
+          width: 100%;
+        }
+      }
+      /* end of animate style */
     }
 
     @media screen and (max-width: 1365px){
@@ -237,7 +253,7 @@
     }
   </script>
 </head>
-<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter" onload="onload()">
   
     <!-- NAV -->
     <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
@@ -419,7 +435,7 @@
     <!-- END SIDE -->
 
     <!-- CONTENT -->
-<div class="h-[700px]">
+<div class="h-[700px]" id="content">
     <div class="mt-[90px] ml-[13px] sm:ml-0 md:ml-0 lg:ml-[230px] xl:ml-[5px]">
         <h1 class="xl:-mt-[5px] ml-[5px] sm:ml-[10px] md:ml-[15px] absolute text-ungu1 text-[25px] lg:ml-[25px] xl:ml-[220px]">Kategori Barang</h1>
         <div class="kotak1 bg1 absolute bg-pp -ml-[3px] sm:ml-[11px] md:ml-[12px] xl:ml-[220px] w-[415px] sm:w-[616px] md:w-[742px] xl:w-[1100px] h-[290px] sm:h-[315px] md:h-[380px] xl:h-[380px] bg-white p-8 m-96 mt-[120px] xl:mt-[120px] rounded-lg shadow-2xl mb-5">
@@ -475,19 +491,6 @@
     </div>
     <!-- end of pop up box -->
     
-<script src="../../dist/dashboardScript/script.js"></script>
-<!-- <script>
-  const popup = document.querySelector('.modal-popup');
-
-  // event popup box
-  document.body.addEventListener('click', (e) => {
-    console.log(e.target.id)
-    if( e.target.id == 'logout' ){
-      popup.style.display = 'flex';
-    }else if(e.target.id == 'confirmErr'){
-      popup.style.display = 'none';
-    }
-  })
-</script> -->
+<script src="../../dist/kategoriJS/ubahKategori.js"></script>
 </body>
 </html>
