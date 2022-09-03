@@ -7,17 +7,6 @@ hamburger.addEventListener('click', function(){
     navMenu.classList.toggle('hidden');
 });
 
-const popup = document.querySelector('.modal-popup');
-  // event popup box
-  document.body.addEventListener('click', (e) => {
-    if( e.target.id == 'logout' ){
-      popup.style.display = 'flex';
-    }else if(e.target.id == 'confirmErr'){
-      popup.style.display = 'none';
-    }
-  })
-
-
 // script ketika halaman di load untuk dashboard
 const thumb = document.querySelectorAll('.thumb');
 const onload = () => {
