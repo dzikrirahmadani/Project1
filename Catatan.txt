@@ -3,7 +3,7 @@ Halaman yang belum responsive
 *Kategori barang
 	1. kategori barang
 	2. tambah kategori
-	3. ubah kategori
+	-
 
 *Gudang 
 	-
