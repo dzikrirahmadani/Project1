@@ -6,7 +6,7 @@ Halaman yang belum responsive
 	3. ubah kategori
 
 *Gudang 
-	1. Gudang
+	-
 
 *Dashboard
 	1. dash
