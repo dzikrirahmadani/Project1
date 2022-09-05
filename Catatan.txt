@@ -2,7 +2,7 @@ Halaman yang belum responsive
 
 *Kategori barang
 	1. kategori barang
-	2. tambah kategori
+	-
 	-
 
 *Gudang 
