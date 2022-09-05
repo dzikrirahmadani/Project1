@@ -128,7 +128,7 @@
         width: 97%;
       }
       div .input hr {
-        width: 105%;
+        width: 103.7%;
       }
       div .flex input {
         width: 40%;
@@ -155,22 +155,28 @@
         width: 97%;
       }
       div .input hr {
-        width: 136%;
-      }
-      div .flex input {
-        width: 40%;
-      }
-      div .flex select {
-        width: 40%;
+        width: 128.5%;
       }
       div h1 .block {
         margin-left: 50%;
       }
       div.btn {
-        margin-left: 8%;
+        margin-left: 15%;
+      }
+      .input > form > .flex:nth-child(1){
+        margin-left: -.4rem;
       }
     }
-
+    @media screen and (max-width: 739px){
+      div .input hr {
+        width: 130%;
+      }
+    }
+    @media screen and (max-width: 677px){
+      div .input hr {
+        width: 134%;
+      }
+    }
     @media screen and (max-width: 639px){
       div .profile {
         margin-left: 58%;
@@ -182,7 +188,7 @@
         width: 97%;
       }
       div .input hr {
-        width: 117%;
+        width: 111.5%;
       }
       div .flex input {
         width: 50%;
@@ -197,7 +203,11 @@
         margin-left: 10%;
       }
     }
-
+    @media screen and (max-width: 499px){
+      div .input hr {
+        width: 115%;
+      }
+    }
     @media screen and (max-width: 450px){
       div .profile {
         margin-left: 25%;
@@ -209,7 +219,7 @@
         width: 96%;
       }
       div .input hr {
-        width: 121%;
+        width: 118%;
       }
       div .flex input {
         width: 45%;
@@ -224,10 +234,72 @@
         margin-left: -1%;
       }
     }
-
-    
-
-
+    @media screen and (max-width: 425px){
+    .input > .btn{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin-left: 0;
+    }
+    .input > .btn > button{
+      width: 100%;
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+    }
+    .input > .btn > button:nth-child(2){
+      margin-left: -.1rem;
+    }
+    .kotak1{
+      height: 65%;
+    }
+    .input > form > .flex{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .input > form > .flex:nth-child(2){
+      margin-left: -2.4rem;
+    }
+    .input > form > .flex > input{
+      width: 100%;
+      margin-left: 0;
+    }
+    .input > form > .flex > select{
+      width: 92%;
+      margin-left: 2rem;
+    }
+    #content > div > .kotak2 > h1{
+      margin-left: 0;
+      padding: 0;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 335px){
+    div .input hr {
+      width: 125%;
+    }
+  }
+  @media screen and (max-width: 280px){
+    .kotak2{
+      height: 6rem;
+    }
+  }
+  @media screen and (max-width: 278px){
+    div .input hr {
+      width: 129%;
+    }
+  }
+  @media screen and (max-width: 181px){
+    #content > div > .kotak2 > h1, #content > div > h1{
+      font-size: 1em;
+    }
+    #content > div > .kotak1{
+      overflow: hidden;
+    }
+  }
   </style>
 <!--  -->
   <script>
