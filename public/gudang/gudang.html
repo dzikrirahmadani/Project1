@@ -142,16 +142,22 @@ body{
   padding: .3rem;
   background-color: #7B2A8C;
   box-sizing: border-box;
-  width: 6rem;
   cursor: pointer;
   color: white;
   border-radius: .5rem 0 0 .5rem;
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-footer > .prev > span{
+  margin-inline: .5rem;
 }
 
 
 .table-footer .field{
   padding: .3rem;
-  width: 5%;
+  width: 2%;
   border-left: none;
   border-right: none;
   border-top: .08rem solid #707070;
@@ -159,16 +165,21 @@ body{
   text-align: center;
   color: #707070;
 }
-
 .table-footer .next{
   border: .08rem solid #7B2A8C;
   padding: .3rem;
   background-color: #7B2A8C;
   box-sizing: border-box;
-  width: 6rem;
+  width: 7rem;
   border-radius: 0 .5rem .5rem 0;
   cursor: pointer;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-footer > .next > span{
+  margin-inline: .5rem;
 }
 
 /* content hidden style */
@@ -214,7 +225,7 @@ body{
   .title-table, .navbar-table{
     width: 80%;
     margin-left: 19%;
-  }
+  }   
 }
 @media screen and (max-width: 1128px){
   .container-table{
@@ -256,6 +267,9 @@ body{
   .title-table{
     margin-left: 5%;
     width: 90%;
+  }
+  .table-footer .field{
+    width: 1.5rem;
   }
 }
 @media screen and (max-width: 664px){
@@ -617,10 +631,10 @@ body{
           </table>
 
           <div class="table-footer">
-              <button type="button" name="button" class="prev"><span><</span> Previous</button>
-              <input type="text" name="" class="field" value="1" disabled>
-              <button type="button" name="button" class="next">Next <span>></span></button>
-          </div>
+            <button type="button" name="button" class="prev"><img src="../../img/icons/back.png" alt=""><span>Previous</span></button>
+            <input type="text" name="" class="field" value="1" disabled>
+            <button type="button" name="button" class="next"><span>Next</span><img src="../../img/icons/next.png" alt="Next"></button>
+        </div>
         </div>
     </div>
     </div>
@@ -677,10 +691,10 @@ body{
           </table>
 
           <div class="table-footer">
-              <button type="button" name="button" class="prev"><span><</span> Previous</button>
-              <input type="text" name="" class="field" value="1" disabled>
-              <button type="button" name="button" class="next">Next <span>></span></button>
-          </div>
+            <button type="button" name="button" class="prev"><img src="../../img/icons/back.png" alt=""><span>Previous</span></button>
+            <input type="text" name="" class="field" value="1" disabled>
+            <button type="button" name="button" class="next"><span>Next</span><img src="../../img/icons/next.png" alt="Next"></button>
+        </div>
         </div>
     </div>
     </div>
