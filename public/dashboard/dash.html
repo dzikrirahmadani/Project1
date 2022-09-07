@@ -10,8 +10,6 @@
   <!-- End G-Font -->
   <title>Dashboard</title>
   <!-- <link href="/dist/output.css" rel="stylesheet"> -->
-    <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
   <script src="https://cdn.tailwindcss.com"></script>
 <!--  -->
   <style type="text/tailwindcss">
@@ -62,380 +60,204 @@
         display: flex;
       } */
 
-            /* ungu1: '#7B2A8C',
-            ungu2: '#3B296F',
-            biru: '#5968C3',
-            hijau: '#01C94B',
-            kuning: '#FCD712',
-            birumuda: '#05BADF', */
-
-
-      /* .container{
-        max-width: 1500px;
-        width: 155%;
-        overflow: hidden;
-        padding: 80px 0;
-      }
-      .container .main-card{
-        display: flex;
-        justify-content: space-evenly;
-        width: 200%;
-        transition: 1s;
-      } */
-      #two:checked ~ .main-card{
-        margin-left: -100%;
-      }
-
-      /* Content Cards1 */
-
-      .container .main-card .cards1{
-        width: calc(100% / 2 - 10px);
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 20px;
-        justify-content: space-between;
-      }
-
-      .main-card .cards1 .card3{
-        width: calc(100% / 3 - 10px);
-        background: #fff;
-        border-radius: 12px;
-        padding: 30px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-        transition: all 0.4s ease;
-      }
-      .main-card .cards1 .card4{
-        width: calc(100% / 3 - 10px);
-        background: #fff;
-        border-radius: 12px;
-        padding: 30px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-        transition: all 0.4s ease;
-      }
-      .main-card .cards1 .card5{
-        width: calc(100% / 3 - 10px);
-        background: #fff;
-        border-radius: 12px;
-        padding: 30px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-        transition: all 0.4s ease;
-      }
-
-      .main-card .cards1 .card3:hover{
-        transform: translateY(-15px);
-      }
-      .main-card .cards1 .card4:hover{
-        transform: translateY(-15px);
-      }
-      .main-card .cards1 .card5:hover{
-        transform: translateY(-15px);
-      }
-
-      .cards1 .card3 .content .img{
-        height: 130px;
-        width: 130px;
-        border-radius: 25%;
-        padding: 3px;
-        background: #5968C3;
-        margin-bottom: 14px;
-      }
-      .cards1 .card4 .content .img{
-        height: 130px;
-        width: 130px;
-        border-radius: 25%;
-        padding: 3px;
-        background: #01C94B;
-        margin-bottom: 14px;
-      }
-      .cards1 .card5 .content .img{
-        height: 130px;
-        width: 130px;
-        border-radius: 25%;
-        padding: 3px;
-        background: #FCD712;
-        margin-bottom: 14px;
-      }
-
-      .cards1 .card3 .content{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-      .cards1 .card4 .content{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-      .cards1 .card5 .content{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-
-      /* Content Cards1 */
-
-      .container .main-card .cards2{
-        width: calc(100% / 2 - 10px);
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 20px;
-        justify-content: space-between;
-      }
-      
-      .main-card .cards2 .card1{
-        width: calc(100% / 3 - 10px);
-        background: #fff;
-        border-radius: 12px;
-        padding: 30px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-        transition: all 0.4s ease;
-        margin-left: 110px;
-      }
-      .main-card .cards2 .card2{
-        width: calc(100% / 3 - 10px);
-        background: #fff;
-        border-radius: 12px;
-        padding: 30px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-        transition: all 0.4s ease;
-        margin-right: 110px;
-      }
-      
-      .main-card .cards2 .card1:hover{
-        transform: translateY(-15px);
-      }
-      .main-card .cards2 .card2:hover{
-        transform: translateY(-15px);
-      }
-      
-      .cards2 .card1 .content{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-      .cards2 .card2 .content{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-      
-      .cards2 .card1 .content .img{
-        height: 130px;
-        width: 130px;
-        border-radius: 25%;
-        padding: 3px;
-        background: #05BADF;
-        margin-bottom: 14px;
-      }
-      .cards2 .card2 .content .img{
-        height: 130px;
-        width: 130px;
-        border-radius: 25%;
-        padding: 3px;
-        background: #7B2A8C;
-        margin-bottom: 14px;
-      }
-      .card .content .img img{
-        height: 100%;
-        width: 100%;
-        /* border: 3px solid #ffff; */
-        border-radius: 25%;
-        object-fit: cover;
-      }
-      .card1 .content .img img{
-        height: 100%;
-        width: 100%;
-        /* border: 3px solid #ffff; */
-        border-radius: 25%;
-        object-fit: cover;
-      }
-      .card2 .content .img img{
-        height: 100%;
-        width: 100%;
-        /* border: 3px solid #ffff; */
-        border-radius: 25%;
-        object-fit: cover;
-      }
-      .card3 .content .total{
-        font-size: 50px;
-        font-weight: 500;
-      }
-      .card4 .content .total{
-        font-size: 50px;
-        font-weight: 500;
-      }
-      .card5 .content .total{
-        font-size: 50px;
-        font-weight: 500;
-      }
-      .card1 .content .total{
-        font-size: 50px;
-        font-weight: 500;
-      }
-      .card2 .content .total{
-        font-size: 50px;
-        font-weight: 500;
-      }
-      .card3 .content .title{
-        font-size: 15px;
-        color: #94a3b8;
-      }
-      .card4 .content .title{
-        font-size: 15px;
-        color: #94a3b8;
-      }
-      .card5 .content .title{
-        font-size: 15px;
-        color: #94a3b8;
-      }
-      .card1 .content .title{
-        font-size: 15px;
-        color: #94a3b8;
-      }
-      .card2 .content .title{
-        font-size: 15px;
-        color: #94a3b8;
-      }
-      .container .button{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin: 20px;
-      }
-      .button label{
-        height: 15px;
-        width: 15px;
-        border-radius: 20px;
-        background: #3B296F;
-        margin: 0 4px;
-        cursor: pointer;
-        transition: all 0.5s ease;
-      }
-      .button label.active{
-        width: 35px;
-        background: #7B2A8C;
-      }
-      #one:checked ~ .button .one{
-        width: 35px;
-      }
-      #one:checked ~ .button .two{
-        width: 15px;
-      }
-      #two:checked ~ .button .one{
-        width: 15px;
-      }
-      #two:checked ~ .button .two{
-        width: 35px;
-      }
-      input[type="radio"]{
-        display: none;
-      }
-
-      /*Nav Profile */
-
-      @media screen and (max-width: 1365px){
-        div.profile {
-          margin-left: 82%;
+      /* responsive */
+      @media screen and (max-width: 1643px){
+        #content{
+          grid-template-columns: repeat(4,minmax(0, 1fr));
         }
       }
-
-      @media screen and (max-width: 1279px){
-        div.profile {
-          margin-left: 77.5%;
+      @media screen and (max-width: 1360px){
+        #content{
+          grid-template-columns: repeat(3,minmax(0, 1fr));
         }
       }
-
+      @media screen and (max-width: 1066px){
+        #content > .thumb{
+          width: 15rem;
+          margin-left: -.1rem;
+        }
+        #content > .thumb > .description > h1, #content > .thumb > .description > p{
+          margin-left: 6.5rem;
+        }
+        #content > .thumb > .description > h1{
+          margin-left: 8rem;
+        }
+      }
+      @media screen and (max-width: 1041px){
+        #content{
+          margin-left: 7%;
+        }
+        #content > .thumb:nth-child(2){
+          margin-left: -2rem;
+        }
+        #content > .thumb:nth-child(3){
+          margin-left: -4rem;
+        }
+        #content > .thumb:nth-child(5){
+          margin-left: -2rem;
+        }
+      }
       @media screen and (max-width: 1023px){
-        div.profile {
-          margin-left: 65%;
+        #content{
+          margin-left: 0;
+        }
+        #content > .thumb{
+          width: 20rem;
+        }
+        #content > .thumb:nth-child(2){
+          margin-left: -3rem;
+        }
+        #content > .thumb:nth-child(3){
+          margin-left: -6rem;
+        }
+        #content > .thumb:nth-child(5){
+          margin-left: -3rem;
+        }
+        #content > .thumb > .description > h1, #content > .thumb > .description > p{
+          margin-left: 9rem;
+        }
+        #content > .thumb > .description > h1{
+          margin-left: 11rem;
+        }
+      }
+      @media screen and (max-width: 1002px){
+        #content{
+          grid-template-columns: repeat(2,minmax(0, 1fr));
+          margin-left: 22%;
+        }
+        #content > .thumb{
+          width: 20rem;
+        }
+        #content > .thumb:nth-child(2){
+          margin-left: 0;
+        }
+        #content > .thumb:nth-child(3){
+          margin-left: 0;
+        }
+        #content > .thumb:nth-child(5){
+          margin-left: 0;
+        }
+        #content > .thumb > .description > h1, #content > .thumb > .description > p{
+          margin-left: 9rem;
+        }
+        #content > .thumb > .description > h1{
+          margin-left: 11rem;
+        }
+        #content > .thumb:nth-child(2), #content > .thumb:nth-child(4){
+          margin-left: -3rem;
         }
       }
       @media screen and (max-width: 767px){
-        div.profile {
-          margin-left: 58%;
+        #content{
+          margin-left: 5%;
+        }
+        #content > .thumb:nth-child(2), #content > .thumb:nth-child(4){
+          margin-left: 2.1rem;
+        }
+        #content > .thumb:nth-child(1), #content > .thumb:nth-child(3), #content > .thumb:nth-child(5){
+          margin-left: -2rem;
         }
       }
-
-      @media screen and (max-width: 639px){
-        div.profile {
-          margin-left: 38%;
+      @media screen and (max-width: 743px){
+        #content > .thumb:nth-child(2), #content > .thumb:nth-child(4){
+          margin-left: 1.5rem;
         }
       }
-
-      @media screen and (max-width: 449px){
-        div.profile {
-          margin-left: 26%;
+      @media screen and (max-width: 733px){
+        #content > .thumb:nth-child(1), #content > .thumb:nth-child(3), #content > .thumb:nth-child(5){
+          margin-left: -2.2rem;
+        }
+        #content > .thumb{
+          margin-top: 1rem;
+        }
+        #content > .thumb:nth-child(2), #content > .thumb:nth-child(4){
+          margin-left: 1rem;
         }
       }
-
-      /* End Nav Profile */
-
-      @media screen and (max-width: 1098px){
-        .container > .main-card > .cards1{
-          max-width: 40%;
+      @media screen and (max-width: 724px){
+        #content{
+          grid-template-columns: repeat(1,minmax(0, 1fr));
+        }
+        #content > .thumb{
+          width: 150%;
+          padding-left: 2rem;
+        }
+        #content > .thumb > .description > h1, #content > .thumb > .description > p{
+          left: 6rem;
+        }
+        #content > .thumb:nth-child(2), #content > .thumb:nth-child(4){
+          margin-left: 20%;
+        }
+        #content > .thumb:nth-child(1), #content > .thumb:nth-child(3), #content > .thumb:nth-child(5){
+          margin-left: 20%;
         }
       }
-      @media (max-width: 770px) {
-        .main-card .cards1 .card3{
-          margin: 1rem 0 10px .5rem;
-          width: calc(100% / 2 - 10px);
+      @media screen and (max-width: 630px){
+        #content > .thumb:nth-child(2), #content > .thumb:nth-child(4){
+          margin-left: 10%;
         }
-        .main-card .cards1 .card4{
-          margin: 1rem 0 10px .5rem;
-          width: calc(100% / 2 - 10px);
-        }
-        .main-card .cards1 .card5{
-          margin: 1rem 0 10px .5rem;
-          width: calc(100% / 2 - 10px);
-        }
-        .main-card .cards2 .card{
-          margin: 20px 0 10px 0;
-          width: calc(100% / 2 - 10px);
-        }
-        .main-card .cards2 .card1{
-          margin: 20px 0 10px 2rem;
-          width: calc(100% / 2 - 20px);
-        }
-        .main-card .cards2 .card2{
-          margin: 20px 0 10px 0;
-          width: calc(100% / 2 - 20px);
+        #content > .thumb:nth-child(1), #content > .thumb:nth-child(3), #content > .thumb:nth-child(5){
+          margin-left: 10%;
         }
       }
-      @media (max-width: 600px) {
-        .main-card .cards1 .card{
-          /* margin: 20px 0 10px 0; */
-          width: 100%;
+      @media screen and (max-width: 596px){
+        #content > .thumb:nth-child(2), #content > .thumb:nth-child(4){
+          margin-left: 1%;
         }
-        .main-card .cards2 .card{
-          /* margin: 20px 0 10px 0; */
-          width: 100%;
-        }
-        .main-card .cards2 .card1{
-          /* margin: 20px 0 10px 0; */
-          width: 100%;
-        }
-        .main-card .cards2 .card2{
-          /* margin: 20px 0 10px 0; */
-          width: 100%;
+        #content > .thumb:nth-child(1), #content > .thumb:nth-child(3), #content > .thumb:nth-child(5){
+          margin-left: 1%;
         }
       }
-
-
+      @media screen and (max-width: 555px){
+        #content > .thumb:nth-child(2), #content > .thumb:nth-child(4){
+          margin-left: -1.5rem;
+        }
+        #content > .thumb:nth-child(1), #content > .thumb:nth-child(3), #content > .thumb:nth-child(5){
+          margin-left: -1.5rem;
+        }
+      }
+      @media screen and (max-width: 535px){
+        #content > .thumb{
+          width: 110%;
+          padding-left: 0;
+        }
+        #content > .thumb > .description > h1, #content > .thumb > .description > p{
+          left: 1rem;
+        }
+        #content > .thumb:nth-child(2), #content > .thumb:nth-child(4){
+          margin-left: 10%;
+        }
+        #content > .thumb:nth-child(1), #content > .thumb:nth-child(3), #content > .thumb:nth-child(5){
+          margin-left: 10%;
+        }
+      }
+      @media screen and (max-width: 468px){
+        #content > .thumb:nth-child(2), #content > .thumb:nth-child(4){
+          margin-left: 2%;
+        }
+        #content > .thumb:nth-child(1), #content > .thumb:nth-child(3), #content > .thumb:nth-child(5){
+          margin-left: 2%;
+        }
+      }
+      @media screen and (max-width: 430px){
+        #content > .thumb:nth-child(2), #content > .thumb:nth-child(4){
+          margin-left: -1.5rem;
+        }
+        #content > .thumb:nth-child(1), #content > .thumb:nth-child(3), #content > .thumb:nth-child(5){
+          margin-left: -1.5rem;
+        }
+      }
+      @media screen and (max-width: 403px){
+        .container{
+          margin-left: 0;
+        }
+      }
+      @media screen and (max-width: 375px){
+        #content > .thumb{
+          overflow: hidden;
+        }
+      }
+      /* end of responsive */
     }
   </style>
 <!--  -->
@@ -501,7 +323,7 @@
         </li>
         <li>
           <a href="../dashboard/dash.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
-            <img src="../dashboard/dash.html" alt="" class="w-4 h-4
+            <img src="../../img/dash.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Dashboard</span>
           </a>
@@ -514,14 +336,14 @@
           </a>
         </li>
         <li>
-          <a href="../satuan/satuan-barang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
-            <img src="../satuan/satuan-barang.html" alt="" class="w-4 h-4
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <img src="../../img/satuan.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Satuan Barang</span>
           </a>
         </li>
         <li>
-          <a href="../kategori/kategori-barang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
             <img src="../../img/data.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Kategori Barang</span>
@@ -574,7 +396,7 @@
       <div class="flex-col bg-ungu1 w-52 mt-[68px]" >
         <ul class="flex-col">
           <li class="">
-            <a href="../dashboard/dash.html" class="side flex text-white py-3 hover:bg-ungu2 active:bg-ungu2 transition duration-200">
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 active:bg-ungu2 transition duration-200">
               <img src="../../img/dash.png" alt="" class="w-4 h-4
                ml-7 mr-2">
               <span class="">Dashboard</span>
@@ -588,35 +410,35 @@
             </a>
           </li>
           <li>
-            <a href="../satuan/satuan-barang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
               <img src="../../img/satuan.png" alt="" class="w-4 h-4
                ml-7 mr-2">
               <span class="">Satuan Barang</span>
             </a>
           </li>
           <li>
-            <a href="../kategori/kategori-barang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
               <img src="../../img/data.png" alt="" class="w-4 h-4
                ml-7 mr-2">
               <span class="">Kategori Barang</span>
             </a>
           </li>
           <li>
-            <a href="../pengajuan/pengajuan-barang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
               <img src="../../img/checklist.png" alt="" class="w-4 h-4
                ml-7 mr-2">
               <span class="">Pengajuan Barang</span>
             </a>
           </li>
           <li>
-            <a href="../peminjaman/peminjaman-hari-ini.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
               <img src="../../img/borrow.png" alt="" class="w-4 h-4
                ml-7 mr-2">
               <span class="">Pinjam Barang</span>
             </a>
           </li>
           <li>
-            <a href="../laporan/laporan-barang.html" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200">
               <img src="../../img/list.png" alt="" class="w-5 h-5
                ml-7 mr-2">
               <span class="">Laporan Barang</span>
@@ -644,109 +466,53 @@
     <!-- END SIDE -->
 
     <!-- CONTENT -->
-    <div class="p-8 text-ungu1-font-semibold m-96 mt-12 ml-[10px] lg:ml-[195px] w-[100%] md:-ml-[18px]">
+    <div class="container p-8 text-ungu1-font-semibold m-96 mt-12 ml-[10px] lg:ml-[195px] w-[100%] md:-ml-[18px]">
       <div class="flex">
         <h1 class="text-2xl font-semibold text-ungu1 mr-[20px]">Dashboard</h1>
         <input type="date" id="tanggal" name="tanggal" class="rounded-lg text-sm text-gray-700 px-10">
       </div>
-      <div class="container" id="container">
-        <input type="radio" name="dot" id="one">
-        <input type="radio" name="dot" id="two">
-        <div class="main-card">
-          <div class="cards1">
-            <div class="card3">
-              <a href="#">
-              <div class="content">
-                <div class="img">
-                  <img src="../../img/svg/static.svg" alt="">
-                </div>
-                <div class="details">
-                  <div class="total">516</div>
-                  <div class="title">Total Inventaris</div>
-                </div>
-              </div>
-              </a>
+      <div class="grid md:grid-cols-2 md:gap-x-[380px] lg:grid-cols-5 gap-x-[285px] lg:gap-x-[285px]" id="content"> 
+          <a href="../gudang/gudang.html" class="thumb w-[350px] sm:w-[22rem] md:w-[360px] lg:w-[264px] h-[150px] lg:h-[70px] bg-white rounded-lg shadow-lg mt-5">
+              <img src="../../img/barstatic.png" alt="" class="w-12 h-12 absolute ml-[45px] mt-[50px] lg:w-6 lg:h-6 lg:ml-[21px] lg:mt-[23px]">
+            <div class="description ml-[25px] mt-7 w-[90px] h-[90px] bg-biru rounded-[25px] lg:rounded-2xl lg:w-[50px] lg:h-[50px] lg:mt-[10px] lg:ml-2">
+              <h1 class="absolute -z-5 ml-[200px] -mt-2 font-semibold text-[50px] lg:text-[35px] lg:ml-[180px] lg:-mt-[13px]">561</h1>
+              <p class="absolute -z-5 ml-[170px] mt-16 font-semibold text-slate-600 lg:text-[13px] lg:ml-[140px] lg:mt-[30px]">Total Inventaris</p>
             </div>
-            <div class="card4">
-              <a href="barangDiterima.html">
-                <div class="content">
-                  <div class="img">
-                      <img src="../../img/svg/recieve.svg" alt="">
-                  </div>
-                  <div class="details">
-                    <div class="total">5</div>
-                    <div class="title">Barang Diterima</div>
-                  </div>
-                </div>
-              </a>
+          </a> 
+
+          <a href="" class="thumb w-[350px] sm:w-[22rem] md:w-[360px] lg:w-[264px] h-[150px] lg:h-[70px] bg-white rounded-lg shadow-lg mt-5">
+              <img src="../../img/recieve.png" alt="" class="w-16 h-16 absolute ml-[39px] mt-[43px] lg:w-10 lg:h-10 lg:ml-[13px] lg:mt-[16px]">
+            <div class="description ml-[25px] mt-7 w-[90px] h-[90px] bg-hijau rounded-[25px] lg:rounded-2xl lg:w-[50px] lg:h-[50px] lg:mt-[10px] lg:ml-2">
+              <h1 class="absolute -z-5 ml-[240px] -mt-2 font-semibold text-[50px] lg:text-[35px] lg:ml-[215px] lg:-mt-[13px]">5</h1>
+              <p class="absolute -z-5 ml-[170px] mt-16 font-semibold text-slate-600 lg:text-[13px] lg:ml-[140px] lg:mt-[30px]">Barang Diterima</p>
             </div>
-            <div class="card5">
-              <a href="barangMasuk.html">
-                <div class="content">
-                  <div class="img">
-                    <img src="../../img/svg/download.svg" alt="" class="ml-1">
-                  </div>
-                  <div class="details">
-                    <div class="total">2</div>
-                    <div class="title">Barang Masuk</div>
-                  </div>
-                </div>
-              </a>
+          </a> 
+
+          <a href="" class="thumb w-[350px] sm:w-[22rem] md:w-[360px] lg:w-[264px] h-[150px] lg:h-[70px] bg-white rounded-lg shadow-lg mt-5">
+              <img src="../../img/download.png" alt="" class="w-12 h-12 absolute ml-[46px] mt-[50px] lg:w-6 lg:h-6 lg:ml-[21px] lg:mt-[23px]">
+            <div class="description ml-[25px] mt-7 w-[90px] h-[90px] bg-kuning rounded-[25px] lg:rounded-2xl lg:w-[50px] lg:h-[50px] lg:mt-[10px] lg:ml-2">
+              <h1 class="absolute -z-5 ml-[240px] -mt-2 font-semibold text-[50px] lg:text-[35px] lg:ml-[200px] lg:-mt-[13px]">2</h1>
+              <p class="absolute -z-5 ml-[170px] mt-16 font-semibold text-slate-600 lg:text-[13px] lg:ml-[140px] lg:mt-[30px]">Barang Masuk</p>
             </div>
-          </div>
-          <div class="cards2">
-            <div class="card1">
-              <a href="barangKeluar.html">
-                <div class="content">
-                  <div class="img">
-                    <img src="../../img/svg/upload.svg" alt="ml-1">
-                  </div>
-                  <div class="details">
-                    <div class="total">5</div>
-                    <div class="title">Barang Keluar</div>
-                  </div>
-                </div>
-              </a>
+          </a> 
+
+          <a href="" class="thumb w-[350px] sm:w-[22rem] md:w-[360px] lg:w-[264px] h-[150px] lg:h-[70px] bg-white rounded-lg shadow-lg mt-5">
+              <img src="../../img/upload.png" alt="" class="w-12 h-12 absolute ml-[46px] mt-[50px] lg:w-6 lg:h-6 lg:ml-[21px] lg:mt-[23px]">
+            <div class="description ml-[25px] mt-7 w-[90px] h-[90px] bg-birumuda rounded-[25px] lg:rounded-2xl lg:w-[50px] lg:h-[50px] lg:mt-[10px] lg:ml-2">
+              <h1 class="absolute -z-5 ml-[240px] -mt-2 font-semibold text-[50px] lg:text-[35px] lg:ml-[200px] lg:-mt-[13px]">5</h1>
+              <p class="absolute -z-5 ml-[170px] mt-16 font-semibold text-slate-600 lg:text-[13px] lg:ml-[140px] lg:mt-[30px]">Barang Keluar</p>
             </div>
-            <div class="card2">
-              <a href="dataSupplier.html">
-                <div class="content">
-                  <div class="img">
-                    <img src="../../img/svg/supplier.svg" alt="">
-                  </div>
-                  <div class="details">
-                    <div class="total">3</div>
-                    <div class="title">Data Supplier</div>
-                  </div>
-                </div>
-              </a>
+          </a> 
+
+          <a href="" class="thumb w-[350px] sm:w-[22rem] md:w-[360px] lg:w-[264px] h-[150px] lg:h-[70px] bg-white rounded-lg shadow-lg mt-5 mb-5">
+              <img src="../../img/check.png" alt="" class="w-12 h-12 absolute ml-[46px] mt-[50px] lg:w-6 lg:h-6 lg:ml-[21px] lg:mt-[23px]">
+            <div class="description ml-[25px] mt-7 w-[90px] h-[90px] bg-ungu1 rounded-[25px] lg:rounded-2xl lg:w-[50px] lg:h-[50px] lg:mt-[10px] lg:ml-2">
+              <h1 class="absolute -z-5 ml-[240px] -mt-2 font-semibold text-[50px] lg:text-[35px] lg:ml-[200px] lg:-mt-[13px]">3</h1>
+              <p class="absolute -z-5 ml-[170px] mt-16 font-semibold text-slate-600 lg:text-[13px] lg:ml-[140px] lg:mt-[30px]">Data Supplier</p>
             </div>
-          </div>
-        </div>
-        <div class="button">
-          <label for="one" class="active one"></label>
-          <label for="two" class="two"></label>
-        </div>
+          </a> 
       </div>
     </div>
-    <style>
-      @media screen and (max-width: 770px){
-        .main-card .cards1 .card3, .main-card .cards1 .card4, .main-card .cards1 .card5{
-          width: 15rem;
-        }
-        .button > label{
-          display: none;
-        }
-        #container{
-         max-width: 200%;
-         width: 200%;
-         border: 1px solid #000;
-        }
-        #container > .main-card{
-          width: 200%;
-        }
-      }
-    </style>
     <!-- END CONTENT -->
 <script src="../../dist/dashboardScript/script.js"></script>
 </body>
