@@ -70,7 +70,7 @@
             birumuda: '#05BADF', */
 
 
-      .container{
+      /* .container{
         max-width: 1500px;
         width: 155%;
         overflow: hidden;
@@ -81,13 +81,7 @@
         justify-content: space-evenly;
         width: 200%;
         transition: 1s;
-      }
-      .container .main-card{
-        display: flex;
-        justify-content: space-evenly;
-        width: 200%;
-        transition: 1s;
-      }
+      } */
       #two:checked ~ .main-card{
         margin-left: -100%;
       }
@@ -396,9 +390,17 @@
           max-width: 40%;
         }
       }
-      @media (max-width: 768px) {
-        .main-card .cards1 .card{
-          margin: 20px 0 10px 0;
+      @media (max-width: 770px) {
+        .main-card .cards1 .card3{
+          margin: 1rem 0 10px .5rem;
+          width: calc(100% / 2 - 10px);
+        }
+        .main-card .cards1 .card4{
+          margin: 1rem 0 10px .5rem;
+          width: calc(100% / 2 - 10px);
+        }
+        .main-card .cards1 .card5{
+          margin: 1rem 0 10px .5rem;
           width: calc(100% / 2 - 10px);
         }
         .main-card .cards2 .card{
@@ -406,12 +408,12 @@
           width: calc(100% / 2 - 10px);
         }
         .main-card .cards2 .card1{
-          margin: 20px 0 10px 0;
-          width: calc(100% / 2 - 10px);
+          margin: 20px 0 10px 2rem;
+          width: calc(100% / 2 - 20px);
         }
         .main-card .cards2 .card2{
           margin: 20px 0 10px 0;
-          width: calc(100% / 2 - 10px);
+          width: calc(100% / 2 - 20px);
         }
       }
       @media (max-width: 600px) {
@@ -647,7 +649,7 @@
         <h1 class="text-2xl font-semibold text-ungu1 mr-[20px]">Dashboard</h1>
         <input type="date" id="tanggal" name="tanggal" class="rounded-lg text-sm text-gray-700 px-10">
       </div>
-      <div class="container">
+      <div class="container" id="container">
         <input type="radio" name="dot" id="one">
         <input type="radio" name="dot" id="two">
         <div class="main-card">
@@ -692,9 +694,6 @@
               </a>
             </div>
           </div>
-          <style>
-            
-          </style>
           <div class="cards2">
             <div class="card1">
               <a href="barangKeluar.html">
@@ -730,6 +729,24 @@
         </div>
       </div>
     </div>
+    <style>
+      @media screen and (max-width: 770px){
+        .main-card .cards1 .card3, .main-card .cards1 .card4, .main-card .cards1 .card5{
+          width: 15rem;
+        }
+        .button > label{
+          display: none;
+        }
+        #container{
+         max-width: 200%;
+         width: 200%;
+         border: 1px solid #000;
+        }
+        #container > .main-card{
+          width: 200%;
+        }
+      }
+    </style>
     <!-- END CONTENT -->
 <script src="../../dist/dashboardScript/script.js"></script>
 </body>
