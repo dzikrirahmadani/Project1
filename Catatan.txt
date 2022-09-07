@@ -8,7 +8,7 @@ Halaman yang belum responsive
 *Gudang 
 	-
 
-*Dashboard
+*Dashboard ✔
 	1. dash
 
 *laporan ✔
