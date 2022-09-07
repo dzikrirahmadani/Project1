@@ -8,11 +8,11 @@ Halaman yang belum responsive
 *Gudang 
 	-
 
-*Dashboard
-	1. dash
+*Dashboard ✔
+	-
 
-*laporan 
-	1. laporan_barang
+*laporan ✔
+	-
 
 *peminjaman 
 	-
@@ -24,4 +24,4 @@ Halaman yang belum responsive
 	-
 
 *satuan 
-	1. satuan gudang
+	1. satuan gudang 

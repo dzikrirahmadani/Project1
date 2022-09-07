@@ -91,87 +91,6 @@
       }
       /* end of card style */
 
-      /* responsive style */
-      /* @media(max-width: 767px){
-        .cards{
-          width: 180%;
-          padding: 3rem;
-        }
-      } */
-
-      /*Nav Profile */
-
-      @media screen and (max-width: 1365px){
-        div.profile {
-          margin-left: 82%;
-        }
-      }
-
-      @media screen and (max-width: 1279px){
-        div.profile {
-          margin-left: 77.5%;
-        }
-      }
-
-      @media screen and (max-width: 1023px){
-        div.profile {
-          margin-left: 65%;
-        }
-      }
-
-      @media screen and (max-width: 767px){
-        div.profile {
-          margin-left: 58%;
-        }
-      }
-
-      @media screen and (max-width: 639px){
-        div.profile {
-          margin-left: 38%;
-        }
-      }
-
-      @media screen and (max-width: 449px){
-        div.profile {
-          margin-left: 26%;
-        }
-      }
-
-      /* End Nav Profile */
-
-      /* @media (max-width: 639px){
-        .title{
-          margin-left: 0;
-          text-align: center;
-        }
-        .card{
-          width: 100%;
-        }
-        .cards{
-          width: 100%;
-          padding: 2rem;
-          margin-inline: 4rem;
-        }
-        .show-detail{
-          margin-right: -4rem;
-        }
-      }
-      @media (max-width: 375px) {
-        .title{
-          margin-left: 0;
-          text-align: center;
-        }
-        .card{
-          width: 100%;
-        }
-        .cards{
-          width: 100%;
-          padding: 2rem;
-        }
-      } */
-      /* end of responsive style */
-      
-
       .side{
         align-items: center;
       }
@@ -192,6 +111,72 @@
         transition: 1s;
       }
 
+      /* responsive style */
+        /*Nav Profile */
+        @media screen and (max-width: 1365px){
+          div.profile {
+            margin-left: 82%;
+          }
+        }
+
+        @media screen and (max-width: 1279px){
+          div.profile {
+            margin-left: 77.5%;
+          }
+        }
+
+        @media screen and (max-width: 1023px){
+          div.profile {
+            margin-left: 65%;
+          }
+        }
+
+        @media screen and (max-width: 767px){
+          div.profile {
+            margin-left: 58%;
+          }
+        }
+
+        @media screen and (max-width: 639px){
+          div.profile {
+            margin-left: 38%;
+          }
+        }
+
+        @media screen and (max-width: 449px){
+          div.profile {
+            margin-left: 26%;
+          }
+        }
+        /* End Nav Profile */
+
+        /* content */
+        @media screen and (min-width: 1536px){
+        section.satuan-barang > .cards{
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+        }
+        @media screen and (max-width: 1535px){
+          section.satuan-barang > .cards{
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            margin-left: 20%;
+          }
+          section.satuan-barang > .cards > .card{
+            margin-inline: 3rem;
+          }
+        }
+        @media screen and (max-width: 1318px){
+          section.satuan-barang > .cards{
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            margin-left: 17%;
+          }
+          section.satuan-barang > .cards > .card{
+            margin-inline: 2rem;
+          }
+        }
+        
+        /* end of content */
+      /* end of responsive style */
     }
   </style>
 <!--  -->
@@ -401,7 +386,7 @@
       <div class="title">
         <h1 class="font-semibold md:-ml-[200px] lg:ml-3">satuan barang</h1>
       </div>
-      <div class="cards grid sm:grid-cols-2 gap-x-5 sm:mx-100 sm:ml-1 sm:mx-5 sm:p-3 md:grid-cols-2 md:ml-5 md:mr-5 lg:grid-cols-3 lg:ml-60 xl:grid-cols-4 xl:ml-60">
+      <div class="cards grid sm:grid-cols-2. gap-x-5 sm:mx-100 sm:ml-1 sm:mx-5 sm:p-3 md:grid-cols-2. md:ml-5 md:mr-5 lg:grid-cols-3. lg:ml-60 xl:grid-cols-4. xl:ml-60">
         <div class="card ml-2">
           <div class="content">
             <img src="../../img/icons/kilogram.png" alt="kilogram" class="img-card-one">
