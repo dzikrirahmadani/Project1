@@ -1,6 +1,6 @@
 Halaman yang belum responsive 
 
-*Kategori barang
+*Kategori barang ✔
 	1. kategori barang
 	2. tambah kategori
 	3. ubah kategori
@@ -11,16 +11,16 @@ Halaman yang belum responsive
 *Dashboard
 	1. dash
 
-*laporan 
+*laporan ✔
 	1. laporan_barang
 
-*peminjaman 
+*peminjaman ✔
 	-
 
-*pengajuan
+*pengajuan ✔
 	-
 
-*profile
+*profile 
 	-
 
 *satuan 
