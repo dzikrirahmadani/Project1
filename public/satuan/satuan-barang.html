@@ -91,87 +91,6 @@
       }
       /* end of card style */
 
-      /* responsive style */
-      /* @media(max-width: 767px){
-        .cards{
-          width: 180%;
-          padding: 3rem;
-        }
-      } */
-
-      /*Nav Profile */
-
-      @media screen and (max-width: 1365px){
-        div.profile {
-          margin-left: 82%;
-        }
-      }
-
-      @media screen and (max-width: 1279px){
-        div.profile {
-          margin-left: 77.5%;
-        }
-      }
-
-      @media screen and (max-width: 1023px){
-        div.profile {
-          margin-left: 65%;
-        }
-      }
-
-      @media screen and (max-width: 767px){
-        div.profile {
-          margin-left: 58%;
-        }
-      }
-
-      @media screen and (max-width: 639px){
-        div.profile {
-          margin-left: 38%;
-        }
-      }
-
-      @media screen and (max-width: 449px){
-        div.profile {
-          margin-left: 26%;
-        }
-      }
-
-      /* End Nav Profile */
-
-      /* @media (max-width: 639px){
-        .title{
-          margin-left: 0;
-          text-align: center;
-        }
-        .card{
-          width: 100%;
-        }
-        .cards{
-          width: 100%;
-          padding: 2rem;
-          margin-inline: 4rem;
-        }
-        .show-detail{
-          margin-right: -4rem;
-        }
-      }
-      @media (max-width: 375px) {
-        .title{
-          margin-left: 0;
-          text-align: center;
-        }
-        .card{
-          width: 100%;
-        }
-        .cards{
-          width: 100%;
-          padding: 2rem;
-        }
-      } */
-      /* end of responsive style */
-      
-
       .side{
         align-items: center;
       }
@@ -192,6 +111,71 @@
         transition: 1s;
       }
 
+      /* responsive style */
+        /*Nav Profile */
+        @media screen and (max-width: 1365px){
+          div.profile {
+            margin-left: 82%;
+          }
+        }
+
+        @media screen and (max-width: 1279px){
+          div.profile {
+            margin-left: 77.5%;
+          }
+        }
+
+        @media screen and (max-width: 1023px){
+          div.profile {
+            margin-left: 65%;
+          }
+        }
+
+        @media screen and (max-width: 767px){
+          div.profile {
+            margin-left: 58%;
+          }
+        }
+
+        @media screen and (max-width: 639px){
+          div.profile {
+            margin-left: 38%;
+          }
+        }
+
+        @media screen and (max-width: 449px){
+          div.profile {
+            margin-left: 26%;
+          }
+        }
+        /* End Nav Profile */
+
+        /* content */
+        @media screen and (min-width: 1536px){
+        section.satuan-barang > .cards{
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+        }
+        @media screen and (max-width: 1535px){
+          section.satuan-barang > .cards{
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            margin-left: 20%;
+          }
+          section.satuan-barang > .cards > .card{
+            margin-inline: 3rem;
+          }
+        }
+        @media screen and (max-width: 1330px){
+          section.satuan-barang > .cards{
+            margin-left: 17%;
+          }
+          section.satuan-barang > .cards > .card{
+            margin-inline: 2rem;
+          }
+        }
+       
+        /* end of content */
+      /* end of responsive style */
     }
   </style>
 <!--  -->
@@ -395,13 +379,129 @@
     </nav>
 
     <!-- END SIDE -->
-
+    <style>
+       @media screen and (max-width: 1332px){
+          section.satuan-barang > .cards{
+            grid-template-columns: repeat(2 , minmax(0, 1fr));
+            margin-left: 40%;
+            padding: 0;
+            width: max-content;
+          }
+          section.satuan-barang > .cards > .card:nth-child(2), section.satuan-barang > .cards > .card:nth-child(4){
+            margin-left: -2rem;
+          }
+        }
+        @media screen and (max-width: 1076px){
+          section.satuan-barang > .cards{
+            margin-left: 30%;
+          }
+        }
+        @media screen and (max-width: 1023px){
+          section.satuan-barang > .cards{
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            margin-left: 2%;
+            padding: 0;
+            width: fit-content;
+          }
+          section.satuan-barang > .cards > .card, section.satuan-barang > .cards > .card:nth-child(3){
+            margin-left: 0;
+          }
+          section.satuan-barang > .cards > .card:nth-child(2){
+            margin-left: 0;
+          }
+          section.satuan-barang > .cards > .card:nth-child(4){
+            margin-left: 0;
+          }
+          .title{
+            text-align: center;
+            padding: 0;
+            margin-left: 0;
+          }
+        }
+        @media screen and (max-width: 988px){
+          section.satuan-barang > .cards{
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            margin-left: 20%;
+            padding: 0;
+            width: fit-content;
+          }
+          section.satuan-barang > .cards > .card:nth-child(2), section.satuan-barang > .cards > .card:nth-child(4){
+            margin-left: 1.5rem;
+          }
+          .title{
+            text-align: center;
+            padding: 0;
+            margin-left: 0;
+            width: 127%;
+          }
+        }
+        @media screen and (max-width: 835px){
+          section.satuan-barang > .cards{
+            margin-left: 10%;
+          }
+          .title{
+            border: 1px solid #000;
+            width: 107%;
+          }
+        }
+        @media screen and (max-width: 770px){
+          section.satuan-barang > .cards{
+            margin-left: 5%;
+          }
+          section.satuan-barang > .cards > .card:nth-child(2), section.satuan-barang > .cards > .card:nth-child(4){
+            margin-left: 0;
+          }
+          section.satuan-barang > .cards > .card:nth-child(1){
+            margin-left: 0;
+          }
+        }
+        @media screen and (max-width: 677px){
+          section.satuan-barang > .cards{
+            margin-left: 3%;
+          }
+        }
+        @media screen and (max-width: 655px){
+          section.satuan-barang > .cards{
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            width: 150%;
+            margin-left: 25%;
+          }
+          section.satuan-barang > .cards > .card{
+            width: 100%;
+          }
+        }
+        @media screen and (max-width: 535px){
+          section.satuan-barang > .cards{
+            margin-left: 15%;
+          }
+          .title{
+            border: 1px solid #000;
+          }
+        }
+        @media screen and (max-width: 497px){
+          section.satuan-barang > .cards{
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            width: 100%;
+            margin-left: 15%;
+          }
+        }
+        @media screen and (max-width: 455px){
+          section.satuan-barang > .cards{
+            width: 90%;
+          }
+        }
+        @media screen and (max-width: 415px){
+          section.satuan-barang > .cards{
+            width: 80%;
+          }
+        }
+    </style>
     <!-- CONTENT -->
-    <section class="satuan-barang -ml-[45px] lg:-ml-5 sm:-ml-2 md:-ml-3">
+    <section class="satuan-barang">
       <div class="title">
-        <h1 class="font-semibold md:-ml-[200px] lg:ml-3">satuan barang</h1>
+        <h1 class="font-semibold lg:ml-3">satuan barang</h1>
       </div>
-      <div class="cards grid sm:grid-cols-2 gap-x-5 sm:mx-100 sm:ml-1 sm:mx-5 sm:p-3 md:grid-cols-2 md:ml-5 md:mr-5 lg:grid-cols-3 lg:ml-60 xl:grid-cols-4 xl:ml-60">
+      <div class="cards grid sm:grid-cols-2. gap-x-5 sm:mx-100 sm:ml-1 sm:mx-5 sm:p-3 md:grid-cols-2. md:ml-5 md:mr-5 lg:grid-cols-3. lg:ml-60 xl:grid-cols-4. xl:ml-60">
         <div class="card ml-2">
           <div class="content">
             <img src="../../img/icons/kilogram.png" alt="kilogram" class="img-card-one">

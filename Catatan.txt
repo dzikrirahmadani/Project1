@@ -9,7 +9,7 @@ Halaman yang belum responsive
 	-
 
 *Dashboard ✔
-	1. dash
+	-
 
 *laporan ✔
 	1. laporan_barang
@@ -23,5 +23,5 @@ Halaman yang belum responsive
 *profile 
 	-
 
-*satuan 
-	1. satuan gudang
+*satuan (Development)
+	1. satuan gudang 
