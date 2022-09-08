@@ -89,6 +89,7 @@
       .card:nth-child(2) > .content, .card:nth-child(3) > .content, .card:nth-child(4) > .content{
         margin-top: .7rem;
       }
+
       /* end of card style */
 
       /* responsive style */
@@ -99,24 +100,64 @@
         }
       } */
 
-      @media (max-width: 639px){
+      @media screen and (max-width: 1023px){
+        .footer-card.satu {
+          width: 116%;
+        }
+      }
+
+      @media screen and (max-width: 767px){
+        .footer-card.satu {
+          width: 119%;
+        }
+      }
+
+      @media screen and (max-width: 639px){
         .title{
           margin-left: 0;
           text-align: center;
         }
         .card{
-          width: 100%;
+          width: 120%;
         }
         .cards{
           width: 100%;
           padding: 2rem;
           margin-inline: 4rem;
+          margin-left: 40%;
         }
         .show-detail{
           margin-right: -4rem;
         }
+        .footer-card.satu {
+          width: 115%;
+        }
       }
-      @media (max-width: 375px) {
+
+      @media screen and (max-width: 520px) {
+        .cards {
+          margin-left: 30%;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        div.profile {
+          margin-left: -20rem;
+        }
+        .cards {
+          margin-left: 10%;
+        }
+        .card{
+          width: 100%;
+          margin-left: 1rem;
+        }
+        .footer {
+          width: 1%;
+          margin-left: 85%;
+        }
+      }
+
+      @media screen and (max-width: 375px) {
         .title{
           margin-left: 0;
           text-align: center;
@@ -128,9 +169,13 @@
           width: 100%;
           padding: 2rem;
         }
+        .footer-card.satu {
+          width: 117%;
+        }
       }
       /* end of responsive style */
-      
+        
+
 
       .side{
         align-items: center;
@@ -180,7 +225,7 @@
 <body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter" onload="onload()">
 
     <!-- NAV -->
-    <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
+    <div class="navbar fixed flex justify-between p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
       <div class="text-left font-bold items-center ">
         <a href="">
           <h3 class="text-white ml-14 lg:ml-4 text-lg block">InVentory</h3>
@@ -188,7 +233,7 @@
         <div>
         </div>
       </div>
-      <div class="profile ml-[260px] sm:ml-[350px] float-right lg:ml-[760px] xl:ml-[1100px] md:ml-[475px]">
+      <div class="profile">
         <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">NoFace21</h3> 
         <img src="../../img/noface.jpg" alt="profile" class="w-7 h-7 rounded-full border"></a>
       </div>
@@ -197,7 +242,7 @@
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
             </svg>
           <input type="text" name="text" placeholder="Search" class="sm-input placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 lg:w-[1000px] bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
-          </div>
+      </div>
     </div>
 
     <!-- HAMBURGER -->
@@ -361,7 +406,7 @@
     <!-- CONTENT -->
     <section class="satuan-barang -ml-[70px] lg:-ml-9 xl:-ml-5 sm:-ml-2 md:-ml-3">
       <div class="title">
-        <h1 class="font-semibold ml-[15px]">satuan barang</h1>
+        <h1 class="font-semibold ml-[15px]">kategori barang</h1>
       </div>
       <div class="cards grid sm:grid-cols-2 sm:gap-x-10 sm:mx-100 sm:ml-1 sm:mx-5 sm:p-3 md:grid-cols-2 md:ml-5 md:mr-5 lg:grid-cols-3 lg:ml-60 xl:grid-cols-4 xl:ml-60 gap-x-7">
         <div class="card sm:w-[305px] md:w-[350px] lg:w-[16rem] xl:w-[16rem] bg-biru">
@@ -370,28 +415,37 @@
             <p class="text-white text-md absolute -mt-[80px] ml-[110px]">Produk Elektronik</p>
             <span class="ml-[10px] mt-[7px] font-semibold text-white text-[50px]">15</span>
           </div>
-          <div class="footer-card">
-            <a href="#">
-              <span class="show-detail md:ml-[5rem] lg:ml-[0]">
-                <span class="absolute text-white -mt-[20px]">lihat detail ></span>
-                <div class="absolute -mt-[15px] -ml-[225px] sm:-ml-[160px] md:-ml-[240px] lg:-ml-[160px] w-[380px] sm:w-[305px] md:w-[350px] lg:w-[256px] h-[35px] bg-black opacity-25 rounded-b-[15px]"></div>
-              </span>
-            </a>
+          <div class="w-[123%] footer-card satu">
+            <a href="#" class=" text-white capitalize">lihat detail <img src="../../img/icons/next.png" alt="Lihat Detail"></a>
           </div>
         </div>
+        <style>
+          .footer-card.satu{
+            margin-left: -1.5rem;
+            padding: .4rem;
+            text-align: right;
+            margin-top: .3rem;
+            background-color: rgba(0,0,0, .25);
+            border-radius: 0 0 1rem 1rem;
+          }
+          .footer-card.satu > a{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+          }
+          .footer-card.satu > a > img{
+            margin-inline: .6rem;
+          }
+        </style>
         <div class="card sm:w-[305px] md:w-[350px] lg:w-[16rem] xl:w-[16rem] bg-hijau">
           <div class="flex-col -mt-[1px] -m-[5px] lg:-ml-[40px]">
             <img src="../../img/icons/pen.png" alt="" class="absolute w-[80px] -mt-[20px] ml-[50px]">
             <p class="text-white text-md absolute -mt-[20px] ml-[110px]">Produk Alat Tulis</p>
             <span class="ml-[120px] mt-[6px] font-semibold text-white text-[50px]">85</span>
           </div>
-          <div class="footer-card">
-            <a href="#">
-              <span class="show-detail md:ml-[5rem] lg:ml-[0]">
-                <span class="absolute text-white -mt-[20px]">lihat detail ></span>
-                <div class="absolute -mt-[15px] -ml-[225px] sm:-ml-[160px] md:-ml-[240px] lg:-ml-[160px] w-[380px] sm:w-[305px] md:w-[350px] lg:w-[256px] h-[35px] bg-black opacity-25 rounded-b-[15px]"></div>
-              </span>
-            </a>
+          <div class="w-[123%] footer-card satu">
+            <a href="#" class=" text-white capitalize">lihat detail <img src="../../img/icons/next.png" alt="Lihat Detail"></a>
           </div>
         </div>
         <div class="card sm:w-[305px] md:w-[350px] lg:w-[16rem] xl:w-[16rem] bg-kuning">
@@ -400,13 +454,8 @@
             <p class="text-white text-md absolute -mt-[20px] ml-[130px]">Produk Pakaian</p>
             <span class="ml-[130px] mt-[6px] font-semibold text-white text-[50px]">343</span>
           </div>
-          <div class="footer-card">
-            <a href="#">
-              <span class="show-detail md:ml-[5rem] lg:ml-[0]">
-                <span class="absolute text-white -mt-[20px]">lihat detail ></span>
-                <div class="absolute -mt-[15px] -ml-[225px] sm:-ml-[160px] md:-ml-[240px] lg:-ml-[160px] w-[380px] sm:w-[305px] md:w-[350px] lg:w-[256px] h-[35px] bg-black opacity-25 rounded-b-[15px]"></div>
-              </span>
-            </a>
+          <div class="w-[123%] footer-card satu">
+            <a href="#" class=" text-white capitalize">lihat detail <img src="../../img/icons/next.png" alt="Lihat Detail"></a>
           </div>
         </div>
         <div class="card sm:w-[305px] md:w-[350px] lg:w-[16rem] xl:w-[16rem] bg-birumuda">
@@ -415,13 +464,8 @@
             <p class="text-white text-md absolute -mt-[20px] ml-[125px]">Produk Furniture</p>
             <span class="ml-[125px] mt-[6px] font-semibold text-white text-[50px]">118</span>
           </div>
-          <div class="footer-card">
-            <a href="#">
-              <span class="show-detail md:ml-[5rem] lg:ml-[0]">
-                <span class="absolute text-white -mt-[20px]">lihat detail ></span>
-                <div class="absolute -mt-[15px] -ml-[225px] sm:-ml-[160px] md:-ml-[240px] lg:-ml-[160px] w-[380px] sm:w-[305px] md:w-[350px] lg:w-[256px] h-[35px] bg-black opacity-25 rounded-b-[15px]"></div>
-              </span>
-            </a>
+          <div class="w-[123%] footer-card satu">
+            <a href="#" class=" text-white capitalize">lihat detail <img src="../../img/icons/next.png" alt="Lihat Detail"></a>
           </div>
         </div>
         

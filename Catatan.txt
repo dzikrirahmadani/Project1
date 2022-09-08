@@ -1,6 +1,6 @@
 Halaman yang belum responsive 
 
-*Kategori barang
+*Kategori barang ✔
 	1. kategori barang
 	-
 	-
@@ -12,15 +12,15 @@ Halaman yang belum responsive
 	-
 
 *laporan ✔
+	1. laporan_barang
+
+*peminjaman ✔
 	-
 
-*peminjaman 
+*pengajuan ✔
 	-
 
-*pengajuan
-	-
-
-*profile
+*profile 
 	-
 
 *satuan ✔
