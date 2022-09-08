@@ -382,7 +382,7 @@ body{
         <div>
         </div>
       </div>
-      <div class="profile">
+      <div class="profile hidden sm:block">
         <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">NoFace21</h3> 
         <img src="../../img/noface.jpg" alt="profile" class="w-7 h-7 rounded-full border"></a>
       </div>
@@ -393,14 +393,14 @@ body{
           <input type="text" name="text" placeholder="Search" class="sm-input placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 lg:w-[1000px] bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
       </div>
     </div>
-    
+
     <!-- HAMBURGER -->
     <button id="hamburger" class="fixed m-[16px] text-white inline-flex items-center justify-center focus:border h-10 w-10 rounded-md outline-none focus:outline-none lg:hidden z-10">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
       </svg>
     </button>
-    <nav id="nav-menu" class="nav-input bg-ungu1 mt-[68px] h-[488px] md:h-[432px] -mr-20 hidden lg:hidden fixed transition duration-1000 rounded-b-md z-50">
+    <nav id="nav-menu" class="nav-input bg-ungu1 mt-[68px] h-[530px] sm:h-[488px] md:h-[432px] -mr-20 hidden lg:hidden fixed transition duration-1000 rounded-b-md z-50">
       <ul class="w-[350px]">
         <li class="ml-[13px] py-2 md:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-[13px] ml-3 bi bi-search inline-block text-white absolute" viewBox="0 0 16 16">
@@ -470,6 +470,12 @@ body{
              ml-7 mr-2">
             <span class="">Log Out</span>
           </a>
+        </li>
+        <li>
+          <div class="sm:hidden block ml-[215px]">
+            <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">NoFace21</h3> 
+            <img src="../../img/noface.jpg" alt="profile" class="w-7 h-7 rounded-full border"></a>
+          </div>
         </li>
       </ul>
 
@@ -679,5 +685,6 @@ body{
 
     <!-- END CONTENT -->
 <script src="../../dist/satuanJS/dus.js"></script>
+<script src="../../src/script.js"></script>
 </body>
 </html>

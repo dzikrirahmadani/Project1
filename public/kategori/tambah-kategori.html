@@ -336,7 +336,7 @@
         <div>
         </div>
       </div>
-      <div class="profile">
+      <div class="profile hidden sm:block">
         <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">NoFace21</h3> 
         <img src="../../img/noface.jpg" alt="profile" class="w-7 h-7 rounded-full border"></a>
       </div>
@@ -349,12 +349,12 @@
     </div>
 
     <!-- HAMBURGER -->
-    <button id="hamburger" class="fixed m-[16px] text-white inline-flex items-center justify-center focus:border h-10 w-10 rounded-md outline-none focus:outline-none lg:hidden z-50">
+    <button id="hamburger" class="fixed m-[16px] text-white inline-flex items-center justify-center focus:border h-10 w-10 rounded-md outline-none focus:outline-none lg:hidden z-10">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
       </svg>
     </button>
-    <nav id="nav-menu" class=" nav-input bg-ungu1 mt-[68px] h-[488px] md:h-[432px] -mr-20 hidden lg:hidden fixed transition duration-1000 rounded-b-md z-50">
+    <nav id="nav-menu" class="nav-input bg-ungu1 mt-[68px] h-[530px] sm:h-[488px] md:h-[432px] -mr-20 hidden lg:hidden fixed transition duration-1000 rounded-b-md z-50">
       <ul class="w-[350px]">
         <li class="ml-[13px] py-2 md:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-[13px] ml-3 bi bi-search inline-block text-white absolute" viewBox="0 0 16 16">
@@ -363,70 +363,76 @@
         <input type="text" name="text" placeholder="Search" class="placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
         </li>
         <li>
-          <a href="../dashboard/dash.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
             <img src="../../img/dash.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="../gudang/gudang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
             <img src="../../img/gudang.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Gudang</span>
           </a>
         </li>
         <li>
-          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
             <img src="../../img/satuan.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Satuan Barang</span>
           </a>
         </li>
         <li>
-          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
             <img src="../../img/data.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Kategori Barang</span>
           </a>
         </li>
         <li>
-          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
             <img src="../../img/checklist.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Pengajuan Barang</span>
           </a>
         </li>
         <li>
-          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
             <img src="../../img/borrow.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Pinjam Barang</span>
           </a>
         </li>
         <li>
-          <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200">
+          <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
             <img src="../../img/list.png" alt="" class="w-5 h-5
              ml-7 mr-2">
             <span class="">Laporan Barang</span>
           </a>
         </li>
         <li>
-          <a href="../profile/profile.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
             <img src="../../img/user.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Profile</span>
           </a>
         </li>
         <li>
-          <a href="../login.html" class=" side flex text-white py-3 hover:bg-ungu2 hover:rounded-b-md transition duration-200">
+          <a href="login.html" class=" side flex text-white py-3 hover:bg-ungu2 hover:rounded-b-md transition duration-200" id="sidebar">
             <img src="../../img/logout.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Log Out</span>
           </a>
         </li>
+        <li>
+          <div class="sm:hidden block ml-[215px]">
+            <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">NoFace21</h3> 
+            <img src="../../img/noface.jpg" alt="profile" class="w-7 h-7 rounded-full border"></a>
+          </div>
+        </li>
       </ul>
-      
+
     </nav>
 
     <!-- END HAMBURGER -->
