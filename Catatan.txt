@@ -23,5 +23,5 @@ Halaman yang belum responsive
 *profile
 	-
 
-*satuan (Development)
+*satuan ✔
 	1. satuan gudang 
