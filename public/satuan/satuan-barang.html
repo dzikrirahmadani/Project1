@@ -15,6 +15,10 @@
   <style type="text/tailwindcss">
     @layer utilities {
 
+      body{
+        opacity: 0;
+      }
+
       /* title style */
       .title{
         margin-left: 15rem;
@@ -111,6 +115,23 @@
         transition: 1s;
       }
 
+      section.satuan-barang > .cards > .card{
+        opacity: 0;
+      }
+
+      @keyframes myanimate {
+        0%{
+          transform: scale(.9,.9);
+          margin-top: -15rem;
+        }
+        70%{
+          margin-top: none;
+          transform: scale(.8,.8);
+        }
+        100%{
+          transform: none;
+        }
+      }
       /* responsive style */
         /*Nav Profile */
         @media screen and (max-width: 1365px){
@@ -159,21 +180,178 @@
         @media screen and (max-width: 1535px){
           section.satuan-barang > .cards{
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            margin-left: 20%;
+            margin-left: 15%;
           }
           section.satuan-barang > .cards > .card{
             margin-inline: 3rem;
           }
         }
+        @media screen and (max-width: 1332px){
+          section.satuan-barang > .cards{
+            grid-template-columns: repeat(2 , minmax(0, 1fr));
+            margin-left: 40%;
+            padding: 0;
+            width: max-content;
+          }
+          section.satuan-barang > .cards > .card:nth-child(2), section.satuan-barang > .cards > .card:nth-child(4){
+            margin-left: -2rem;
+          }
+        }
         @media screen and (max-width: 1330px){
           section.satuan-barang > .cards{
-            margin-left: 17%;
+            margin-left: 30%;
           }
           section.satuan-barang > .cards > .card{
             margin-inline: 2rem;
           }
         }
-       
+        @media screen and (max-width: 1076px){
+          section.satuan-barang > .cards{
+            margin-left: 30%;
+          }
+        }
+        @media screen and (max-width: 1023px){
+          section.satuan-barang > .cards{
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            margin-left: 2%;
+            padding: 0;
+            width: fit-content;
+          }
+          section.satuan-barang > .cards > .card, section.satuan-barang > .cards > .card:nth-child(3){
+            margin-left: 0;
+          }
+          section.satuan-barang > .cards > .card:nth-child(2){
+            margin-left: 0;
+          }
+          section.satuan-barang > .cards > .card:nth-child(4){
+            margin-left: 0;
+          }
+          .title{
+            text-align: center;
+            padding: 0;
+            margin-left: 0;
+          }
+        }
+        @media screen and (max-width: 988px){
+          section.satuan-barang > .cards{
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            margin-left: 20%;
+            padding: 0;
+            width: fit-content;
+          }
+          section.satuan-barang > .cards > .card:nth-child(2), section.satuan-barang > .cards > .card:nth-child(4){
+            margin-left: 1.5rem;
+          }
+          .title{
+            text-align: center;
+            padding: 0;
+            margin-left: 0;
+            width: 120%;
+          }
+        }
+        @media screen and (max-width: 936px){
+          .title{
+            width: 110%;
+          }
+        }
+        @media screen and (max-width: 859px){
+          .title{
+            width: 100%;
+          }
+        }
+        @media screen and (max-width: 835px){
+          section.satuan-barang > .cards{
+            margin-left: 10%;
+          }
+          .title{
+            width: 100%;
+          }
+        }
+        @media screen and (max-width: 770px){
+          section.satuan-barang > .cards{
+            margin-left: 5%;
+          }
+          section.satuan-barang > .cards > .card:nth-child(2), section.satuan-barang > .cards > .card:nth-child(4){
+            margin-left: 0;
+          }
+          section.satuan-barang > .cards > .card:nth-child(1){
+            margin-left: 0;
+          }
+        }
+        @media screen and (max-width: 677px){
+          section.satuan-barang > .cards{
+            margin-left: 3%;
+          }
+        }
+        @media screen and (max-width: 665px){
+          section.satuan-barang > .cards{
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            width: 150%;
+            margin-left: 28%;
+          }
+          section.satuan-barang > .cards > .card{
+            width: 100%;
+          }
+          .title{
+            width: 180%;
+          }
+        }
+        @media screen and (max-width: 535px){
+          section.satuan-barang > .cards{
+            margin-left: 15%;
+          }
+          .title{
+            width: 180%;
+          }
+        }
+        @media screen and (max-width: 519px){
+          .title{
+            width: 160%;
+          }
+        }
+        @media screen and (max-width: 497px){
+          section.satuan-barang > .cards{
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            width: 120%;
+            margin-left: 25%;
+          }
+        }
+        @media screen and (max-width: 461px){
+          .title{
+            width: 150%;
+          }
+        }
+        @media screen and (max-width: 455px){
+          section.satuan-barang > .cards{
+            width: 110%;
+          }
+          .title{
+            width: 140%;
+          }
+        }
+        @media screen and (max-width: 415px){
+          section.satuan-barang > .cards{
+            width: 100%;
+          }
+        }
+        @media screen and (max-width: 403px) {
+          .title{
+            width: 130%;
+          }
+        }
+        @media screen and (max-width: 376px){
+          section.satuan-barang > .cards{
+            margin-left: 10%;
+          }
+        }
+        @media screen and (max-width: 374px){
+          .title{
+            width: 110%;
+          }
+          section.satuan-barang > .cards > .card{
+            overflow: hidden;
+          }
+        }
         /* end of content */
       /* end of responsive style */
     }
@@ -199,7 +377,7 @@
     }
   </script>
 </head>
-<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter">
+<body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter" onload="onload()">
 
     <!-- NAV -->
     <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
@@ -379,123 +557,7 @@
     </nav>
 
     <!-- END SIDE -->
-    <style>
-       @media screen and (max-width: 1332px){
-          section.satuan-barang > .cards{
-            grid-template-columns: repeat(2 , minmax(0, 1fr));
-            margin-left: 40%;
-            padding: 0;
-            width: max-content;
-          }
-          section.satuan-barang > .cards > .card:nth-child(2), section.satuan-barang > .cards > .card:nth-child(4){
-            margin-left: -2rem;
-          }
-        }
-        @media screen and (max-width: 1076px){
-          section.satuan-barang > .cards{
-            margin-left: 30%;
-          }
-        }
-        @media screen and (max-width: 1023px){
-          section.satuan-barang > .cards{
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            margin-left: 2%;
-            padding: 0;
-            width: fit-content;
-          }
-          section.satuan-barang > .cards > .card, section.satuan-barang > .cards > .card:nth-child(3){
-            margin-left: 0;
-          }
-          section.satuan-barang > .cards > .card:nth-child(2){
-            margin-left: 0;
-          }
-          section.satuan-barang > .cards > .card:nth-child(4){
-            margin-left: 0;
-          }
-          .title{
-            text-align: center;
-            padding: 0;
-            margin-left: 0;
-          }
-        }
-        @media screen and (max-width: 988px){
-          section.satuan-barang > .cards{
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            margin-left: 20%;
-            padding: 0;
-            width: fit-content;
-          }
-          section.satuan-barang > .cards > .card:nth-child(2), section.satuan-barang > .cards > .card:nth-child(4){
-            margin-left: 1.5rem;
-          }
-          .title{
-            text-align: center;
-            padding: 0;
-            margin-left: 0;
-            width: 127%;
-          }
-        }
-        @media screen and (max-width: 835px){
-          section.satuan-barang > .cards{
-            margin-left: 10%;
-          }
-          .title{
-            border: 1px solid #000;
-            width: 107%;
-          }
-        }
-        @media screen and (max-width: 770px){
-          section.satuan-barang > .cards{
-            margin-left: 5%;
-          }
-          section.satuan-barang > .cards > .card:nth-child(2), section.satuan-barang > .cards > .card:nth-child(4){
-            margin-left: 0;
-          }
-          section.satuan-barang > .cards > .card:nth-child(1){
-            margin-left: 0;
-          }
-        }
-        @media screen and (max-width: 677px){
-          section.satuan-barang > .cards{
-            margin-left: 3%;
-          }
-        }
-        @media screen and (max-width: 655px){
-          section.satuan-barang > .cards{
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-            width: 150%;
-            margin-left: 25%;
-          }
-          section.satuan-barang > .cards > .card{
-            width: 100%;
-          }
-        }
-        @media screen and (max-width: 535px){
-          section.satuan-barang > .cards{
-            margin-left: 15%;
-          }
-          .title{
-            border: 1px solid #000;
-          }
-        }
-        @media screen and (max-width: 497px){
-          section.satuan-barang > .cards{
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-            width: 100%;
-            margin-left: 15%;
-          }
-        }
-        @media screen and (max-width: 455px){
-          section.satuan-barang > .cards{
-            width: 90%;
-          }
-        }
-        @media screen and (max-width: 415px){
-          section.satuan-barang > .cards{
-            width: 80%;
-          }
-        }
-    </style>
+
     <!-- CONTENT -->
     <section class="satuan-barang">
       <div class="title">
@@ -563,6 +625,6 @@
 
     <!-- END CONTENT -->
 
-<script src="../../src/script.js"></script>
+<script src="../../dist/satuanJS/satuanBarang.js"></script>
 </body>
 </html>
