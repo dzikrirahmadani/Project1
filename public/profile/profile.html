@@ -83,10 +83,31 @@
           margin-left: 43%;
         }
         div.kotak1 {
-          width: 81%;
+          width: 85%;
         }
         div.kotak2 {
-          width: 81%;
+          width: 85%;
+        }
+        div.line {
+          width: 106.7%;
+        }
+        div.data {
+          margin-left: 69%;
+        }
+      }
+
+      @media screen and (max-width: 1320px){
+        div.profile {
+          margin-left: 82%;
+        }
+        div.profile2 {
+          margin-left: 43%;
+        }
+        div.kotak1 {
+          width: 85%;
+        }
+        div.kotak2 {
+          width: 85%;
         }
         div.line {
           width: 106.7%;
@@ -148,7 +169,7 @@
 
       @media screen and (max-width: 767px){
         div.profile {
-          margin-left: 58%;
+          margin-left: 38%;
         }
         div.profile2 {
           margin-left: 38%;
@@ -158,10 +179,10 @@
           width: 96%;
         }
         div.kotak2 {
-          width: 96%;
+          width: 96.3%;
         }
         div.line {
-          width: 109.5%;
+          width: 117.5%;
         }
         h1.title {
           margin-left: 84%;
@@ -224,6 +245,34 @@
         }
       }
 
+      @media screen and (max-width: 374px){
+        div.profile {
+          margin-left: 16%;
+        }
+        div.profile2 {
+          margin-left: 28%;
+          margin-top: 50px;
+        }
+        div.kotak1 {
+          width: 96%;
+        }
+        div.kotak2 {
+          width: 96.3%;
+        }
+        div.line {
+          width: 121.5%;
+        }
+        h1.title {
+          margin-left: 84%;
+        }
+        div.data {
+          margin-left: 1%;
+        }
+        input.input {
+          width: 95%;
+        }
+      }
+
       /* End Responsive */
 
     }
@@ -255,7 +304,7 @@
 <body class="h-screen mx-auto antialiased flex justify-between bg-purple-100 font-inter" onload="onload()">
   
     <!-- NAV -->
-    <div class="navbar fixed flex p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
+    <div class="navbar fixed flex justify-between p-5 bg-gradient-to-r from-ungu1 to-ungu2 w-100% mr-0 z-10">
       <div class="text-left font-bold items-center ">
         <a href="">
           <h3 class="text-white ml-14 lg:ml-4 text-lg block">InVentory</h3>
@@ -263,7 +312,7 @@
         <div>
         </div>
       </div>
-      <div class="profile ml-[260px] sm:ml-[350px] float-right lg:ml-[760px] xl:ml-[1100px] md:ml-[475px]">
+      <div class="profile">
         <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">NoFace21</h3> 
         <img src="../../img/noface.jpg" alt="profile" class="w-7 h-7 rounded-full border"></a>
       </div>
@@ -272,9 +321,8 @@
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
             </svg>
           <input type="text" name="text" placeholder="Search" class="sm-input placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 lg:w-[1000px] bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
-          </div>
+      </div>
     </div>
-
     <!-- HAMBURGER -->
     <button id="hamburger" class="fixed m-[16px] text-white inline-flex items-center justify-center focus:border h-10 w-10 rounded-md outline-none focus:outline-none lg:hidden z-50">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
@@ -435,22 +483,22 @@
 
     <!-- CONTENT -->
   <div class="container h-[985px] sm:h-[955px] lg:h-[790px]" id="content"> 
-    <h1 class="lg:mt-[75px] xl:mt-[75px] absolute text-ungu1 text-[25px] lg:ml-[240px] xl:ml-[240px]">Profile</h1>
-    <div class="kotak1 absolute bg-pp ml-[6px] sm:ml-[11px] md:ml-[12px] lg:ml-[235px] xl:ml-[225px] w-[415px]. sm:w-[616px]. md:w-[742px]. lg:w-[760px]. xl:w-[1100px]. h-[850px] sm:h-[820px] lg:h-[680px] xl:h-[640px] bg-white p-8 m-96 mt-[120px] xl:mt-[120px] rounded-xl shadow-2xl">
+    <h1 class="lg:mt-[75px] xl:mt-[75px] absolute text-ungu1 text-[25px] lg:ml-[240px] xl:ml-[240px] hidden lg:block">Profile</h1>
+    <div class="kotak1 absolute bg-pp ml-[6px] sm:ml-[11px] md:ml-[12px] lg:ml-[235px] xl:ml-[225px] h-[850px] sm:h-[820px] lg:h-[680px] xl:h-[640px] bg-white p-8 m-96 mt-[120px] xl:mt-[120px] rounded-xl shadow-2xl">
         
     </div>
-    <div class="kotak2 absolute bg-pp ml-[5px] sm:ml-[11px] md:ml-[12px] lg:ml-[235px] xl:ml-[225px] w-[415px]. sm:w-[615px]. md:w-[742px]. lg:w-[760px]. xl:w-[1100px]. h-[150px] sm:h-[150px] bg-gradient-to-t from-ungu1 to-ungu2 p-8 m-96 mt-[80px] sm:mt-[80px] lg:mt-[120px] xl:mt-[120px] rounded-b-none rounded-xl">
+    <div class="kotak2 absolute bg-pp ml-[5px] sm:ml-[11px] md:ml-[12px] lg:ml-[235px] xl:ml-[225px] h-[150px] sm:h-[150px] bg-gradient-to-t from-ungu1 to-ungu2 p-8 m-96 mt-[80px] sm:mt-[80px] lg:mt-[120px] xl:mt-[120px] rounded-b-none rounded-xl">
         <a href=""><img src="../../img/back.svg" alt="" class="w-[30px] h-[30px] -ml-5 sm:-ml-5 -mt-5 sm:-mt-5 xl:-ml-4 xl:-mt-4 absolute"></a>
         <h1 class="title hidden lg:block text-[25px] font-semibold text-white">NoFace21</h1>
         <div class="profile2 ml-[10px] sm:ml-[70px] mt-[50px] sm:mt-[60px] lg:ml-[290px] xl:ml-[445px] xl:mt-[15px]">
-          <a href="">
+          <a href="../../img/noface.jpg">
             <img src="../../img/noface.jpg" alt="profile" class="w-32 lg:w-32 rounded-full border-4 shadow-xl">
           </a>
           <h1 class="-ml-[20px] mt-[15px] text-[18px] font-semibold text-slate-900">NoFace TwentyOne</h1>
           <p class="text-slate-600 mt-[10px] ml-[14px]">User / Owner</p>
         </div>
           
-        <div class="line mt-[100px] sm:mt-[100px] w-[415px] sm:w-[616px] md:w-[742px] lg:w-[760px] xl:w-[1100px] h-0.5 bg-slate-300 -ml-[32px] lg:mt-[70px]"></div>
+        
         <h1 class="pt-2 text-ungu1 text-[20px] font-bold pb-3">Perbarui Profile</h1>
         
         <form action="" class="grid">
@@ -485,5 +533,17 @@
     <!-- end of pop up box -->
     
 <script src="../../dist/profileJS/profile.js"></script>
+<script>
+  // Hamburger
+const hamburger = document.querySelector('#hamburger');
+const navMenu = document.querySelector('#nav-menu');
+const navInput = document.querySelector('.nav-input');
+
+hamburger.addEventListener('click', function(){
+    hamburger.classList.toggle('hamburger-active');
+    navMenu.classList.toggle('hidden');
+});
+</script>
+
 </body>
 </html>
