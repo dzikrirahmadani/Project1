@@ -24,3 +24,29 @@ hamburger.addEventListener('click', function(){
     hamburger.classList.toggle('hamburger-active');
     navMenu.classList.toggle('hidden');
 });
+
+
+// REQUEST API
+fetch(`http://localhost:8080/restful/public/barang`)
+.then(response => response.json())
+.then(response => {
+
+    let table = '';
+    for( let i = 0; i < response.length; i++ ){
+                table += showTable(response[i], i);
+    }
+    const tbody = document.getElementById('tbody');
+    tbody.innerHTML = table;
+
+})
+
+const showTable = (m, no) => {
+return `
+    <tr>
+        <td>${no += 1}</td>
+        <td>${m.nm_barang}</td>
+        <td>${m.spesifikasi}</td>
+        <td>${m.kategori}</td>
+        <td>${m.satuan}</td>
+    </tr>`;
+}
