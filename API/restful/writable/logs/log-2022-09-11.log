@@ -1,0 +1,328 @@
+ERROR - 2022-09-11 19:56:17 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_inventory' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'db_inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\restful\app\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(904): App\Controllers\barang->index()
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+#9 C:\xampp\htdocs\restful\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\restful\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_inventory' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\restful\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\restful\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\restful\app\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(904): App\Controllers\barang->index()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-11 19:56:17 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_inventory'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-11 19:56:18 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_inventory' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'db_inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\restful\app\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(904): App\Controllers\barang->index()
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+#9 C:\xampp\htdocs\restful\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\restful\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_inventory' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\restful\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\restful\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\restful\app\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(904): App\Controllers\barang->index()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-11 19:56:18 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_inventory'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-11 19:56:23 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_inventory' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'db_inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\restful\app\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(904): App\Controllers\barang->index()
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+#9 C:\xampp\htdocs\restful\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\restful\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_inventory' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\restful\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\restful\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\restful\app\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(904): App\Controllers\barang->index()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-11 19:56:23 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_inventory'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-11 19:56:54 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_inventory' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'db_inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\restful\app\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(904): App\Controllers\barang->index()
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+#9 C:\xampp\htdocs\restful\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\restful\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_inventory' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\restful\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\restful\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\restful\app\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(904): App\Controllers\barang->index()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-11 19:56:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_inventory'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-11 19:56:55 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_inventory' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'db_inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\restful\app\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(904): App\Controllers\barang->index()
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+#9 C:\xampp\htdocs\restful\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\restful\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_inventory' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\restful\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\restful\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\restful\app\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(904): App\Controllers\barang->index()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-11 19:56:55 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_inventory'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-11 19:57:03 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_inventory' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'db_inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\restful\app\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(904): App\Controllers\barang->index()
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+#9 C:\xampp\htdocs\restful\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\restful\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_inventory' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\restful\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\restful\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\restful\app\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(904): App\Controllers\barang->index()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-11 19:57:03 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_inventory'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-11 19:59:23 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_inventory' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'db_inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\restful\app\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(904): App\Controllers\barang->index()
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+#9 C:\xampp\htdocs\restful\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\restful\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_inventory' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\restful\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\restful\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\restful\app\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(904): App\Controllers\barang->index()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-11 19:59:23 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_inventory'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-11 20:55:50 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_inventory' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'db_inventory', 3306, '', 0)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\restful\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\restful\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\restful\app\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(904): App\Controllers\barang->index()
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+#9 C:\xampp\htdocs\restful\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\restful\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_inventory' in C:\xampp\htdocs\restful\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\restful\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\restful\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\restful\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\restful\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\restful\app\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\restful\system\CodeIgniter.php(904): App\Controllers\barang->index()
+#7 C:\xampp\htdocs\restful\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+#8 C:\xampp\htdocs\restful\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\restful\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-11 20:55:50 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_inventory'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\barang.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\barang))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
