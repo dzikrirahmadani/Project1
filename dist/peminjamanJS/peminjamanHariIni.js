@@ -28,7 +28,6 @@ const onload = () => {
 
 
 //  REQUEST API
-const clickTambah = document.getElementById('')
 const api = ( async () => {
     return await fetch('http://localhost:8080/restful/public/Peminjaman', {method : "GET"})
             .then(response => response.json())

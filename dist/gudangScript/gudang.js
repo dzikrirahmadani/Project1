@@ -30,7 +30,7 @@ hamburger.addEventListener('click', function(){
 fetch(`http://localhost:8080/restful/public/barang`)
 .then(response => response.json())
 .then(response => {
-
+    console.log(response);
     let table = '';
     for( let i = 0; i < response.length; i++ ){
         table += showTable(response[i], i);
