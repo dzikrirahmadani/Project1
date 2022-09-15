@@ -11,6 +11,7 @@
   <title>Peminjaman Hari Ini</title>
   <!-- <link href="/dist/output.css" rel="stylesheet"> -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../src/pagination.css">
 <!--  -->
   <style type="text/tailwindcss">
     @layer utilities {
@@ -785,9 +786,13 @@ body{
             </tbody>
           </table>
           <div class="table-footer">
-              <button type="button" name="button" class="prev" id="prev"><span><img src="../../img/icons/back.png" alt="Previos"></span> Previous</button>
-              <input type="text" name="" class="field" value="1" disabled>
-              <button type="button" name="button" class="next" id="next"><span>Next </span><img src="../../img/icons/next.png" alt="Next"></button>
+              <ul class="pagination pagination-primary">
+                <li class="page-item"><a class="page-link" href="<?= $pager->links()?>">Prev</a></li>
+                <li class="page-item active"><a class="page-link" href="<?= $pager->links()?>">1</a></li>
+                <li class="page-item"><a class="page-link" href="<?= $pager->links()?>">2</a></li>
+                <li class="page-item"><a class="page-link" href="<?= $pager->links()?>">3</a></li>
+                <li class="page-item"><a class="page-link" href="<?= $pager->links()?>">Next</a></li>
+              </ul>
           </div>
         </div>
       </div>
