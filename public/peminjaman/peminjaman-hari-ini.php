@@ -826,39 +826,16 @@ body{
         <div class="container-table" id="content">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead id="table-hidden">
-              <!-- <tr>
-                <th>No</th>
-                <td>1</td>
-              </tr>
-              <tr>
-                <th>nama barang</th>
-                <td>keybord logitech</td>
-              </tr>
-              <tr>
-                <th>jumlah</th>
-                <td>4</td>
-              </tr>
-              <tr>
-                <th>tanggal pinjam</th>
-                <td>rp. 03/03/2023</td>
-              </tr>
-              <tr>
-                <th>status peminjaman</th>
-                <td>rp. 03/03/2023</td>
-              </tr>
-              <tr>
-                <th>Aksi</th>
-                <td class="table-btn">
-                  <a href="#" class="sm:mr-[60px] md:mr-0 p-2 px-5 mx-1 rounded-lg text-white text-sm md:text-xs" style="background-color: #00C2FF;">ubah</a>
-                  <a href="#" class="p-2 px-5 mx-1 rounded-lg text-white text-sm md:text-xs" style="background-color: #FF5050;">hapus</a>
-                </td>
-              </tr> -->
             </thead>
           </table>
-          <div class="table-footer" id="table-footer">
-              <button type="button" name="button" class="prev"><img src="../../img/icons/back.png" alt=""><span>Previous</span></button>
-              <input type="text" name="" class="field" value="1" disabled>
-              <button type="button" name="button" class="next"><span>Next</span><img src="../../img/icons/next.png" alt="Next"></button>
+          <div class="table-footer">
+              <ul class="pagination pagination-primary">
+                <li class="page-item"><a class="page-link" href="<?= $pager->links()?>">Prev</a></li>
+                <li class="page-item active"><a class="page-link" href="<?= $pager->links()?>">1</a></li>
+                <li class="page-item"><a class="page-link" href="<?= $pager->links()?>">2</a></li>
+                <li class="page-item"><a class="page-link" href="<?= $pager->links()?>">3</a></li>
+                <li class="page-item"><a class="page-link" href="<?= $pager->links()?>">Next</a></li>
+              </ul>
           </div>
         </div>
       </div>

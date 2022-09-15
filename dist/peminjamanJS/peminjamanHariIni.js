@@ -29,9 +29,23 @@ const onload = () => {
 
 //  REQUEST API
 const api = ( async () => {
+    
     return await fetch('http://localhost:8080/restful/public/Peminjaman', {method : "GET"})
-            .then(response => response.json())
             .then(response => {
+                // Error handling
+                if( !response.ok ){
+                    throw new Error(response.statusText);
+                }
+
+                return response.json()
+            })
+            .then(response => {
+                // ERROR HANDLING
+                if( response.Response === 'False' ){
+                    alert(response.Error);
+                }
+
+
                 let table = '';
                 for(let i = 0; i < response.length; i++){
                     table += showTable(response[i], (i+1));
@@ -40,8 +54,8 @@ const api = ( async () => {
                 body.innerHTML = table;
 
                 let tableHidden = '';
-                let index = 0;
-                tableHidden += showHidden(response[index], 1);
+                let index = 1;
+                tableHidden += showHidden(response[index], 2);
                 const bodyHidden = document.getElementById('table-hidden');
                 bodyHidden.innerHTML = tableHidden;
             })

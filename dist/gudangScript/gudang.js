@@ -27,17 +27,24 @@ hamburger.addEventListener('click', function(){
 
 
 // REQUEST API
-fetch(`http://localhost:8080/restful/public/barang`)
+fetch('http://localhost:8080/restful/public/barang')
 .then(response => response.json())
 .then(response => {
-    console.log(response);
+
+    // table
     let table = '';
-    for( let i = 0; i < response.length; i++ ){
-        table += showTable(response[i], i);
+    for( let i = 0; i < response.barang.length; i++ ){
+        table += showTable(response.barang[i], i);
     }
     const tbody = document.getElementById('tbody');
     tbody.innerHTML = table;
 
+    // table hidden
+    let tableHidden = '';
+    let index = 0;
+    tableHidden += showHidden(response.barang[index], 1);
+    const bodyHidden = document.getElementById('table-hidden');
+    bodyHidden.innerHTML = tableHidden;
 })
 
 const showTable = (m, no) => {
@@ -49,4 +56,29 @@ return `
         <td>${m.kategori}</td>
         <td>${m.satuan}</td>
     </tr>`;
+}
+
+const showHidden = (response, no) => {
+    return `
+        <tr>
+            <th class="font-semibold">no</th>
+            <td>${no}</td>
+        </tr>
+        <tr>
+            <th class="font-semibold">nama barang</th>
+            <td>${response.nm_barang}</td>
+        </tr>
+        <tr>
+            <th class="font-semibold">spesifikasi</th>
+            <td>${response.spesifikasi}</td>
+        </tr>
+        <tr>
+            <th class="font-semibold">kategori</th>
+            <td>${response.kategori}</td>
+        </tr>
+        <tr>
+            <th class="font-semibold">satuan</th>
+            <td>${response.satuan}</td>
+        </tr>
+    `;
 }
