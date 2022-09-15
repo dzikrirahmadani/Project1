@@ -595,63 +595,63 @@ body{
         <input type="text" name="text" placeholder="Search" class="placeholder-white text-white items-center bg-opacity-25 max-w-md w-80 bg-slate-100 rounded-md px-10 h-10 text-xs font-semibold focus:border-ungu1 focus:outline-none " required>
         </li>
         <li>
-          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+          <a href="../dashboard/dash.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
             <img src="../../img/dash.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+          <a href="../gudang/gudang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
             <img src="../../img/gudang.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Gudang</span>
           </a>
         </li>
         <li>
-          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+          <a href="../satuan/satuan-barang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
             <img src="../../img/satuan.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Satuan Barang</span>
           </a>
         </li>
         <li>
-          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+          <a href="../kategori/kategori-barang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
             <img src="../../img/data.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Kategori Barang</span>
           </a>
         </li>
         <li>
-          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+          <a href="../pengajuan/pengajuan-barang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
             <img src="../../img/checklist.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Pengajuan Barang</span>
           </a>
         </li>
         <li>
-          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+          <a href="../peminjaman/peminjaman-hari-ini.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
             <img src="../../img/borrow.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Pinjam Barang</span>
           </a>
         </li>
         <li>
-          <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+          <a href="../laporan/laporan-barang.html" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
             <img src="../../img/list.png" alt="" class="w-5 h-5
              ml-7 mr-2">
             <span class="">Laporan Barang</span>
           </a>
         </li>
         <li>
-          <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+          <a href="../profile/profile.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
             <img src="../../img/user.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Profile</span>
           </a>
         </li>
         <li>
-          <a href="login.html" class=" side flex text-white py-3 hover:bg-ungu2 hover:rounded-b-md transition duration-200" id="sidebar">
+          <a href="../login.html" class=" side flex text-white py-3 hover:bg-ungu2 hover:rounded-b-md transition duration-200" id="sidebar">
             <img src="../../img/logout.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Log Out</span>
@@ -675,63 +675,63 @@ body{
       <div class="flex-col bg-ungu1 w-52 mt-[68px]" >
         <ul class="flex-col">
           <li>
-            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <a href="../dashboard/dash.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
               <img src="../../img/dash.png" alt="" class="w-4 h-4
                ml-7 mr-2">
               <span class="">Dashboard</span>
             </a>
           </li>
           <li>
-            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <a href="../gudang/gudang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
               <img src="../../img/gudang.png" alt="" class="w-4 h-4
                ml-7 mr-2">
               <span class="">Gudang</span>
             </a>
           </li>
           <li>
-            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <a href="../satuan/satuan-barang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
               <img src="../../img/satuan.png" alt="" class="w-4 h-4
                ml-7 mr-2">
               <span class="">Satuan Barang</span>
             </a>
           </li>
           <li>
-            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <a href="../kategori/kategori-barang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
               <img src="../../img/data.png" alt="" class="w-4 h-4
                ml-7 mr-2">
               <span class="">Kategori Barang</span>
             </a>
           </li>
           <li>
-            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <a href="../pengajuan/pengajuan-barang.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
               <img src="../../img/checklist.png" alt="" class="w-4 h-4
                ml-7 mr-2">
               <span class="">Pengajuan Barang</span>
             </a>
           </li>
           <li>
-            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <a href="../peminjaman/peminjaman-hari-ini.php" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
               <img src="../../img/borrow.png" alt="" class="w-4 h-4
                ml-7 mr-2">
               <span class="">Pinjam Barang</span>
             </a>
           </li>
           <li>
-            <a href="" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <a href="../laporan/laporan-barang.html" class="side -ml-[2px] flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
               <img src="../../img/list.png" alt="" class="w-5 h-5
                ml-7 mr-2">
               <span class="">Laporan Barang</span>
             </a>
           </li>
           <li>
-            <a href="" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <a href="../profile/profile.html" class="side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
               <img src="../../img/user.png" alt="" class="w-4 h-4
                ml-7 mr-2">
               <span class="">Profile</span>
             </a>
           </li>
           <li>
-            <a href="login.html" class="mt-[143px] side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
+            <a href="../login.html" class="mt-[143px] side flex text-white py-3 hover:bg-ungu2 transition duration-200" id="sidebar">
               <img src="../../img/logout.png" alt="" class="w-4 h-4
                ml-7 mr-2">
               <span class="">Log Out</span>

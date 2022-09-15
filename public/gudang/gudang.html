@@ -11,6 +11,8 @@
   <title>Gudang</title>
   <!-- <link href="/dist/output.css" rel="stylesheet"> -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../src/pagination.css">
+  <link rel="shortcut icon" href="../../img/fav.svg" type="image/png">
 <!--  -->
   <style type="text/tailwindcss">
     @layer utilities {
@@ -74,8 +76,8 @@ body{
 .title-table > .input-field input:focus{
   outline: none;
 }
-.title-table > .input-field > button{
-  height: 2.1rem;
+.title-table > .input-field > a{
+  padding: .6rem;
   border-radius: 5px;
   border: none;
   background-color: #7B2A8C;
@@ -376,7 +378,7 @@ body{
         </div>
       </div>
       <div class="profile hidden sm:block">
-        <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">NoFace21</h3> 
+        <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">@NoFace21</h3> 
         <img src="../../img/noface.jpg" alt="profile" class="w-7 h-7 rounded-full border"></a>
       </div>
       <div class="absolute px-48 box-border lg:mx-[1px] -my-[7px] hidden md:block">
@@ -458,7 +460,7 @@ body{
           </a>
         </li>
         <li>
-          <a href="login.html" class=" side flex text-white py-3 hover:bg-ungu2 hover:rounded-b-md transition duration-200" id="sidebar">
+          <a href="../login.html" class=" side flex text-white py-3 hover:bg-ungu2 hover:rounded-b-md transition duration-200" id="sidebar">
             <img src="../../img/logout.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Log Out</span>
@@ -562,7 +564,7 @@ body{
           </div>
           <div class="input-field">
             <input type="text" name="" value="" placeholder="Cari Barang">
-            <button type="submit" name="button">tambah barang</button>
+            <a href="tambah-barang.html" type="submit" name="button">tambah barang</a>
           </div>
         </div>
         <!-- end of title table -->
@@ -585,10 +587,14 @@ body{
           </table>
           
           <div class="table-footer">
-            <button type="button" name="button" class="prev"><img src="../../img/icons/back.png" alt=""><span>Previous</span></button>
-            <input type="text" name="" class="field" value="1" disabled>
-            <button type="button" name="button" class="next"><span>Next</span><img src="../../img/icons/next.png" alt="Next"></button>
-        </div>
+            <ul class="pagination pagination-primary">
+              <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </div>
         </div>
     </div>
     </div>
@@ -601,7 +607,7 @@ body{
           </div>
           <div class="input-field">
             <input type="text" name="" value="" placeholder="Cari Barang">
-            <button type="submit" name="button">tambah barang</button>
+            <a href="tambah-barang.html" type="submit" name="button">tambah barang</a>
           </div>
         </div>
         <!-- end of title table -->
@@ -609,13 +615,20 @@ body{
         <div class="container-table" id="container">
           <table class="table" cellspacing="0" cellpadding="0">
             <thead id="table-hidden">
+              
             </thead>
           </table>
 
           <div class="table-footer">
-            <button type="button" name="button" class="prev"><img src="../../img/icons/back.png" alt=""><span>Previous</span></button>
-            <input type="text" name="" class="field" value="1" disabled>
-            <button type="button" name="button" class="next"><span>Next</span><img src="../../img/icons/next.png" alt="Next"></button>
+            <div class="table-footer">
+              <ul class="pagination pagination-primary">
+                <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </div>
         </div>
         </div>
     </div>

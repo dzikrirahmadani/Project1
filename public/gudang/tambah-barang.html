@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="../../img/fav.svg" type="image/png">
   <!-- End G-Font -->
   <title>Tambah Barang Gudang</title>
   <!-- <link href="/dist/output.css" rel="stylesheet"> -->
@@ -412,6 +413,7 @@
         .container{
           width: 80%;
           overflow: hidden;
+          margin-top: 8rem;
         }
       }
       @media screen and (max-width: 1268px){
@@ -422,6 +424,9 @@
         .title-table{
           left: 5.08%;
           opacity: 0;
+        }
+        .container{
+          margin-top: 8rem;
         }
       }
       @media screen and (max-width: 1110px){
@@ -475,7 +480,7 @@
           flex-direction: column;
         }
         .container{
-          margin-top: 11.5rem;
+          margin-top: 8rem;
         }
         .title-table > .brand > p{
           margin-inline: 14rem;
@@ -515,7 +520,8 @@
           margin-left: 0;
         }
         .container{
-          margin-top: 14.5rem;
+          margin-top: 8rem;
+          height: 90%;
         }
         .title-table > .brand > p{
           margin-inline: 12rem;
@@ -557,6 +563,10 @@
         .form-input > form > input{
           width: 25%;
         }
+        .container{
+          height: 110%;
+        }
+
       }
       @media screen and (max-width: 557px){
         .title-table > .brand > p{
@@ -593,7 +603,7 @@
           margin-top: 1rem;
         }
         .container{
-          margin-top: 15rem;
+          margin-top: 9rem;
         }
       }
       @media screen and (max-width: 435px){
@@ -726,8 +736,10 @@
         </div>
       </div>
       <div class="profile hidden sm:block">
-        <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">NoFace21</h3> 
-        <img src="../../img/noface.jpg" alt="profile" class="w-7 h-7 rounded-full border"></a>
+        <a href="profile.html" class="flex"><h3 class="text-white font-semibold pr-3 pt-1">@NoFace21</h3> 
+          <img src="../../img/noface.jpg" alt="profile" class="w-7 h-7 rounded-full border">
+        </a>
+          <span class="status border-[1px] absolute h-[.7rem] w-[.7rem] rounded-full bg-hijau sm:ml-[113px] sm:mt-[-10px]"></span>
       </div>
       <div class="absolute px-48 box-border lg:mx-[1px] -my-[7px] hidden md:block">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-[13px] ml-3 bi bi-search inline-block text-white absolute" viewBox="0 0 16 16">
@@ -808,7 +820,7 @@
           </a>
         </li>
         <li>
-          <a href="login.html" class=" side flex text-white py-3 hover:bg-ungu2 hover:rounded-b-md transition duration-200" id="sidebar">
+          <a href="../login.html" class=" side flex text-white py-3 hover:bg-ungu2 hover:rounded-b-md transition duration-200" id="sidebar">
             <img src="../../img/logout.png" alt="" class="w-4 h-4
              ml-7 mr-2">
             <span class="">Log Out</span>
@@ -888,7 +900,7 @@
             </a>
           </li>
           <li>
-            <a href="login.html" class="mt-[143px] side flex text-white py-3 hover:bg-ungu2 transition duration-200">
+            <a href="../login.html" class="mt-[143px] side flex text-white py-3 hover:bg-ungu2 transition duration-200">
               <img src="../../img/logout.png" alt="" class="w-4 h-4
                ml-7 mr-2">
               <span class="">Log Out</span>
@@ -908,12 +920,10 @@
       <div class="grid shadow-xl">
         <div class="title-table W-[500px] p-96">
           <div class="brand flex  -mt-[50px] sm:mt-0">
-            <img src="../../img/back.png" alt="" class="w-4">
+            <a href="gudang.html">
+              <img src="../../img/back.png" alt="" class="w-4">
+            </a>
             <p class="font-semibold pl-4">Gudang</p> 
-          </div>
-          <div class="input-field">
-            <input type="text" name="" value="" placeholder="Cari Barang" class="ml-[60px] px-4 mt-2 mb-2">
-            <button type="submit" name="button" class="ml-[170px] sm:ml-0 mb-2 sm:mr-2">tambah barang</button>
           </div>
         </div>
       </div>
