@@ -33,7 +33,7 @@ fetch(`http://localhost:8080/restful/public/barang`)
 
     let table = '';
     for( let i = 0; i < response.length; i++ ){
-                table += showTable(response[i], i);
+        table += showTable(response[i], i);
     }
     const tbody = document.getElementById('tbody');
     tbody.innerHTML = table;
