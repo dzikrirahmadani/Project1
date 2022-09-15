@@ -784,11 +784,10 @@ body{
             <tbody id="table-body">
             </tbody>
           </table>
-
           <div class="table-footer">
-              <button type="button" name="button" class="prev"><span><img src="../../img/icons/back.png" alt="Previos"></span> Previous</button>
+              <button type="button" name="button" class="prev" id="prev"><span><img src="../../img/icons/back.png" alt="Previos"></span> Previous</button>
               <input type="text" name="" class="field" value="1" disabled>
-              <button type="button" name="button" class="next"><span>Next </span><img src="../../img/icons/next.png" alt="Next"></button>
+              <button type="button" name="button" class="next" id="next"><span>Next </span><img src="../../img/icons/next.png" alt="Next"></button>
           </div>
         </div>
       </div>
